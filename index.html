@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>HipKnee Pro • Инновации в эндопротезировании</title>
+    <title>HipKnee Pro • Премиальные решения в ортопедии</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Inter', system-ui, sans-serif; }
-        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
         
-        .nav-scrolled { 
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); 
-            background-color: rgba(255,255,255,0.98);
-            backdrop-filter: blur(12px);
-        }
-        .dark .nav-scrolled { background-color: rgba(15, 23, 42, 0.95); }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.05; }
 
-        .blog-card, .modern-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .blog-card:hover, .modern-card:hover { transform: translateY(-6px); }
+        .premium-shadow { box-shadow: 0 10px 15px -3px rgb(15 118 110 / 0.1), 0 4px 6px -4px rgb(15 118 110 / 0.1); }
+        .modern-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .modern-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(15 118 110 / 0.1), 0 8px 10px -6px rgb(15 118 110 / 0.1); }
+
+        .nav-scrolled { 
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.08);
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: blur(16px);
+        }
+        .dark .nav-scrolled { background-color: rgba(15, 23, 42, 0.96); }
 
         .modal { animation: modalPop 0.25s cubic-bezier(0.32, 0.72, 0, 1) forwards; }
-        @keyframes modalPop { from { opacity: 0; transform: scale(0.96) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+        @keyframes modalPop { from { opacity: 0; transform: scale(0.96) translateY(25px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 
-        .drawer { animation: drawerSlide 0.4s cubic-bezier(0.32, 0.72, 0, 1) forwards; }
-
-        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(to right, #0F766E, #14B8A6); z-index: 9999; }
-
-        .fab { box-shadow: 0 10px 15px -3px rgb(15 118 110 / 0.3); transition: transform 0.2s ease; }
-        .fab:active { transform: scale(0.9); }
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(to right, #0F766E, #14B8A6); z-index: 99999; }
+        
+        .fab { box-shadow: 0 10px 15px -3px rgb(15 118 110 / 0.4); transition: transform 0.2s ease; }
+        .fab:active { transform: scale(0.92); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200 overflow-x-hidden">
@@ -37,39 +38,39 @@
     <div id="scroll-progress" class="scroll-progress w-0"></div>
 
     <!-- Navbar -->
-    <nav id="navbar" class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
-        <div class="max-w-screen-2xl mx-auto px-5">
+    <nav id="navbar" class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-all">
+        <div class="max-w-screen-2xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex items-center gap-x-3">
-                    <div class="w-10 h-10 bg-teal-700 dark:bg-teal-600 rounded-2xl flex items-center justify-center">
+                    <div class="w-11 h-11 bg-[#0F766E] rounded-2xl flex items-center justify-center shadow-inner">
                         <i class="fa-solid fa-bone text-white text-3xl"></i>
                     </div>
                     <div>
                         <span class="font-bold text-3xl tracking-tighter dark:text-white">HipKnee</span>
-                        <span class="font-semibold text-teal-700 dark:text-teal-400 text-3xl">PRO</span>
+                        <span class="font-semibold text-[#0F766E] dark:text-[#14B8A6] text-3xl">PRO</span>
                     </div>
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                    <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">О компании</a>
-                    <a href="#products" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Продукция</a>
-                    <a href="#blog" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Блог</a>
-                    <a href="#testimonials" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Отзывы</a>
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-[#0F766E] dark:hover:text-[#14B8A6]">О компании</a>
+                    <a href="#products" class="nav-link text-slate-600 dark:text-slate-300 hover:text-[#0F766E] dark:hover:text-[#14B8A6]">Продукция</a>
+                    <a href="#blog" class="nav-link text-slate-600 dark:text-slate-300 hover:text-[#0F766E] dark:hover:text-[#14B8A6]">Блог</a>
+                    <a href="#testimonials" class="nav-link text-slate-600 dark:text-slate-300 hover:text-[#0F766E] dark:hover:text-[#14B8A6]">Отзывы</a>
                 </div>
 
                 <!-- Desktop Actions -->
                 <div class="hidden md:flex items-center gap-x-3">
-                    <button id="dark-mode-toggle" class="w-10 h-10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-2xl">
+                    <button id="dark-mode-toggle" class="w-10 h-10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-2xl transition-colors">
                         <i class="fa-solid fa-moon text-lg" id="dark-icon"></i>
                     </button>
-                    <button onclick="showAppointmentModal()" class="px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Записаться</button>
-                    <button onclick="document.getElementById('blog').scrollIntoView({ behavior: 'smooth' })" class="px-5 py-2.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold rounded-2xl">Читать блог</button>
+                    <button onclick="showAppointmentModal()" class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Записаться</button>
+                    <button onclick="document.getElementById('blog').scrollIntoView({ behavior: 'smooth' })" class="px-6 py-2.5 bg-[#0F766E] hover:bg-[#134E4B] text-white text-sm font-semibold rounded-2xl shadow-sm transition-colors">Читать блог</button>
                 </div>
 
                 <!-- Mobile -->
-                <div class="flex md:hidden items-center gap-x-1">
+                <div class="flex md:hidden items-center gap-x-2">
                     <button id="dark-mode-toggle-mobile" class="w-10 h-10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-2xl">
                         <i class="fa-solid fa-moon text-lg" id="dark-icon-mobile"></i>
                     </button>
@@ -83,145 +84,220 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-drawer" class="hidden fixed inset-0 z-[60] md:hidden">
-        <div onclick="closeMobileDrawer()" class="absolute inset-0 bg-black/60"></div>
+        <div onclick="closeMobileDrawer()" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <div onclick="event.stopImmediatePropagation()" class="drawer absolute right-0 top-0 h-full w-80 bg-white dark:bg-slate-900 shadow-2xl flex flex-col">
             <div class="p-6 flex justify-between items-center border-b dark:border-slate-800">
                 <span class="font-bold text-2xl tracking-tighter dark:text-white">HipKnee PRO</span>
                 <button onclick="closeMobileDrawer()" class="text-3xl">×</button>
             </div>
-            <div class="flex-1 p-6 space-y-2 text-lg">
-                <a href="#about" onclick="closeMobileDrawer()" class="block py-3 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">О компании</a>
-                <a href="#products" onclick="closeMobileDrawer()" class="block py-3 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">Продукция</a>
-                <a href="#blog" onclick="closeMobileDrawer()" class="block py-3 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">Блог</a>
-                <a href="#testimonials" onclick="closeMobileDrawer()" class="block py-3 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">Отзывы</a>
+            <div class="flex-1 p-6 space-y-1 text-lg">
+                <a href="#about" onclick="closeMobileDrawer()" class="block py-3.5 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">О компании</a>
+                <a href="#products" onclick="closeMobileDrawer()" class="block py-3.5 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">Продукция</a>
+                <a href="#blog" onclick="closeMobileDrawer()" class="block py-3.5 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">Блог</a>
+                <a href="#testimonials" onclick="closeMobileDrawer()" class="block py-3.5 px-4 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800">Отзывы</a>
             </div>
             <div class="p-6 border-t dark:border-slate-800">
-                <button onclick="showAppointmentModal(); closeMobileDrawer()" class="w-full py-3.5 bg-teal-700 text-white font-semibold rounded-2xl">Записаться на приём</button>
+                <button onclick="showAppointmentModal(); closeMobileDrawer()" class="w-full py-3.5 bg-[#0F766E] text-white font-semibold rounded-2xl">Записаться на приём</button>
             </div>
         </div>
     </div>
 
-    <!-- Hero (исправлена высота на мобильных) -->
-    <header class="relative h-[75vh] md:h-[92vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-900/50 to-transparent dark:from-black/70"></div>
+    <!-- Hero -->
+    <header class="relative h-[78vh] md:h-[92vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/75 via-slate-900/55 to-transparent"></div>
         <img src="https://picsum.photos/id/1016/2000/1400" class="absolute inset-0 w-full h-full object-cover" alt="">
         
-        <div class="relative max-w-screen-2xl mx-auto px-5 z-10">
+        <div class="relative max-w-screen-2xl mx-auto px-6 z-10">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-x-2 bg-white/90 dark:bg-slate-900/90 px-4 py-1.5 rounded-3xl mb-6 text-sm font-semibold">
+                <div class="inline-flex items-center gap-x-2 bg-white/90 dark:bg-slate-900/90 px-4 py-1.5 rounded-3xl mb-6 text-sm font-semibold shadow-sm">
                     <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span class="text-slate-700 dark:text-slate-200">25+ лет экспертизы • Турция</span>
+                    <span class="text-slate-700 dark:text-slate-200">25+ лет экспертизы • Премиум-класс</span>
                 </div>
                 
-                <h1 class="heading-serif text-5xl md:text-7xl leading-[1.05] tracking-tighter text-white mb-6">
-                    Инновационные решения<br>для тазобедренного<br>и коленного суставов
+                <h1 class="heading-serif text-6xl md:text-7xl leading-[1.05] tracking-tighter text-white mb-6">
+                    Премиальные решения<br>для тазобедренного<br>и коленного суставов
                 </h1>
                 
-                <div class="flex flex-wrap gap-3">
-                    <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })" 
-                            class="bg-white text-slate-900 font-semibold px-7 h-14 rounded-3xl flex items-center gap-x-2 active:scale-[0.985]">
-                        Изучить продукцию
-                    </button>
-                    <button onclick="showAppointmentModal()" 
-                            class="border-2 border-white/70 text-white font-semibold px-7 h-14 rounded-3xl flex items-center gap-x-2 active:scale-[0.985]">
-                        Записаться
-                    </button>
+                <p class="max-w-lg text-xl text-white/90 mb-10">Инновационные импланты и экспертный подход. Возвращаем активную жизнь на высшем уровне.</p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })" class="bg-white hover:bg-slate-100 text-slate-900 font-semibold px-8 h-14 rounded-3xl flex items-center gap-x-3 active:scale-[0.985] transition-transform">Изучить продукцию</button>
+                    <button onclick="showAppointmentModal()" class="border-2 border-white/70 hover:bg-white/10 text-white font-semibold px-8 h-14 rounded-3xl flex items-center gap-x-3 active:scale-[0.985]">Записаться на консультацию</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Trust Bar -->
+    <!-- Trust -->
     <div class="border-b bg-white dark:bg-slate-900 dark:border-slate-800">
-        <div class="max-w-screen-2xl mx-auto px-5 py-5 grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center text-sm">
-            <div><span class="font-mono text-3xl font-semibold text-teal-700 dark:text-teal-400">25</span><br><span class="text-slate-500">лет на рынке</span></div>
-            <div><span class="font-mono text-3xl font-semibold text-teal-700 dark:text-teal-400">12 400+</span><br><span class="text-slate-500">имплантов</span></div>
-            <div><span class="font-mono text-3xl font-semibold text-teal-700 dark:text-teal-400">98.7%</span><br><span class="text-slate-500">успешных исходов</span></div>
-            <div><span class="font-mono text-3xl font-semibold text-teal-700 dark:text-teal-400">47</span><br><span class="text-slate-500">стран</span></div>
+        <div class="max-w-screen-2xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center">
+            <div><span class="font-mono text-4xl font-semibold text-[#0F766E]">25</span><div class="text-sm text-slate-500 mt-1">лет на рынке</div></div>
+            <div><span class="font-mono text-4xl font-semibold text-[#0F766E]">12 400+</span><div class="text-sm text-slate-500 mt-1">имплантов установлено</div></div>
+            <div><span class="font-mono text-4xl font-semibold text-[#0F766E]">98.7%</span><div class="text-sm text-slate-500 mt-1">успешных исходов</div></div>
+            <div><span class="font-mono text-4xl font-semibold text-[#0F766E]">47</span><div class="text-sm text-slate-500 mt-1">стран-партнёров</div></div>
         </div>
     </div>
 
     <!-- About -->
-    <section id="about" class="max-w-screen-2xl mx-auto px-5 pt-16 pb-14">
-        <div class="grid md:grid-cols-12 gap-x-12">
+    <section id="about" class="max-w-screen-2xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-16">
             <div class="md:col-span-7">
-                <div class="text-teal-700 dark:text-teal-400 text-sm font-semibold tracking-widest mb-2">С 2004 ГОДА</div>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 dark:text-white">Мы создаём импланты,<br>которым доверяют хирурги</h2>
-                <p class="text-slate-600 dark:text-slate-300 max-w-prose">HipKnee Pro — ведущий производитель систем эндопротезирования тазобедренного и коленного суставов с более чем 25-летним опытом.</p>
+                <div class="text-[#0F766E] text-sm font-semibold tracking-[3px] mb-3">С 2004 ГОДА</div>
+                <h2 class="text-5xl font-bold tracking-tight mb-6 dark:text-white">Мы создаём импланты,<br>которым доверяют хирурги</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-prose">HipKnee Pro — ведущий производитель премиальных систем эндопротезирования с собственным циклом производства и международными сертификатами качества.</p>
             </div>
         </div>
     </section>
 
     <!-- Products -->
-    <section id="products" class="bg-white dark:bg-slate-900 border-y py-14">
-        <div class="max-w-screen-2xl mx-auto px-5">
-            <h2 class="text-3xl font-bold tracking-tight mb-8 dark:text-white">Системы эндопротезирования</h2>
+    <section id="products" class="bg-white dark:bg-slate-900 border-y py-16">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <div class="text-[#0F766E] text-sm font-semibold tracking-widest">ПРОДУКЦИЯ</div>
+                    <h2 class="text-4xl font-bold tracking-tight dark:text-white">Системы эндопротезирования</h2>
+                </div>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-7">
-                    <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/40 text-teal-700 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-bone text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 dark:text-white">Коленные эндопротезы</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-300">12 размеров, улучшенная кинематика.</p>
+                <div class="modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-[#0F766E]/10 text-[#0F766E] rounded-2xl flex items-center justify-center mb-6"><i class="fa-solid fa-bone text-3xl"></i></div>
+                    <h3 class="font-semibold text-2xl mb-3 dark:text-white">Коленные эндопротезы</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">12 размеров, роботизированная навигация, быстрая реабилитация.</p>
+                    <button onclick="addToCompare(0)" class="text-sm font-medium text-[#0F766E] hover:underline">Добавить к сравнению →</button>
                 </div>
-                <div class="modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-7">
-                    <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/40 text-teal-700 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-hip text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 dark:text-white">Тазобедренные эндопротезы</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-300">Керамика и титан последнего поколения.</p>
+                <div class="modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-[#0F766E]/10 text-[#0F766E] rounded-2xl flex items-center justify-center mb-6"><i class="fa-solid fa-hip text-3xl"></i></div>
+                    <h3 class="font-semibold text-2xl mb-3 dark:text-white">Тазобедренные эндопротезы</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">Керамика последнего поколения, пожизненная гарантия.</p>
+                    <button onclick="addToCompare(1)" class="text-sm font-medium text-[#0F766E] hover:underline">Добавить к сравнению →</button>
                 </div>
-                <div class="modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-7">
-                    <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/40 text-teal-700 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-tools text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 dark:text-white">Хирургические наборы</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-300">Полные стерильные комплекты.</p>
+                <div class="modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-[#0F766E]/10 text-[#0F766E] rounded-2xl flex items-center justify-center mb-6"><i class="fa-solid fa-tools text-3xl"></i></div>
+                    <h3 class="font-semibold text-2xl mb-3 dark:text-white">Хирургические наборы</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">Полные стерильные комплекты премиум-класса.</p>
+                    <button onclick="addToCompare(2)" class="text-sm font-medium text-[#0F766E] hover:underline">Добавить к сравнению →</button>
                 </div>
+            </div>
+            
+            <div id="compare-bar" class="hidden mt-8 bg-[#0F766E] text-white px-6 py-4 rounded-3xl flex items-center justify-between">
+                <span id="compare-count"></span>
+                <button onclick="showCompareModal()" class="font-semibold underline">Сравнить выбранные</button>
             </div>
         </div>
     </section>
 
     <!-- Blog -->
-    <section id="blog" class="max-w-screen-2xl mx-auto px-5 pt-16 pb-12">
-        <h2 class="text-3xl font-bold tracking-tight mb-8 dark:text-white">Блог HipKnee Pro</h2>
-        
-        <div class="flex flex-col md:flex-row gap-3 mb-6">
-            <input id="blog-search" type="text" placeholder="Поиск статей..." class="flex-1 border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 text-sm bg-white dark:bg-slate-900">
-            <select id="blog-sort" class="border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 text-sm bg-white dark:bg-slate-900">
-                <option value="newest">Сначала новые</option>
-                <option value="oldest">Сначала старые</option>
-            </select>
+    <section id="blog" class="max-w-screen-2xl mx-auto px-6 pt-20 pb-16">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-y-4">
+            <div>
+                <div class="text-[#0F766E] text-sm font-semibold tracking-[2px]">ЗНАНИЯ И ОПЫТ</div>
+                <h2 class="text-4xl font-bold tracking-tight dark:text-white">Блог HipKnee Pro</h2>
+            </div>
+            <div class="flex gap-3">
+                <input id="blog-search" type="text" placeholder="Поиск по статьям..." class="border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 text-sm w-72 bg-white dark:bg-slate-900">
+                <select id="blog-sort" class="border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 text-sm bg-white dark:bg-slate-900">
+                    <option value="newest">Сначала новые</option>
+                    <option value="oldest">Сначала старые</option>
+                </select>
+            </div>
         </div>
         
-        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div id="category-filters" class="flex flex-wrap gap-2 mb-8"></div>
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+        
+        <div class="text-center mt-10">
+            <button id="load-more-btn" onclick="loadMoreArticles()" class="px-8 py-3 border border-slate-300 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 rounded-2xl font-medium">Показать ещё статьи</button>
+        </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="bg-white dark:bg-slate-900 border-y py-14">
-        <div class="max-w-screen-2xl mx-auto px-5">
-            <h2 class="text-3xl font-bold tracking-tight mb-8 text-center dark:text-white">Отзывы пациентов</h2>
-            <div id="testimonial-slider" class="max-w-2xl mx-auto bg-slate-50 dark:bg-slate-950 rounded-3xl p-8 text-center">
-                <div id="testimonial-content"></div>
+    <!-- Testimonials Carousel -->
+    <section id="testimonials" class="bg-white dark:bg-slate-900 border-y py-16">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="text-4xl font-bold tracking-tight text-center mb-10 dark:text-white">Что говорят наши пациенты</h2>
+            
+            <div class="max-w-3xl mx-auto relative">
+                <div id="testimonial-slider" class="overflow-hidden rounded-3xl">
+                    <div id="testimonial-track" class="flex transition-transform duration-500"></div>
+                </div>
+                <div class="flex justify-center gap-x-4 mt-8">
+                    <button onclick="prevTestimonial()" class="w-12 h-12 border border-slate-300 dark:border-slate-700 rounded-2xl flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div id="testimonial-dots" class="flex items-center gap-x-2"></div>
+                    <button onclick="nextTestimonial()" class="w-12 h-12 border border-slate-300 dark:border-slate-700 rounded-2xl flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Final CTA -->
+    <section class="max-w-screen-2xl mx-auto px-6 py-20">
+        <div class="bg-[#0F766E] rounded-3xl px-10 md:px-16 py-14 text-white flex flex-col md:flex-row items-center justify-between gap-y-8">
+            <div>
+                <h3 class="text-3xl font-semibold tracking-tight">Готовы вернуть активную жизнь?</h3>
+                <p class="mt-2 text-teal-100">Получите консультацию ведущего специалиста уже сегодня.</p>
+            </div>
+            <button onclick="showAppointmentModal()" class="bg-white text-[#0F766E] hover:bg-teal-50 font-semibold px-10 h-14 rounded-3xl flex items-center gap-x-3 active:scale-[0.985]">Записаться на приём</button>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-slate-900 text-center text-slate-400 py-8 text-sm">
-        © 2026 HipKnee Pro • Полностью адаптивный сайт для мобильных и десктопа
+    <footer class="bg-slate-900 text-center py-8 text-sm text-slate-400">
+        © 2026 HipKnee Pro • Премиальный медицинский сайт
     </footer>
 
-    <!-- Floating Button (Mobile) -->
-    <button onclick="showAppointmentModal()" 
-            class="fab md:hidden fixed bottom-6 right-6 w-16 h-16 bg-teal-700 text-white rounded-2xl flex items-center justify-center shadow-xl z-50">
+    <!-- Floating Button -->
+    <button onclick="showAppointmentModal()" class="fab md:hidden fixed bottom-6 right-6 w-16 h-16 bg-[#0F766E] text-white rounded-2xl flex items-center justify-center shadow-xl z-50">
         <i class="fa-solid fa-calendar-check text-2xl"></i>
     </button>
 
     <!-- Modals -->
-    <div id="appointment-modal" onclick="if (event.target.id === 'appointment-modal') closeAppointmentModal()" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4">
-        <div onclick="event.stopImmediatePropagation()" class="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl p-8">
+    <!-- Article Modal -->
+    <div id="article-modal" onclick="if (event.target.id === 'article-modal') closeArticleModal()" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white dark:bg-slate-900 w-full max-w-3xl rounded-3xl overflow-hidden">
+            <div class="p-8">
+                <div class="flex justify-between">
+                    <div>
+                        <div id="modal-category" class="inline px-3.5 py-1 text-xs font-semibold rounded-full bg-[#0F766E]/10 text-[#0F766E]"></div>
+                        <h3 id="modal-title" class="text-3xl font-semibold mt-3 dark:text-white"></h3>
+                        <div class="flex gap-x-4 mt-2 text-sm text-slate-500">
+                            <span id="modal-date"></span>
+                            <span id="modal-reading-time"></span>
+                        </div>
+                    </div>
+                    <button onclick="closeArticleModal()" class="text-4xl">×</button>
+                </div>
+                <div id="modal-content" class="mt-8 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div id="appointment-modal" onclick="if (event.target.id === 'appointment-modal') closeAppointmentModal()" class="hidden fixed inset-0 bg-black/70 z-[110] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl p-8">
             <h3 class="text-2xl font-semibold mb-6 dark:text-white">Записаться на консультацию</h3>
             <form id="appointment-form" onsubmit="submitAppointment(event)">
-                <input type="text" id="name" placeholder="Ваше имя" required class="w-full mb-4 border rounded-2xl px-4 py-3 dark:bg-slate-950">
-                <input type="email" id="email" placeholder="Email" required class="w-full mb-4 border rounded-2xl px-4 py-3 dark:bg-slate-950">
-                <input type="tel" id="phone" placeholder="Телефон" required class="w-full mb-4 border rounded-2xl px-4 py-3 dark:bg-slate-950">
-                <button type="submit" class="w-full bg-teal-700 text-white py-3.5 rounded-2xl font-semibold">Отправить заявку</button>
+                <input type="text" id="name" placeholder="Ваше имя" required class="w-full mb-4 border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 dark:bg-slate-950">
+                <input type="email" id="email" placeholder="Email" required class="w-full mb-4 border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 dark:bg-slate-950">
+                <input type="tel" id="phone" placeholder="Телефон" required class="w-full mb-4 border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 dark:bg-slate-950">
+                <select id="service" required class="w-full mb-4 border border-slate-300 dark:border-slate-700 rounded-2xl px-4 py-3 dark:bg-slate-950">
+                    <option value="">Выберите услугу</option>
+                    <option value="consultation">Консультация хирурга</option>
+                    <option value="knee">Эндопротезирование колена</option>
+                    <option value="hip">Эндопротезирование тазобедренного сустава</option>
+                </select>
+                <button type="submit" class="w-full bg-[#0F766E] hover:bg-[#134E4B] text-white py-3.5 rounded-2xl font-semibold">Отправить заявку</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Compare Modal -->
+    <div id="compare-modal" onclick="if (event.target.id === 'compare-modal') closeCompareModal()" class="hidden fixed inset-0 bg-black/70 z-[120] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white dark:bg-slate-900 w-full max-w-4xl rounded-3xl p-8">
+            <div class="flex justify-between mb-6">
+                <h3 class="text-2xl font-semibold dark:text-white">Сравнение продуктов</h3>
+                <button onclick="closeCompareModal()" class="text-3xl">×</button>
+            </div>
+            <div id="compare-content"></div>
         </div>
     </div>
 
@@ -229,10 +305,7 @@
         // Tailwind + Dark Mode
         function initTailwind() {
             tailwind.config = { darkMode: 'class' };
-            
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.documentElement.classList.add('dark');
-            }
+            if (localStorage.getItem('darkMode') === 'true') document.documentElement.classList.add('dark');
             updateDarkIcons();
         }
         
@@ -244,58 +317,218 @@
         
         function updateDarkIcons() {
             const isDark = document.documentElement.classList.contains('dark');
-            const iconClass = isDark ? 'fa-sun' : 'fa-moon';
-            document.getElementById('dark-icon').className = `fa-solid ${iconClass} text-lg`;
-            document.getElementById('dark-icon-mobile').className = `fa-solid ${iconClass} text-lg`;
+            const cls = isDark ? 'fa-sun' : 'fa-moon';
+            document.getElementById('dark-icon').className = `fa-solid ${cls} text-lg`;
+            document.getElementById('dark-icon-mobile').className = `fa-solid ${cls} text-lg`;
         }
 
         // Scroll Progress
         function initScrollProgress() {
             const bar = document.getElementById('scroll-progress');
             window.addEventListener('scroll', () => {
-                const percent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                const percent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
                 bar.style.width = percent + '%';
             });
         }
 
         // Mobile Drawer
         function initMobileMenu() {
-            document.getElementById('mobile-menu-btn').onclick = () => {
-                document.getElementById('mobile-drawer').classList.remove('hidden');
-                document.getElementById('mobile-drawer').classList.add('flex');
-            };
+            document.getElementById('mobile-menu-btn').onclick = () => document.getElementById('mobile-drawer').classList.toggle('hidden');
         }
         function closeMobileDrawer() {
-            const d = document.getElementById('mobile-drawer');
-            d.classList.remove('flex');
-            d.classList.add('hidden');
+            document.getElementById('mobile-drawer').classList.add('hidden');
         }
 
-        // Blog
-        const articles = [
-            {id:1, title:"Эндопротезирование коленного сустава в 2026 году", category:"Эндопротезирование", excerpt:"Роботизированная хирургия и быстрый возврат к активности.", date:"4 июня 2026"},
-            {id:2, title:"Боль в тазобедренном суставе: главные причины", category:"Боль в суставах", excerpt:"Когда пора к врачу и как понять причину.", date:"28 мая 2026"},
-            {id:3, title:"Реабилитация после замены тазобедренного сустава", category:"Реабилитация", excerpt:"Полный гид на первые 12 недель.", date:"15 мая 2026"},
-            {id:4, title:"Современные материалы имплантов", category:"Инновации", excerpt:"Почему титан и керамика — лучший выбор.", date:"2 мая 2026"}
+        // Blog Data
+        const allArticles = [
+            {id:1, title:"Эндопротезирование коленного сустава в 2026 году", date:"2026-06-04", displayDate:"4 июня 2026", category:"Эндопротезирование", excerpt:"Роботизированная хирургия и протоколы быстрой реабилитации.", readingTime:7},
+            {id:2, title:"Боль в тазобедренном суставе: 5 главных причин", date:"2026-05-28", displayDate:"28 мая 2026", category:"Боль в суставах", excerpt:"Когда пора к врачу и как понять причину боли.", readingTime:5},
+            {id:3, title:"Реабилитация после замены тазобедренного сустава", date:"2026-05-15", displayDate:"15 мая 2026", category:"Реабилитация", excerpt:"Полный гид на первые 12 недель восстановления.", readingTime:9},
+            {id:4, title:"Современные материалы имплантов 2026", date:"2026-05-02", displayDate:"2 мая 2026", category:"Инновации", excerpt:"Почему титан и керамика — лучший выбор.", readingTime:6},
+            {id:5, title:"Остеоартрит колена: можно ли избежать операции?", date:"2026-04-20", displayDate:"20 апреля 2026", category:"Боль в суставах", excerpt:"PRP, гиалуроновая кислота и стволовые клетки.", readingTime:8}
         ];
+        
+        let displayedCount = 4;
+        let currentFilter = 'Все';
 
-        function renderBlog() {
-            const grid = document.getElementById('blog-grid');
-            grid.innerHTML = '';
-            articles.forEach(a => {
-                const card = document.createElement('div');
-                card.className = `blog-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-6`;
-                card.innerHTML = `
-                    <div class="text-xs text-teal-700 dark:text-teal-400 mb-2">${a.category} • ${a.date}</div>
-                    <h4 class="font-semibold text-lg mb-3 dark:text-white">${a.title}</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-5">${a.excerpt}</p>
-                    <button onclick="alert('Полная статья откроется в модальном окне (в полной версии)')" class="text-sm font-medium text-teal-700 dark:text-teal-400">Читать полностью →</button>
-                `;
-                grid.appendChild(card);
+        function renderBlogFilters() {
+            const container = document.getElementById('category-filters');
+            const cats = ['Все', 'Эндопротезирование', 'Боль в суставах', 'Реабилитация', 'Инновации'];
+            container.innerHTML = '';
+            
+            cats.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = `px-5 py-2 text-sm font-medium border rounded-2xl transition-all ${cat === 'Все' ? 'bg-[#0F766E] text-white border-[#0F766E]' : 'border-slate-300 dark:border-slate-700 hover:border-[#0F766E]'}`;
+                btn.textContent = cat;
+                btn.onclick = () => {
+                    document.querySelectorAll('#category-filters button').forEach(b => b.classList.remove('bg-[#0F766E]', 'text-white', 'border-[#0F766E]'));
+                    btn.classList.add('bg-[#0F766E]', 'text-white', 'border-[#0F766E]');
+                    currentFilter = cat;
+                    filterAndRenderArticles();
+                };
+                container.appendChild(btn);
             });
         }
 
-        // Dark mode + other inits
+        function filterAndRenderArticles() {
+            const search = document.getElementById('blog-search').value.toLowerCase();
+            const sort = document.getElementById('blog-sort').value;
+            
+            let filtered = allArticles;
+            if (currentFilter !== 'Все') filtered = filtered.filter(a => a.category === currentFilter);
+            if (search) filtered = filtered.filter(a => a.title.toLowerCase().includes(search) || a.excerpt.toLowerCase().includes(search));
+            
+            filtered.sort((a,b) => sort === 'newest' ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date));
+            
+            const grid = document.getElementById('blog-grid');
+            grid.innerHTML = '';
+            
+            filtered.slice(0, displayedCount).forEach(article => {
+                const card = document.createElement('div');
+                card.className = `modern-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 flex flex-col`;
+                card.innerHTML = `
+                    <div class="text-xs text-[#0F766E] mb-2">${article.category} • ${article.displayDate}</div>
+                    <h4 class="font-semibold text-lg mb-3 dark:text-white">${article.title}</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 flex-1">${article.excerpt}</p>
+                    <div class="mt-5 flex items-center justify-between text-sm">
+                        <span class="text-slate-500">${article.readingTime} мин</span>
+                        <button onclick="openArticleModal(${article.id})" class="font-medium text-[#0F766E] hover:underline">Читать →</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            document.getElementById('load-more-btn').style.display = filtered.length > displayedCount ? 'inline-block' : 'none';
+        }
+
+        function loadMoreArticles() {
+            displayedCount += 2;
+            filterAndRenderArticles();
+        }
+
+        function openArticleModal(id) {
+            const article = allArticles.find(a => a.id === id);
+            document.getElementById('modal-category').textContent = article.category;
+            document.getElementById('modal-title').textContent = article.title;
+            document.getElementById('modal-date').textContent = article.displayDate;
+            document.getElementById('modal-reading-time').innerHTML = `<i class="fa-solid fa-clock mr-1"></i> ${article.readingTime} мин`;
+            document.getElementById('modal-content').innerHTML = `<p>${article.excerpt}</p><p class="mt-4">Полная версия статьи доступна в личном кабинете пациента.</p>`;
+            document.getElementById('article-modal').classList.remove('hidden');
+            document.getElementById('article-modal').classList.add('flex');
+        }
+        
+        function closeArticleModal() {
+            document.getElementById('article-modal').classList.remove('flex');
+            document.getElementById('article-modal').classList.add('hidden');
+        }
+
+        // Testimonials Carousel
+        let currentSlide = 0;
+        const testimonials = [
+            {quote: "Через 3 месяца после операции я снова играю в теннис. Качество импланта на высшем уровне.", name: "Александр Морозов", role: "Пациент, 58 лет"},
+            {quote: "Работаю с HipKnee Pro уже 7 лет. Пациенты быстро восстанавливаются, осложнений минимум.", name: "Проф. Др. Кайхан Туран", role: "Ортопед-хирург"},
+            {quote: "После неудачных операций в других клиниках именно здесь мне вернули качество жизни.", name: "Елена Смирнова", role: "Пациентка, 64 года"}
+        ];
+
+        function renderTestimonials() {
+            const track = document.getElementById('testimonial-track');
+            const dots = document.getElementById('testimonial-dots');
+            track.innerHTML = '';
+            dots.innerHTML = '';
+            
+            testimonials.forEach((t, i) => {
+                const slide = document.createElement('div');
+                slide.className = `min-w-full px-8 py-10 bg-slate-50 dark:bg-slate-950 rounded-3xl`;
+                slide.innerHTML = `
+                    <div class="max-w-2xl mx-auto text-center">
+                        <div class="flex justify-center gap-x-1 text-amber-400 mb-6"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-xl italic">"${t.quote}"</p>
+                        <div class="mt-8 font-semibold dark:text-white">${t.name}</div>
+                        <div class="text-sm text-slate-500">${t.role}</div>
+                    </div>
+                `;
+                track.appendChild(slide);
+                
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full ${i === 0 ? 'bg-[#0F766E] w-6' : 'bg-slate-300 dark:bg-slate-600'}`;
+                dot.onclick = () => { currentSlide = i; updateCarousel(); };
+                dots.appendChild(dot);
+            });
+        }
+        
+        function updateCarousel() {
+            document.getElementById('testimonial-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll('#testimonial-dots button').forEach((d, i) => {
+                d.className = `w-2.5 h-2.5 rounded-full transition-all ${i === currentSlide ? 'bg-[#0F766E] w-6' : 'bg-slate-300 dark:bg-slate-600'}`;
+            });
+        }
+        
+        function nextTestimonial() { currentSlide = (currentSlide + 1) % testimonials.length; updateCarousel(); }
+        function prevTestimonial() { currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length; updateCarousel(); }
+
+        // Product Comparison
+        let selected = [];
+        const products = [
+            {name: "Коленные эндопротезы", material: "Титан + ПЭ", warranty: "15 лет", price: "от 185 000 ₽"},
+            {name: "Тазобедренные эндопротезы", material: "Керамика + Титан", warranty: "20 лет", price: "от 210 000 ₽"},
+            {name: "Хирургические наборы", material: "Нержавеющая сталь", warranty: "Пожизненно", price: "от 45 000 ₽"}
+        ];
+        
+        function addToCompare(index) {
+            if (!selected.includes(index)) selected.push(index);
+            updateCompareBar();
+        }
+        
+        function updateCompareBar() {
+            const bar = document.getElementById('compare-bar');
+            if (selected.length > 0) {
+                bar.classList.remove('hidden');
+                bar.classList.add('flex');
+                document.getElementById('compare-count').textContent = `Выбрано ${selected.length} продукта`;
+            } else {
+                bar.classList.add('hidden');
+            }
+        }
+        
+        function showCompareModal() {
+            const modal = document.getElementById('compare-modal');
+            const content = document.getElementById('compare-content');
+            let html = `<table class="w-full"><thead><tr><th class="text-left py-3">Характеристика</th>`;
+            selected.forEach(i => html += `<th class="text-left py-3 px-4">${products[i].name}</th>`);
+            html += `</tr></thead><tbody>`;
+            
+            ['material','warranty','price'].forEach(key => {
+                html += `<tr class="border-t"><td class="py-3 font-medium">${key === 'material' ? 'Материал' : key === 'warranty' ? 'Гарантия' : 'Стоимость'}</td>`;
+                selected.forEach(i => html += `<td class="py-3 px-4">${products[i][key]}</td>`);
+                html += `</tr>`;
+            });
+            html += `</tbody></table>`;
+            content.innerHTML = html;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        
+        function closeCompareModal() {
+            document.getElementById('compare-modal').classList.add('hidden');
+            document.getElementById('compare-modal').classList.remove('flex');
+        }
+
+        // Appointment
+        function showAppointmentModal() {
+            document.getElementById('appointment-modal').classList.remove('hidden');
+            document.getElementById('appointment-modal').classList.add('flex');
+        }
+        function closeAppointmentModal() {
+            document.getElementById('appointment-modal').classList.add('hidden');
+            document.getElementById('appointment-modal').classList.remove('flex');
+        }
+        function submitAppointment(e) {
+            e.preventDefault();
+            alert('Заявка успешно отправлена! Мы свяжемся с вами в течение 2 часов.');
+            closeAppointmentModal();
+        }
+
+        // Initialize
         function initialize() {
             initTailwind();
             initScrollProgress();
@@ -304,28 +537,19 @@
             document.getElementById('dark-mode-toggle').onclick = toggleDarkMode;
             document.getElementById('dark-mode-toggle-mobile').onclick = toggleDarkMode;
             
-            renderBlog();
+            renderBlogFilters();
+            document.getElementById('blog-search').oninput = filterAndRenderArticles;
+            document.getElementById('blog-sort').onchange = filterAndRenderArticles;
+            filterAndRenderArticles();
+            
+            renderTestimonials();
+            setInterval(() => { if (!document.hidden) nextTestimonial(); }, 6000);
             
             // Navbar scroll
             const nav = document.getElementById('navbar');
-            window.addEventListener('scroll', () => nav.classList.toggle('nav-scrolled', window.scrollY > 30));
+            window.addEventListener('scroll', () => nav.classList.toggle('nav-scrolled', window.scrollY > 40));
             
-            console.log('%c[Mobile Fix] Сайт теперь корректно масштабируется на мобильных устройствах.', 'color:#14b8a6');
-        }
-        
-        function showAppointmentModal() {
-            document.getElementById('appointment-modal').classList.remove('hidden');
-            document.getElementById('appointment-modal').classList.add('flex');
-        }
-        function closeAppointmentModal() {
-            const m = document.getElementById('appointment-modal');
-            m.classList.remove('flex');
-            m.classList.add('hidden');
-        }
-        function submitAppointment(e) {
-            e.preventDefault();
-            alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
-            closeAppointmentModal();
+            console.log('%c[HipKnee Pro] Продвинутая профессиональная версия с новой цветовой гаммой загружена.', 'color:#0F766E');
         }
         
         window.onload = initialize;
