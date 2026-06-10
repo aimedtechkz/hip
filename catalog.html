@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог эндопротезов тазобедренного и коленного суставов</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #0ea5e9, #0284c8);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка -->
+    <header class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">O</span>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">OrthoMed</h1>
+                    <p class="text-xs text-gray-500 -mt-1">Медицинские имплантаты</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-x-8 text-sm font-medium">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Главная</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Тазобедренный сустав</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Коленный сустав</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Инструментарий</a>
+            </nav>
+        </div>
+    </header>
 
+    <div class="max-w-7xl mx-auto px-6 py-10">
+        <!-- Заголовок страницы -->
+        <div class="mb-10">
+            <h2 class="text-4xl font-bold text-gray-900 tracking-tight">Каталог компонентов<br>эндопротезов</h2>
+            <p class="mt-3 text-lg text-gray-600 max-w-2xl">Высококачественные имплантаты и инструменты для эндопротезирования тазобедренного и коленного суставов</p>
+        </div>
+
+        <!-- Секция 1: Металлические головки -->
+        <div class="mb-16">
+            <h3 class="section-title text-2xl font-semibold mb-6">Металлические головки бедренной кости</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Фото 1 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo1.jpg" alt="Четыре металлические сферические головки эндопротеза тазобедренного сустава хромированного цвета" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold text-lg">Металлические головки (набор)</h4>
+                        <p class="text-sm text-gray-600 mt-1">Хромированные сферические головки для эндопротеза тазобедренного сустава. Различные диаметры.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 2: Бедренные ножки -->
+        <div class="mb-16">
+            <h3 class="section-title text-2xl font-semibold mb-6">Бедренные ножки эндопротеза</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Фото 3 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo3.jpg" alt="Бедренная ножка эндопротеза с модульным соединением и маркировкой" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Модульная бедренная ножка</h4>
+                        <p class="text-sm text-gray-600 mt-1">Современная конструкция с возможностью модульной сборки.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 5 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo5.jpg" alt="Бедренная ножка эндопротеза с покрытием" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Бедренная ножка (цементная/бесцементная)</h4>
+                        <p class="text-sm text-gray-600 mt-1">С покрытием для надежной фиксации.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 6 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo6.jpg" alt="Бедренная ножка эндопротеза" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Бедренная ножка</h4>
+                        <p class="text-sm text-gray-600 mt-1">Стандартная модель для тотального эндопротезирования.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 9 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo9.jpg" alt="Полированная бедренная ножка эндопротеза" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Полированная бедренная ножка</h4>
+                        <p class="text-sm text-gray-600 mt-1">Премиум-класс с зеркальной полировкой.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 3: Ацетабулярные компоненты -->
+        <div class="mb-16">
+            <h3 class="section-title text-2xl font-semibold mb-6">Ацетабулярные чашки и компоненты</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Фото 4 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo4.jpg" alt="Ацетабулярная чашка с винтами, полиэтиленовый вкладыш и металлическая головка" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Ацетабулярная система (чашка + вкладыш + головка)</h4>
+                        <p class="text-sm text-gray-600 mt-1">Полный комплект с фиксацией винтами.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 8 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo8.jpg" alt="Биполярный или модульный ацетабулярный компонент" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Биполярный / модульный компонент</h4>
+                        <p class="text-sm text-gray-600 mt-1">Современная конструкция для повышенной стабильности.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 4: Наборы и инструменты -->
+        <div class="mb-16">
+            <h3 class="section-title text-2xl font-semibold mb-6">Хирургические наборы и инструментарий</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Фото 10 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo10.jpg" alt="Хирургический набор ацетабулярных чашек с инструментами" class="w-full h-80 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Набор ацетабулярных чашек (ACETABULAR CUP SET)</h4>
+                        <p class="text-sm text-gray-600 mt-1">Полный стерильный набор для установки ацетабулярного компонента.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 13 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo13.jpg" alt="Набор металлических головок и хирургических инструментов" class="w-full h-80 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Набор головок и инструментов</h4>
+                        <p class="text-sm text-gray-600 mt-1">Различные размеры металлических головок и вспомогательные инструменты.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 5: Коленный сустав -->
+        <div>
+            <h3 class="section-title text-2xl font-semibold mb-6">Триалы и инструменты для коленного сустава</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Фото 11 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo11.jpg" alt="Цветные пробные компоненты (триалы) для эндопротезирования коленного сустава разных размеров" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Триалы для коленного сустава (цветовая кодировка)</h4>
+                        <p class="text-sm text-gray-600 mt-1">Размеры от 8 мм до 16 мм. Удобная цветовая маркировка.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 12 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo12.jpg" alt="Дополнительные триалы и инструменты для коленного эндопротеза" class="w-full h-72 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Набор триалов для коленного сустава</h4>
+                        <p class="text-sm text-gray-600 mt-1">Полный комплект пробных компонентов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Дополнительные фото (общие коллекции) -->
+        <div class="mt-16">
+            <h3 class="section-title text-2xl font-semibold mb-6">Общие коллекции компонентов</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Фото 2 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo2.jpg" alt="Полная коллекция компонентов эндопротеза тазобедренного сустава: ножки, головки, чашки, вкладыши" class="w-full h-80 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Полная коллекция компонентов тазобедренного сустава</h4>
+                        <p class="text-sm text-gray-600 mt-1">Ножки, головки, ацетабулярные чашки и вкладыши.</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 7 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden border">
+                    <img src="images/photo7.jpg" alt="Различные компоненты эндопротеза тазобедренного сустава" class="w-full h-80 object-contain bg-white p-6">
+                    <div class="px-6 pb-6">
+                        <h4 class="font-semibold">Набор компонентов эндопротеза</h4>
+                        <p class="text-sm text-gray-600 mt-1">Разнообразные модели ножек и соединительных элементов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
+            © 2026 OrthoMed — профессиональные имплантаты для ортопедии
+        </div>
+    </footer>
+</body>
+</html>
