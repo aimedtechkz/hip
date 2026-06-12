@@ -87,43 +87,38 @@
     </nav>
 
     <!-- HERO -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0C]/95 backdrop-blur-lg border-b border-white/10">
-        <div class="max-w-screen-2xl mx-auto px-8 lg:px-12">
-            <div class="flex items-center justify-between h-20">
+    <header class="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[#0A0A0B]">
+            <img src="https://picsum.photos/id/1015/2000/1200" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity" alt="Современная ортопедическая хирургия" decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0B] via-[#0A0A0B]/95 to-[#0A0A0B]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-screen-2xl mx-auto px-8 lg:px-16 pt-12 pb-20 text-center">
+            <div class="max-w-5xl mx-auto">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 mb-8">
+                    <div class="w-1.5 h-1.5 bg-[#C9A227] rounded-full animate-pulse"></div>
+                    <span class="text-xs tracking-[2px] font-mono text-white/70">ПРЕМИАЛЬНЫЙ ПРОИЗВОДИТЕЛЬ ОРТОПЕДИЧЕСКИХ ИМПЛАНТОВ ТУРЦИИ</span>
+                </div>
+
+                <h1 class="text-6xl md:text-7xl lg:text-[5.25rem] leading-[0.96] tracking-[-3.5px] font-bold heading-serif mb-6">
+                    Точность.<br>Надёжность.<br>
+                    <span class="gold-accent">Долговечные результаты.</span>
+                </h1>
                 
-                <!-- Логотип -->
-                <a href="index.html" class="flex items-center gap-x-3 group">
-                    <img 
-                        src="images/logo.jpg" 
-                        alt="HIP KNEE MEDICAL QAZAQSTAN" 
-                        class="h-11 w-auto transition-transform group-hover:scale-105"
-                    >
-                </a>
-    
-                <!-- Навигация -->
-                <nav class="hidden md:flex items-center gap-x-9 text-sm font-medium">
-                    <a href="#about" class="hover:text-[#C9A227] transition-colors">О компании</a>
-                    <a href="#solutions" class="hover:text-[#C9A227] transition-colors">Решения</a>
-                    <a href="#technology" class="hover:text-[#C9A227] transition-colors">Технологии</a>
-                    <a href="#why-us" class="hover:text-[#C9A227] transition-colors">Почему мы</a>
-                    <a href="#exhibitions" class="hover:text-[#C9A227] transition-colors">Выставки</a>
-                    <a href="catalog.html" class="hover:text-[#C9A227] transition-colors">Каталог</a>
-                </nav>
-    
-                <div class="flex items-center gap-x-4">
-                    <button onclick="showContactModal()" 
-                            class="px-6 py-2.5 text-sm font-semibold border border-white/20 hover:bg-white/5 rounded-full transition-all">
-                        Связаться с нами
+                <p class="max-w-2xl mx-auto text-xl md:text-2xl text-white/70 font-light tracking-tight mb-10">
+                    Инновационные решения для эндопротезирования тазобедренного и коленного суставов, 
+                    созданные с более чем 20-летним опытом.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="document.getElementById('solutions').scrollIntoView({ behavior: 'smooth' })" 
+                            class="modern-btn px-9 py-4 text-base font-semibold border border-white/40 hover:bg-white hover:text-[#0A0A0B] rounded-full flex items-center justify-center gap-x-3 transition-all">
+                        Посмотреть решения
                     </button>
                     
-                    <a href="catalog.html" 
-                       class="hidden md:block px-6 py-2.5 text-sm font-semibold bg-[#C9A227] hover:bg-[#B38B1F] text-black rounded-full transition-all">
-                        Смотреть каталог
+                    <a href="catalog.html" class="modern-btn modern-btn-gold px-9 py-4 text-base font-semibold rounded-full flex items-center justify-center gap-x-3 shadow-xl">
+                        Посмотреть каталог продукции
                     </a>
-    
-                    <button class="md:hidden p-2" onclick="toggleMobileMenu()">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
                 </div>
             </div>
         </div>
