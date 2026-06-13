@@ -769,6 +769,24 @@
             }, 4800);
         }
 
+        function showLogoThanks() {
+                const toast = document.getElementById('success-toast');
+                document.getElementById('toast-message').innerHTML = `Спасибо! <strong>Вы нажали на логотип HIP KNEE MEDICAL QAZAQSTAN</strong>. Добро пожаловать — мы рады, что вы с нами.`;
+                toast.style.display = 'flex';
+                toast.classList.remove('hidden');
+                   
+                setTimeout(() => {
+                    toast.style.transition = 'all 0.4s ease';
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transition = '';
+                        toast.style.display = 'none';
+                        toast.classList.add('hidden');
+                    }, 400);
+                }, 3500);
+            }
+
         function initializeSite() {
             initializeTailwind();
             initNavbar();
