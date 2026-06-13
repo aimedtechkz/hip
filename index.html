@@ -421,37 +421,43 @@
 
     <!-- EXHIBITIONS -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
-                <div class="group overflow-hidden rounded-2xl border border-white/10">
-                    <img src="images/exhibition1.jpg" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" alt="Общий вид стенда Pro Implant на Medica">
-                </div>
-                <div class="group overflow-hidden rounded-2xl border border-white/10">
-                    <img src="images/exhibition2.jpg" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" alt="Обсуждение с посетителями на стенде">
-                </div>
-                <div class="group overflow-hidden rounded-2xl border border-white/10">
-                    <img src="images/exhibition3.jpg" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" alt="Инструментальные наборы на выставке">
-                </div>
-                <div class="group overflow-hidden rounded-2xl border border-white/10">
-                    <img src="images/exhibition4.jpg" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" alt="Обсуждение с посетителями на стенде">
-                </div>
+            <!-- 1. Фото -->
+            <div class="group overflow-hidden rounded-2xl border border-white/10">
+                <img src="images/exhibition1.jpg" 
+                     class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" 
+                     alt="Общий вид стенда Pro Implant на Medica">
             </div>
-   
-            <!-- Видео -->
-            <div class="max-w-4xl mx-auto mt-6">
-                <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                    <video
-                        controls
-                        playsinline
-                        preload="metadata"
-                        class="w-full rounded-3xl aspect-video"
-                        <source src="videos/exhibition.video.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает воспроизведение видео.
-                    </video>
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent px-8 py-6">
-                        <div>
-                            <div class="text-[#C9A227] font-semibold">Видео с нашего стенда на Medica</div>
-                            <div class="text-white/80 text-sm">Hall 10, Booth B77 • Показ продукции и инструментов</div>
-                        </div>
-                    </div>
+    
+            <!-- 2. Фото -->
+            <div class="group overflow-hidden rounded-2xl border border-white/10">
+                <img src="images/exhibition2.jpg" 
+                     class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" 
+                     alt="Обсуждение с посетителями на стенде">
+            </div>
+    
+            <!-- 3. Фото -->
+            <div class="group overflow-hidden rounded-2xl border border-white/10">
+                <img src="images/exhibition3.jpg" 
+                     class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" 
+                     alt="Инструментальные наборы на выставке">
+            </div>
+    
+            <!-- 4. ВИДЕО (четвёртым в ряду) -->
+            <div class="group overflow-hidden rounded-2xl border border-white/10 relative">
+                <video
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="w-full h-64 object-cover rounded-2xl"
+                    poster="https://picsum.photos/id/1015/800/600">
+                    <source src="videos/exhibition.video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает воспроизведение видео.
+                </video>
+    
+                <!-- Компактная подпись внизу -->
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent px-4 py-3 rounded-b-2xl">
+                    <div class="text-[#C9A227] text-xs font-semibold">Видео с нашего стенда на Medica</div>
+                    <div class="text-white/80 text-[10px]">Hall 10, Booth B77 • Показ продукции и инструментов</div>
                 </div>
             </div>
         </div>
