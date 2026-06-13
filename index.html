@@ -767,25 +767,6 @@
             }, 4800);
         }
 
-        function showLogoThanks() {
-            const logo = document.getElementById('logo');
-            if (!logo) return;
-        
-            const originalHTML = logo.innerHTML;
-        
-            // Показываем "Спасибо" прямо на месте логотипа
-            logo.innerHTML = `
-                <div class="flex flex-col">
-                    <span class="text-2xl font-bold tracking-[-2px] heading-serif text-[#C9A227]">Спасибо!</span>
-                    <span class="text-sm text-white/80 -mt-0.5">что зашли к нам ❤️</span>
-                </div>
-            `;
-        
-            setTimeout(() => {
-                logo.innerHTML = originalHTML;
-            }, 2200);
-        }
-
         function initializeSite() {
             initializeTailwind();
             initNavbar();
