@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Полный каталог компонентов эндопротезов тазобедренного и коленного суставов HIP KNEE MEDICAL QAZAQSTAN | Pro Implant. Реальные фотографии и технические характеристики.">
-    <meta property="og:title" content="Каталог продукции | HIP KNEE MEDICAL QAZAQSTAN | Pro Implant">
-    <meta property="og:description" content="Премиальные компоненты для эндопротезирования тазобедренного и коленного суставов. Высокоточные имплантаты и хирургические инструменты.">
-    <meta property="og:image" content="attachments/photo10.jpeg">
+    <meta name="description" content="Полный каталог хирургических инструментов и компонентов эндопротезов тазобедренного и коленного суставов | HIP KNEE MEDICAL QAZAQSTAN | Pro Implant. Реальные фотографии наборов.">
+    <meta property="og:title" content="Каталог инструментов и компонентов | HIP KNEE MEDICAL QAZAQSTAN">
+    <meta property="og:description" content="Профессиональные хирургические наборы и имплантаты. Реальные фото инструментов и компонентов.">
+    <meta property="og:image" content="images/Ace_4-removebg-preview.png">
     <meta property="og:url" content="https://hipkneemedicalqazaqstan.com/catalog.html">
     <meta name="theme-color" content="#0A0A0B">
-    <title>Каталог продукции | HIP KNEE MEDICAL QAZAQSTAN | Pro Implant</title>
+    <title>Каталог инструментов и компонентов | HIP KNEE MEDICAL QAZAQSTAN | Pro Implant</title>
   
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,9 +26,6 @@
             font-weight: 700;
             letter-spacing: -0.025em;
         }
-        .gold-accent {
-            color: #C9A227;
-        }
         .premium-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid #1F2937;
@@ -38,25 +35,11 @@
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
             border-color: #C9A227;
         }
-        .section-title {
-            position: relative;
-            display: inline-block;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, #C9A227, #B8971F);
-            border-radius: 3px;
-        }
         .product-img {
             transition: transform 0.5s ease;
         }
         .premium-card:hover .product-img {
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
         .filter-btn {
             transition: all 0.2s ease;
@@ -80,7 +63,7 @@
     <nav class="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
             <div class="flex items-center gap-x-4">
-                <a href="index.html" class="flex items-center gap-x-3">
+                <a href="#" class="flex items-center gap-x-3">
                     <div>
                         <span class="text-2xl font-bold heading-serif tracking-[-1.5px]">HIP KNEE MEDICAL QAZAQSTAN</span>
                         <span class="ml-2 text-xs font-mono tracking-[2px] text-[#C9A227]">PRO IMPLANT</span>
@@ -89,10 +72,6 @@
             </div>
           
             <div class="flex items-center gap-x-4">
-                <a href="index.html" class="hidden md:flex items-center gap-x-2 text-sm hover:text-[#C9A227] transition-colors">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>На главную</span>
-                </a>
                 <button onclick="showContactModal()"
                         class="px-6 py-2.5 bg-[#C9A227] hover:bg-[#B8971F] text-[#0A0A0B] text-sm font-semibold rounded-full transition-all flex items-center gap-x-2">
                     <i class="fa-solid fa-envelope"></i>
@@ -101,15 +80,16 @@
             </div>
         </div>
     </nav>
+
     <!-- Header -->
     <div class="max-w-7xl mx-auto px-6 pt-10 pb-6">
         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div class="max-w-2xl">
                 <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-[#C9A227]/10 text-[#C9A227] text-xs font-semibold tracking-[1.5px] mb-4">
-                    ПОЛНЫЙ КАТАЛОГ • РЕАЛЬНАЯ ПРОДУКЦИЯ • 15+ ФОТОГРАФИЙ
+                    РЕАЛЬНЫЕ ФОТОГРАФИИ • ПРОФЕССИОНАЛЬНЫЕ НАБОРЫ
                 </div>
-                <h1 class="text-5xl md:text-6xl font-bold heading-serif tracking-[-2px]">Каталог компонентов</h1>
-                <p class="mt-4 text-xl text-white/70">Высокоточные имплантаты и инструменты для эндопротезирования тазобедренного и коленного суставов. Реальные фотографии продукции.</p>
+                <h1 class="text-5xl md:text-6xl font-bold heading-serif tracking-[-2px]">Каталог инструментов и компонентов</h1>
+                <p class="mt-4 text-xl text-white/70">Хирургические наборы и имплантаты для эндопротезирования тазобедренного и коленного суставов. Реальные фотографии продукции.</p>
             </div>
            
             <!-- Search -->
@@ -117,18 +97,19 @@
                 <div class="relative">
                     <input type="text" id="search-input"
                            class="w-full bg-[#111114] border border-white/20 focus:border-[#C9A227] rounded-2xl pl-12 py-3.5 text-sm outline-none placeholder:text-white/40"
-                           placeholder="Поиск по названию или характеристикам...">
+                           placeholder="Поиск по названию набора...">
                     <i class="fa-solid fa-search absolute left-5 top-4 text-white/40"></i>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Filters -->
     <div class="max-w-7xl mx-auto px-6 pb-8">
         <div class="flex flex-wrap gap-3" id="filters">
             <button onclick="filterProducts('all')" class="filter-btn active px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl flex items-center gap-x-2" data-filter="all">
                 <i class="fa-solid fa-th-large"></i>
-                <span>Все продукты</span>
+                <span>Все наборы</span>
             </button>
             <button onclick="filterProducts('hip')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl flex items-center gap-x-2" data-filter="hip">
                 <i class="fa-solid fa-bone"></i>
@@ -144,23 +125,23 @@
             </button>
         </div>
     </div>
-    <!-- Products Grid - All real photos (15 products) -->
+
+    <!-- Products Grid -->
     <div class="max-w-7xl mx-auto px-6 pb-16">
         <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-           
-            <!-- ========== HIP PRODUCTS (9 cards) ========== -->
-            <!-- 1. Metal heads -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Металлические головки (набор)">
+            
+            <!-- 1. Acetabular Cup Reamer Set -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор ацетабулярных разверток">
                 <div class="relative">
-                    <img src="images/photo1.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Металлические сферические головки эндопротеза тазобедренного сустава - набор хромированных головок" loading="lazy">
+                    <img src="images/Acetabular Cup Reamer Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Набор ацетабулярных разверток ACETABULAR CUP SET" loading="lazy">
                     <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Металлические головки (набор)</h3>
-                    <p class="text-white/70 text-sm mb-4">Хромированные сферические головки различных диаметров. Высокоточная полировка поверхности.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор ацетабулярных разверток (ACETABULAR CUP SET)</h3>
+                    <p class="text-white/70 text-sm mb-4">Полный набор ацетабулярных чашек, разверток и инструментов для подготовки вертлужной впадины.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">CoCrMo</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">22–36 мм</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Развертки разных размеров</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Синие рукоятки</span>
                     </div>
                     <button onclick="showProductDetail(0)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -168,18 +149,18 @@
                 </div>
             </div>
 
-            <!-- 2. Modular stem -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Модульная бедренная ножка">
+            <!-- 2. Ace_4 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор инструментов Ace_4">
                 <div class="relative">
-                    <img src="images/photo3.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Модульная бедренная ножка эндопротеза тазобедренного сустава" loading="lazy">
+                    <img src="images/Ace_4-removebg-preview.png" class="product-img w-full h-64 object-contain bg-black p-4" alt="Хирургический набор инструментов для тазобедренного сустава Ace_4" loading="lazy">
                     <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Модульная бедренная ножка</h3>
-                    <p class="text-white/70 text-sm mb-4">Модульная конструкция с возможностью ревизионной замены и отличной первичной стабильностью.</p>
+                    <h3 class="font-semibold text-xl mb-2">Хирургический набор Ace_4</h3>
+                    <p class="text-white/70 text-sm mb-4">Профессиональный набор инструментов с синими рукоятками для операций на тазобедренном суставе.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Титан / CoCrMo</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Пористое покрытие</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Синие эргономичные рукоятки</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Полный комплект</span>
                     </div>
                     <button onclick="showProductDetail(1)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -187,18 +168,18 @@
                 </div>
             </div>
 
-            <!-- 3. Acetabular set -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Ацетабулярная система (чашка + вкладыш)">
+            <!-- 3. Ace_3 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор ацетабулярных компонентов Ace_3">
                 <div class="relative">
-                    <img src="images/photo10.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Ацетабулярная чашка с вкладышем и головкой - набор компонентов" loading="lazy">
+                    <img src="images/Ace_3-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Набор ацетабулярных компонентов и цветных пробных головок" loading="lazy">
                     <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Ацетабулярная система (чашка + вкладыш)</h3>
-                    <p class="text-white/70 text-sm mb-4">Полная система с полиэтиленовым вкладышем и опцией двойной мобильности. Реальный производственный набор.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор ацетабулярных компонентов Ace_3</h3>
+                    <p class="text-white/70 text-sm mb-4">Набор с цветными пробными головками, металлическими сферами и инструментами.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Титан + UHMWPE</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Цементная / Бесцементная</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Цветная кодировка</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Пробные компоненты</span>
                     </div>
                     <button onclick="showProductDetail(2)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -206,18 +187,18 @@
                 </div>
             </div>
 
-            <!-- 4. Acetabular cup with liner -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Ацетабулярная чашка с полиэтиленовым вкладышем">
+            <!-- 4. Ace_2 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор инструментов Ace_2">
                 <div class="relative">
-                    <img src="images/photo8.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Ацетабулярная чашка с белым полиэтиленовым вкладышем" loading="lazy">
+                    <img src="images/Ace_2-removebg-preview.png" class="product-img w-full h-64 object-contain bg-black p-4" alt="Набор инструментов для ацетабулярной чашки Ace_2" loading="lazy">
                     <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Ацетабулярная чашка с вкладышем</h3>
-                    <p class="text-white/70 text-sm mb-4">Металлическая ацетабулярная чашка с высококачественным полиэтиленовым вкладышем.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор инструментов Ace_2</h3>
+                    <p class="text-white/70 text-sm mb-4">Компактный набор с синими рукоятками для работы с ацетабулярными компонентами.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">CoCrMo / Титан</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">UHMWPE вкладыш</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Эргономичные рукоятки</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Высококачественная сталь</span>
                     </div>
                     <button onclick="showProductDetail(3)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -225,18 +206,18 @@
                 </div>
             </div>
 
-            <!-- 5. Acetabular with screw -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Ацетабулярный компонент с винтом">
+            <!-- 5. Bipolar Cup Instrument Set -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор инструментов для биполярной чашки">
                 <div class="relative">
-                    <img src="images/photo4.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Ацетабулярный компонент с фиксирующим винтом и вкладышем" loading="lazy">
+                    <img src="images/Bipolar Cup Instrument Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Набор инструментов для биполярной чашки" loading="lazy">
                     <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Ацетабулярный компонент с винтом</h3>
-                    <p class="text-white/70 text-sm mb-4">Ацетабулярная чашка с фиксирующим винтом и полиэтиленовым вкладышем. Для надёжной фиксации.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор инструментов для биполярной чашки</h3>
+                    <p class="text-white/70 text-sm mb-4">Специализированный набор для установки биполярных чашек с фиолетовыми рукоятками.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Титан</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Винтовая фиксация</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Биполярная система</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Фиолетовые рукоятки</span>
                     </div>
                     <button onclick="showProductDetail(4)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -244,18 +225,18 @@
                 </div>
             </div>
 
-            <!-- 6. Polished stem -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Бедренная ножка (полированная)">
+            <!-- 6. Coril Design Rasp Set -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Набор долот и рашпилей Coril Design">
                 <div class="relative">
-                    <img src="images/photo9.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Полированная бедренная ножка эндопротеза тазобедренного сустава" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
+                    <img src="images/Coril Design Rasp Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Набор долот и рашпилей с зелеными держателями Coril Design" loading="lazy">
+                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Бедренная ножка (полированная)</h3>
-                    <p class="text-white/70 text-sm mb-4">Высокополированная бедренная ножка премиум-класса. Отличная биосовместимость.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор долот и рашпилей Coril Design (зеленый)</h3>
+                    <p class="text-white/70 text-sm mb-4">Профессиональный набор долот, рашпилей и инструментов с зелеными силиконовыми держателями.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">CoCrMo</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Высокая полировка</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Зеленые держатели</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">CHISEL BOX</span>
                     </div>
                     <button onclick="showProductDetail(5)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -263,18 +244,18 @@
                 </div>
             </div>
 
-            <!-- 7. Stem with modular neck -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Бедренная ножка с модульной шейкой">
+            <!-- 7. инструменты.тазобедренные1.jpg -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Набор долот CHISEL BOX зеленый">
                 <div class="relative">
-                    <img src="images/photo6.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Бедренная ножка с модульной шейкой для эндопротеза" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
+                    <img src="images/инструменты.тазобедренные1.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Набор долот и инструментов с зелеными держателями CHISEL BOX" loading="lazy">
+                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Бедренная ножка с модульной шейкой</h3>
-                    <p class="text-white/70 text-sm mb-4">Современная модульная бедренная ножка с возможностью регулировки длины и версии.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор долот CHISEL BOX (зеленый)</h3>
+                    <p class="text-white/70 text-sm mb-4">Полный набор долот, рашпилей и вспомогательных инструментов в зеленом исполнении.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Титановый сплав</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Модульная конструкция</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">CHISEL BOX организация</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Зеленые эргономичные держатели</span>
                     </div>
                     <button onclick="showProductDetail(6)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -282,18 +263,18 @@
                 </div>
             </div>
 
-            <!-- 8. Full hip set -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Полный набор компонентов тазобедренного сустава">
+            <!-- 8. T2.jpeg -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Хирургический набор T2 (синий/фиолетовый)">
                 <div class="relative">
-                    <img src="images/photo14.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Полный набор компонентов эндопротеза тазобедренного сустава" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
+                    <img src="images/T2.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Большой хирургический набор инструментов T2 с синими и фиолетовыми держателями" loading="lazy">
+                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Полный набор компонентов тазобедренного сустава</h3>
-                    <p class="text-white/70 text-sm mb-4">Комплексный набор: чашка, вкладыш, головка, ножка и вспомогательные элементы.</p>
+                    <h3 class="font-semibold text-xl mb-2">Хирургический набор T2 (синий/фиолетовый)</h3>
+                    <p class="text-white/70 text-sm mb-4">Большой профессиональный набор ремеров, разверток, рашпилей и инструментов с цветовой кодировкой.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
+                        <span class="px-3 py-1 bg-white/5 rounded">Цветовая кодировка</span>
                         <span class="px-3 py-1 bg-white/5 rounded">Полный комплект</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Первичный + ревизионный</span>
                     </div>
                     <button onclick="showProductDetail(7)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -301,18 +282,18 @@
                 </div>
             </div>
 
-            <!-- 9. Acetabular components set -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор ацетабулярных компонентов">
+            <!-- 9. t2 set.jpeg -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Набор T2 Set (расширенный)">
                 <div class="relative">
-                    <img src="images/photo13.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Набор ацетабулярных компонентов и инструментов" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ТАЗОБЕДРЕННЫЙ</div>
+                    <img src="images/t2 set.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Расширенный набор инструментов T2 с ремерами и рукоятками" loading="lazy">
+                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Набор ацетабулярных компонентов</h3>
-                    <p class="text-white/70 text-sm mb-4">Полный набор ацетабулярных чашек, вкладышей и инструментов для установки.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор T2 Set (расширенный)</h3>
+                    <p class="text-white/70 text-sm mb-4">Расширенная версия набора T2 с дополнительными ремерами, развертками и инструментами.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Титан + UHMWPE</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">С цветовой кодировкой</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">PROXIMAL BODY REAMER</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Разные диаметры</span>
                     </div>
                     <button onclick="showProductDetail(8)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -320,19 +301,18 @@
                 </div>
             </div>
 
-            <!-- ========== KNEE PRODUCTS (3 cards) ========== -->
-            <!-- 10. Knee trials color -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="Триалы для коленного сустава (цветовая кодировка)">
+            <!-- 10. инструменты.тазобедренные2.jpg -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Набор инструментов для тазобедренного сустава (детальный)">
                 <div class="relative">
-                    <img src="images/photo12.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Цветные пробные компоненты (триалы) для коленного сустава - цветовая кодировка размеров" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">КОЛЕННЫЙ</div>
+                    <img src="images/инструменты.тазобедренные2.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Детальный вид набора инструментов для тазобедренного сустава" loading="lazy">
+                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Триалы для коленного сустава (цветовая кодировка)</h3>
-                    <p class="text-white/70 text-sm mb-4">Полный набор цветокодированных триалов для точной интраоперационной примерки. Размеры 8–16 мм.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор инструментов для тазобедренного сустава (детальный)</h3>
+                    <p class="text-white/70 text-sm mb-4">Профессиональный набор с синими и фиолетовыми держателями, включая ремеры и рукоятки.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Хирургическая сталь</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Цветовая маркировка</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">PROXIMAL BODY REAMER</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Высокоточные инструменты</span>
                     </div>
                     <button onclick="showProductDetail(9)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -340,18 +320,18 @@
                 </div>
             </div>
 
-            <!-- 11. Full knee trials set -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="Полный набор триалов коленного сустава">
+            <!-- 11. WhatsApp Görsel -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Набор долот и инструментов (зеленый, детальный)">
                 <div class="relative">
-                    <img src="images/photo11.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Полный набор триалов для коленного сустава с цветовой кодировкой" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">КОЛЕННЫЙ</div>
+                    <img src="images/WhatsApp Görsel 2025-10-31 saat 13.37.16_797aca3a.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" alt="Детальный вид набора долот с зелеными держателями" loading="lazy">
+                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Полный набор триалов коленного сустава</h3>
-                    <p class="text-white/70 text-sm mb-4">Стандартизированный набор триалов для первичного и ревизионного эндопротезирования коленного сустава.</p>
+                    <h3 class="font-semibold text-xl mb-2">Набор долот и инструментов (зеленый, детальный)</h3>
+                    <p class="text-white/70 text-sm mb-4">Детальный вид профессионального набора долот, рашпилей и инструментов с зелеными держателями.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Высококачественная сталь</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Модульные лотки</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">CHISEL BOX</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Полный комплект</span>
                     </div>
                     <button onclick="showProductDetail(10)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
                         Подробнее и запросить образцы
@@ -359,89 +339,13 @@
                 </div>
             </div>
 
-            <!-- 12. Knee components -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="Компоненты эндопротеза коленного сустава">
-                <div class="relative">
-                    <img src="images/photo15.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Компоненты эндопротеза коленного сустава - вкладыши и металлические части" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">КОЛЕННЫЙ</div>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Компоненты эндопротеза коленного сустава</h3>
-                    <p class="text-white/70 text-sm mb-4">Металлические и полиэтиленовые компоненты для эндопротезирования коленного сустава.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">CoCrMo + UHMWPE</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Размер 3.5</span>
-                    </div>
-                    <button onclick="showProductDetail(11)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
-                        Подробнее и запросить образцы
-                    </button>
-                </div>
-            </div>
-
-            <!-- ========== INSTRUMENTS (3 cards) ========== -->
-            <!-- 13. Full surgical set -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Полный хирургический набор инструментов">
-                <div class="relative">
-                    <img src="images/photo2.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Полный хирургический набор инструментов и компонентов эндопротезов" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Полный хирургический набор инструментов</h3>
-                    <p class="text-white/70 text-sm mb-4">Эргономичный набор инструментов и компонентов для воспроизводимой техники эндопротезирования.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Немецкая сталь</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Цветовая кодировка</span>
-                    </div>
-                    <button onclick="showProductDetail(12)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
-                        Подробнее и запросить образцы
-                    </button>
-                </div>
-            </div>
-
-            <!-- 14. Heads and instruments set -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Набор головок и инструментов">
-                <div class="relative">
-                    <img src="images/photo7.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Набор металлических головок, стержней и инструментов для эндопротезирования" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Набор головок и инструментов</h3>
-                    <p class="text-white/70 text-sm mb-4">Компактный набор для работы с металлическими головками и ацетабулярными компонентами.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Премиальная сталь</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Стерилизуемый</span>
-                    </div>
-                    <button onclick="showProductDetail(13)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
-                        Подробнее и запросить образцы
-                    </button>
-                </div>
-            </div>
-
-            <!-- 15. Stem insertion instrument -->
-            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="Хирургический инструмент для установки ножки">
-                <div class="relative">
-                    <img src="images/photo5.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-6" alt="Хирургический инструмент для установки бедренной ножки" loading="lazy">
-                    <div class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-[#C9A227]/90 text-[#0A0A0B] rounded">ИНСТРУМЕНТЫ</div>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2">Хирургический инструмент для установки ножки</h3>
-                    <p class="text-white/70 text-sm mb-4">Специализированный инструмент для точной установки бедренной ножки эндопротеза.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-white/5 rounded">Немецкая сталь</span>
-                        <span class="px-3 py-1 bg-white/5 rounded">Эргономичная рукоятка</span>
-                    </div>
-                    <button onclick="showProductDetail(14)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl transition-all">
-                        Подробнее и запросить образцы
-                    </button>
-                </div>
-            </div>
-
         </div>
     </div>
+
     <!-- Final CTA -->
     <div class="max-w-7xl mx-auto px-6 py-16 text-center border-t border-white/10">
-        <h2 class="text-3xl font-semibold mb-4">Нужна помощь с подбором компонентов?</h2>
-        <p class="text-white/70 mb-8 max-w-md mx-auto">Наши клинические специалисты помогут подобрать оптимальные решения под ваши клинические задачи.</p>
+        <h2 class="text-3xl font-semibold mb-4">Нужна помощь с подбором наборов инструментов?</h2>
+        <p class="text-white/70 mb-8 max-w-md mx-auto">Наши специалисты помогут подобрать оптимальные хирургические наборы под ваши задачи.</p>
        
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <button onclick="showContactModal()"
@@ -449,14 +353,11 @@
                 <i class="fa-solid fa-headset"></i>
                 <span>Запросить консультацию</span>
             </button>
-            <a href="index.html"
-               class="px-10 py-4 border border-white/30 hover:bg-white hover:text-[#0A0A0B] font-semibold rounded-2xl text-lg transition-all flex items-center justify-center gap-x-3">
-                Вернуться на главную
-            </a>
         </div>
     </div>
+
     <footer class="bg-black py-8 text-center text-sm text-white/50 border-t border-white/10">
-        © 2026 HIP KNEE MEDICAL QAZAQSTAN | Pro Implant — Вертикально интегрированное производство в Турции. Все фотографии — реальная продукция.
+        © 2026 HIP KNEE MEDICAL QAZAQSTAN | Pro Implant — Реальные фотографии профессиональных хирургических наборов.
     </footer>
 
     <!-- Product Detail Modal -->
@@ -471,12 +372,10 @@
             </div>
            
             <div class="p-8 grid md:grid-cols-2 gap-10">
-                <!-- Image -->
                 <div>
                     <img id="detail-image" class="w-full rounded-2xl object-contain bg-[#0A0A0B] p-6 border border-white/10" alt="">
                 </div>
                
-                <!-- Info -->
                 <div>
                     <h3 id="detail-title" class="text-3xl font-semibold tracking-tight mb-3"></h3>
                     <p id="detail-subtitle" class="text-white/70 text-lg mb-6"></p>
@@ -490,7 +389,7 @@
                         <button onclick="requestQuoteFromModal()"
                                 class="w-full py-4 bg-[#C9A227] hover:bg-[#D4B03A] active:bg-[#B8971F] text-[#0A0A0B] font-semibold rounded-2xl text-base transition flex items-center justify-center gap-x-3">
                             <i class="fa-solid fa-file-medical"></i>
-                            <span>Запросить образцы и коммерческое предложение</span>
+                            <span>Запросить коммерческое предложение</span>
                         </button>
                         <button onclick="hideProductDetailModal()"
                                 class="w-full py-4 border border-white/30 hover:bg-white/5 rounded-2xl text-base transition">
@@ -552,51 +451,31 @@
     </div>
 
     <script>
-        // Tailwind configuration
         function initTailwind() {
-            tailwind.config = { 
-                theme: { 
-                    extend: { 
-                        fontFamily: { 
-                            'serif-premium': ['Playfair Display', 'Georgia', 'serif'] 
-                        } 
-                    } 
-                } 
-            };
+            tailwind.config = { theme: { extend: { fontFamily: { 'serif-premium': ['Playfair Display', 'Georgia', 'serif'] } } } };
         }
 
-        // Complete product data with all 15 real photos
         const products = [
-            // HIP (0-8)
-            { id: 0, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Металлические головки (набор)", subtitle: "Хромированные сферические головки различных диаметров для эндопротеза тазобедренного сустава.", image: "attachments/photo1.jpeg", features: ["Материал: CoCrMo (кобальт-хром-молибден)", "Диаметры: 22, 28, 32, 36 мм", "Высокая полировка поверхности", "Совместимость с цементной и бесцементной фиксацией"] },
-            { id: 1, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная бедренная ножка", subtitle: "Модульная конструкция с возможностью ревизионной замены и отличной первичной стабильностью.", image: "attachments/photo3.jpeg", features: ["Материал: Титановый сплав / CoCrMo", "Пористое плазменное покрытие", "Модульная шейка и проксимальная часть", "Подходит для первичного и ревизионного эндопротезирования"] },
-            { id: 2, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная система (чашка + вкладыш)", subtitle: "Полная ацетабулярная система с полиэтиленовым вкладышем и опцией двойной мобильности.", image: "attachments/photo10.jpeg", features: ["Материал чашки: Титан с пористым покрытием", "Вкладыш: Высокосшитый UHMWPE (витамин E)", "Варианты: стандартная и двойная мобильность", "Цементная и бесцементная фиксация"] },
-            { id: 3, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с полиэтиленовым вкладышем", subtitle: "Металлическая ацетабулярная чашка с высококачественным полиэтиленовым вкладышем.", image: "attachments/photo8.jpeg", features: ["Материал: CoCrMo / Титан", "Вкладыш из UHMWPE", "Высокая износостойкость", "Отличная биосовместимость"] },
-            { id: 4, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярный компонент с винтом", subtitle: "Ацетабулярная чашка с фиксирующим винтом и полиэтиленовым вкладышем для надёжной фиксации.", image: "attachments/photo4.jpeg", features: ["Материал: Титан", "Винтовая фиксация", "Включает полиэтиленовый вкладыш", "Для первичного и ревизионного эндопротезирования"] },
-            { id: 5, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бедренная ножка (полированная)", subtitle: "Высокополированная бедренная ножка премиум-класса с отличной биосовместимостью.", image: "attachments/photo9.jpeg", features: ["Материал: CoCrMo", "Высокая зеркальная полировка", "Минимальное трение", "Долговечность и надёжность"] },
-            { id: 6, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бедренная ножка с модульной шейкой", subtitle: "Современная модульная бедренная ножка с возможностью регулировки длины и версии.", image: "attachments/photo6.jpeg", features: ["Материал: Титановый сплав", "Модульная конструкция", "Возможность ревизии", "Высокая первичная стабильность"] },
-            { id: 7, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Полный набор компонентов тазобедренного сустава", subtitle: "Комплексный набор: чашка, вкладыш, головка, ножка и вспомогательные элементы.", image: "attachments/photo14.jpeg", features: ["Полный комплект для операции", "Первичный и ревизионный варианты", "Все необходимые компоненты", "Высокое качество изготовления"] },
-            { id: 8, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор ацетабулярных компонентов", subtitle: "Полный набор ацетабулярных чашек, вкладышей и инструментов для установки.", image: "attachments/photo13.jpeg", features: ["Титан + UHMWPE", "С цветовой кодировкой размеров", "Полный комплект для хирурга", "Стерилизуемые компоненты"] },
-            // KNEE (9-11)
-            { id: 9, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Триалы для коленного сустава (цветовая кодировка)", subtitle: "Полный набор цветокодированных триалов для точной интраоперационной примерки.", image: "attachments/photo12.jpeg", features: ["Цветовая кодировка по размерам (8–16 мм)", "Материал: Высококачественная хирургическая сталь", "Полная совместимость с системой ProKnee™", "Стерилизуемые и многоразовые"] },
-            { id: 10, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор триалов коленного сустава", subtitle: "Стандартизированный набор триалов для первичного и ревизионного эндопротезирования коленного сустава.", image: "attachments/photo11.jpeg", features: ["Полный набор размеров с цветовой маркировкой", "Модульные лотки с интуитивной маркировкой", "Эргономичная геометрия", "Валидировано для паровой стерилизации"] },
-            { id: 11, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Компоненты эндопротеза коленного сустава", subtitle: "Металлические и полиэтиленовые компоненты для эндопротезирования коленного сустава.", image: "attachments/photo15.jpeg", features: ["CoCrMo + UHMWPE", "Размер 3.5", "Высокая износостойкость", "Анатомическая форма"] },
-            // INSTRUMENTS (12-14)
-            { id: 12, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Полный хирургический набор инструментов", subtitle: "Эргономичный набор инструментов и компонентов для воспроизводимой техники эндопротезирования.", image: "attachments/photo2.jpeg", features: ["Премиальная немецкая хирургическая сталь", "Цветовая кодировка компонентов", "Оптимизировано для миниинвазивных доступов", "Полная валидация стерилизации"] },
-            { id: 13, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор головок и инструментов", subtitle: "Компактный набор для работы с металлическими головками и ацетабулярными компонентами.", image: "attachments/photo7.jpeg", features: ["Высококачественная нержавеющая сталь", "Специальные инструменты для установки головок", "Компактный кейс для стерилизации", "Многоразовое использование"] },
-            { id: 14, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Хирургический инструмент для установки ножки", subtitle: "Специализированный инструмент для точной установки бедренной ножки эндопротеза.", image: "attachments/photo5.jpeg", features: ["Немецкая хирургическая сталь", "Эргономичная рукоятка", "Точная посадка имплантата", "Многоразовый и стерилизуемый"] }
+            { id: 0, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор ацетабулярных разверток (ACETABULAR CUP SET)", subtitle: "Полный профессиональный набор ацетабулярных чашек, разверток и инструментов для подготовки вертлужной впадины.", image: "images/Acetabular Cup Reamer Set.png", features: ["Развертки разных диаметров", "Синие эргономичные рукоятки", "Высококачественная медицинская сталь", "Полный комплект для операции"] },
+            { id: 1, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Хирургический набор Ace_4", subtitle: "Профессиональный набор инструментов с синими рукоятками для операций на тазобедренном суставе.", image: "images/Ace_4-removebg-preview.png", features: ["Синие эргономичные рукоятки", "Полный комплект инструментов", "Высокоточная обработка", "Стерилизуемый набор"] },
+            { id: 2, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор ацетабулярных компонентов Ace_3", subtitle: "Набор с цветными пробными головками, металлическими сферами и инструментами для примерки.", image: "images/Ace_3-removebg-preview.png", features: ["Цветная кодировка размеров", "Пробные компоненты разных диаметров", "Металлические и цветные головки", "Удобная организация в лотке"] },
+            { id: 3, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор инструментов Ace_2", subtitle: "Компактный профессиональный набор с синими рукоятками для работы с ацетабулярными компонентами.", image: "images/Ace_2-removebg-preview.png", features: ["Эргономичные синие рукоятки", "Высококачественная сталь", "Компактный и удобный", "Полный комплект для хирурга"] },
+            { id: 4, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор инструментов для биполярной чашки", subtitle: "Специализированный набор для установки биполярных чашек с фиолетовыми рукоятками.", image: "images/Bipolar Cup Instrument Set.png", features: ["Биполярная система", "Фиолетовые эргономичные рукоятки", "Высокоточные инструменты", "Полный комплект"] },
+            { id: 5, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор долот и рашпилей Coril Design (зеленый)", subtitle: "Профессиональный набор долот, рашпилей и инструментов с зелеными силиконовыми держателями.", image: "images/Coril Design Rasp Set.png", features: ["Зеленые силиконовые держатели", "Высококачественная сталь", "CHISEL BOX система", "Полный комплект для препарирования"] },
+            { id: 6, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор долот CHISEL BOX (зеленый)", subtitle: "Полный набор долот, рашпилей и вспомогательных инструментов в зеленом исполнении.", image: "images/инструменты.тазобедренные1.jpg", features: ["CHISEL BOX организация", "Зеленые эргономичные держатели", "Высокоточная обработка кости", "Стерилизуемый комплект"] },
+            { id: 7, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Хирургический набор T2 (синий/фиолетовый)", subtitle: "Большой профессиональный набор ремеров, разверток, рашпилей и инструментов с цветовой кодировкой.", image: "images/T2.jpeg", features: ["Цветовая кодировка (синий/фиолетовый)", "PROXIMAL BODY REAMER", "Полный комплект ремеров и разверток", "Высококачественная сталь"] },
+            { id: 8, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор T2 Set (расширенный)", subtitle: "Расширенная версия набора T2 с дополнительными ремерами, развертками и инструментами.", image: "images/t2 set.jpeg", features: ["Расширенный комплект", "Разные диаметры ремеров", "PROXIMAL BODY REAMER", "Удобная организация"] },
+            { id: 9, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор инструментов для тазобедренного сустава (детальный)", subtitle: "Профессиональный набор с синими и фиолетовыми держателями, включая ремеры и рукоятки.", image: "images/инструменты.тазобедренные2.jpg", features: ["PROXIMAL BODY REAMER", "Синие и фиолетовые держатели", "Высокоточные инструменты", "Полный хирургический комплект"] },
+            { id: 10, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор долот и инструментов (зеленый, детальный)", subtitle: "Детальный вид профессионального набора долот, рашпилей и инструментов с зелеными держателями.", image: "images/WhatsApp Görsel 2025-10-31 saat 13.37.16_797aca3a.jpg", features: ["CHISEL BOX система", "Зеленые держатели", "Высококачественная сталь", "Полный комплект для операции"] }
         ];
 
-        // Filter functionality
         let currentFilter = 'all';
 
         function filterProducts(category) {
             currentFilter = category;
-           
             document.querySelectorAll('#filters button').forEach(btn => {
                 btn.classList.remove('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
                 btn.classList.add('border-white/30');
-               
                 if ((category === 'all' && btn.dataset.filter === 'all') || btn.dataset.filter === category) {
                     btn.classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
                     btn.classList.remove('border-white/30');
@@ -608,48 +487,33 @@
         function applyFilters() {
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
             const cards = document.querySelectorAll('.product-card');
-            
             cards.forEach(card => {
                 const category = card.dataset.category;
                 const name = card.dataset.name.toLowerCase();
-               
                 const matchesCategory = currentFilter === 'all' || category === currentFilter;
                 const matchesSearch = name.includes(searchTerm);
-                
-                if (matchesCategory && matchesSearch) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.display = (matchesCategory && matchesSearch) ? '' : 'none';
             });
         }
 
         function initSearch() {
-            const searchInput = document.getElementById('search-input');
-            searchInput.addEventListener('input', () => {
-                applyFilters();
-            });
+            document.getElementById('search-input').addEventListener('input', applyFilters);
         }
 
-        // Product detail modal
         let currentProductId = null;
 
         function showProductDetail(id) {
             const product = products[id];
             if (!product) return;
-            
             currentProductId = id;
-            
             document.getElementById('detail-badge').innerHTML = product.badge;
             document.getElementById('detail-title').innerHTML = product.title;
             document.getElementById('detail-subtitle').innerHTML = product.subtitle;
             document.getElementById('detail-image').src = product.image;
-            
             const featuresList = document.getElementById('detail-features');
-            featuresList.innerHTML = product.features.map(f =>
+            featuresList.innerHTML = product.features.map(f => 
                 `<li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A227] mt-1"></i> <span>${f}</span></li>`
             ).join('');
-            
             document.getElementById('product-detail-modal').classList.remove('hidden');
             document.getElementById('product-detail-modal').classList.add('flex');
             document.body.style.overflow = 'hidden';
@@ -667,7 +531,6 @@
             showContactModal();
         }
 
-        // Contact modal functions
         function showContactModal() {
             const modal = document.getElementById('contact-modal');
             modal.classList.remove('hidden');
@@ -688,19 +551,16 @@
             const form = document.getElementById('contact-form');
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            
             btn.innerHTML = `<span class="flex items-center justify-center gap-x-2"><i class="fa-solid fa-spinner fa-spin"></i> ОТПРАВКА...</span>`;
             btn.disabled = true;
-            
+
             setTimeout(() => {
                 hideContactModal();
-               
                 const toast = document.getElementById('success-toast');
                 document.getElementById('toast-message').innerHTML = `Спасибо! Ваш запрос получен. Мы свяжемся с вами в течение 24 часов.`;
                 toast.style.display = 'flex';
                 toast.classList.remove('hidden');
                 form.reset();
-                
                 setTimeout(() => {
                     toast.style.transition = 'all 0.4s ease';
                     toast.style.opacity = '0';
@@ -711,27 +571,21 @@
                         toast.classList.add('hidden');
                     }, 400);
                 }, 4500);
-                
                 btn.innerHTML = originalText;
                 btn.disabled = false;
             }, 900);
         }
 
-        // Initialize everything
         function initializeCatalog() {
             initTailwind();
             initSearch();
-            
-            // Set initial filter to "all"
             const allBtn = document.querySelector('#filters button[data-filter="all"]');
             if (allBtn) allBtn.classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
             
-            // Keyboard support for modals
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     const detailModal = document.getElementById('product-detail-modal');
                     const contactModal = document.getElementById('contact-modal');
-                   
                     if (!detailModal.classList.contains('hidden') && detailModal.classList.contains('flex')) {
                         hideProductDetailModal();
                     } else if (!contactModal.classList.contains('hidden') && contactModal.classList.contains('flex')) {
@@ -739,8 +593,7 @@
                     }
                 }
             });
-            
-            console.log('%c[HIP KNEE MEDICAL QAZAQSTAN] Catalog initialized with all 15 real product photos', 'color:#666');
+            console.log('%c[HIP KNEE MEDICAL QAZAQSTAN] Catalog updated with new instrument photos', 'color:#666');
         }
 
         window.onload = initializeCatalog;
