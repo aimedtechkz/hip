@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог | HIP KNEE MEDICAL QAZAQSTAN</title>
+    <title>Каталог инструментов и имплантатов | HIP KNEE MEDICAL QAZAQSTAN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Inter', system-ui, sans-serif; background: #0A0A0B; color: #F8F8F8; }
         .premium-card { transition: all 0.3s ease; border: 1px solid #1F2937; }
         .premium-card:hover { transform: translateY(-8px); border-color: #C9A227; }
+        .product-img { transition: transform 0.4s ease; }
+        .premium-card:hover .product-img { transform: scale(1.02); }
     </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div>
@@ -27,11 +30,23 @@
     </div>
 </nav>
 
+<!-- Header -->
 <div class="max-w-7xl mx-auto px-6 pt-10 pb-6">
-    <h1 class="text-5xl font-bold heading-serif tracking-[-2px]">Каталог инструментов и компонентов</h1>
-    <p class="mt-4 text-xl text-white/70">Реальные фотографии профессиональных хирургических наборов и имплантатов.</p>
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div>
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-[#C9A227]/10 text-[#C9A227] text-xs font-semibold tracking-[1.5px] mb-4">
+                РЕАЛЬНЫЕ ФОТОГРАФИИ • ПРОФЕССИОНАЛЬНЫЕ НАБОРЫ
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold heading-serif tracking-[-2px]">Каталог инструментов и компонентов</h1>
+            <p class="mt-4 text-xl text-white/70 max-w-2xl">Хирургические наборы и имплантаты для эндопротезирования тазобедренного и коленного суставов. Реальные фотографии.</p>
+        </div>
+        <div class="w-full lg:w-96">
+            <input type="text" id="search-input" placeholder="Поиск по названию..." class="w-full bg-[#111114] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
+        </div>
+    </div>
 </div>
 
+<!-- Filters -->
 <div class="max-w-7xl mx-auto px-6 pb-8">
     <div class="flex flex-wrap gap-3">
         <button onclick="filterProducts('all')" class="filter-btn active px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl bg-[#C9A227] text-[#0A0A0B]" data-filter="all">Все</button>
@@ -40,14 +55,18 @@
     </div>
 </div>
 
+<!-- Products Grid -->
 <div class="max-w-7xl mx-auto px-6 pb-16">
     <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- ==================== ИНСТРУМЕНТЫ (0-10) ==================== -->
 
         <!-- 0 -->
         <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Набор ацетабулярных разверток">
             <img src="images/Acetabular Cup Reamer Set.png" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор ацетабулярных разверток (ACETABULAR CUP SET)</h3>
+                <p class="text-white/70 text-sm mb-4">Полный набор ацетабулярных чашек, разверток и инструментов.</p>
                 <button onclick="showProductDetail(0)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -57,6 +76,7 @@
             <img src="images/Ace_4-removebg-preview.png" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Хирургический набор Ace_4</h3>
+                <p class="text-white/70 text-sm mb-4">Профессиональный набор с синими рукоятками.</p>
                 <button onclick="showProductDetail(1)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -66,6 +86,7 @@
             <img src="images/Ace_3-removebg-preview.png" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор ацетабулярных компонентов Ace_3</h3>
+                <p class="text-white/70 text-sm mb-4">Набор с цветными пробными головками и металлическими сферами.</p>
                 <button onclick="showProductDetail(2)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -75,6 +96,7 @@
             <img src="images/Ace_2-removebg-preview.png" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор инструментов Ace_2</h3>
+                <p class="text-white/70 text-sm mb-4">Компактный набор с синими рукоятками.</p>
                 <button onclick="showProductDetail(3)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -84,6 +106,7 @@
             <img src="images/Bipolar Cup Instrument Set.png" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор инструментов для биполярной чашки</h3>
+                <p class="text-white/70 text-sm mb-4">Специализированный набор с фиолетовыми рукоятками.</p>
                 <button onclick="showProductDetail(4)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -93,6 +116,7 @@
             <img src="images/Coril Design Rasp Set.png" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор долот и рашпилей Coril Design (зеленый)</h3>
+                <p class="text-white/70 text-sm mb-4">Профессиональный набор с зелеными силиконовыми держателями.</p>
                 <button onclick="showProductDetail(5)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -102,6 +126,7 @@
             <img src="images/инструменты.тазобедренные1.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор долот CHISEL BOX (зеленый)</h3>
+                <p class="text-white/70 text-sm mb-4">Полный набор долот и инструментов в зеленом исполнении.</p>
                 <button onclick="showProductDetail(6)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -111,6 +136,7 @@
             <img src="images/T2.jpeg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Хирургический набор T2 (синий/фиолетовый)</h3>
+                <p class="text-white/70 text-sm mb-4">Большой профессиональный набор ремеров и разверток.</p>
                 <button onclick="showProductDetail(7)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -120,6 +146,7 @@
             <img src="images/t2 set.jpeg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор T2 Set (расширенный)</h3>
+                <p class="text-white/70 text-sm mb-4">Расширенная версия набора T2.</p>
                 <button onclick="showProductDetail(8)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -129,6 +156,7 @@
             <img src="images/инструменты.тазобедренные2.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор инструментов для тазобедренного сустава (детальный)</h3>
+                <p class="text-white/70 text-sm mb-4">Профессиональный набор с синими и фиолетовыми держателями.</p>
                 <button onclick="showProductDetail(9)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -138,15 +166,19 @@
             <img src="images/инструменты.тазобедренные3.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Набор долот и инструментов (зеленый, детальный)</h3>
+                <p class="text-white/70 text-sm mb-4">Детальный вид полного CHISEL BOX комплекта.</p>
                 <button onclick="showProductDetail(10)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
+
+        <!-- ==================== ИМПЛАНТАТЫ ТАЗОБЕДРЕННОГО СУСТАВА (11-24) ==================== -->
 
         <!-- 11 -->
         <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="Dual Mobility">
             <img src="images/ACETABULAR CUP DUAL KAPLI.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Система ацетабулярной чашки Dual Mobility</h3>
+                <p class="text-white/70 text-sm mb-4">Современная система с двойной подвижностью для снижения риска вывиха.</p>
                 <button onclick="showProductDetail(11)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -156,6 +188,7 @@
             <img src="images/Cementless Femoral Stem HA COATED corail type.png" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Бесцементный стержень HA Coated (Corail type)</h3>
+                <p class="text-white/70 text-sm mb-4">С гидроксиапатитовым покрытием для отличной остеоинтеграции.</p>
                 <button onclick="showProductDetail(12)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -165,6 +198,7 @@
             <img src="images/Cemented Femoral Stem.png" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Цементный бедренный стержень</h3>
+                <p class="text-white/70 text-sm mb-4">Классический полированный цементный стержень.</p>
                 <button onclick="showProductDetail(13)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -174,6 +208,7 @@
             <img src="images/MODULER TİP FEMORAL STEM.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Модульная система бедренных компонентов</h3>
+                <p class="text-white/70 text-sm mb-4">Полная модульная система: стержни, проксимальные тела, конусы.</p>
                 <button onclick="showProductDetail(14)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -183,6 +218,7 @@
             <img src="images/Bİ-POLAR CUP.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Биполярная чашка (Bipolar Cup)</h3>
+                <p class="text-white/70 text-sm mb-4">Биполярная система для гемиартропластики.</p>
                 <button onclick="showProductDetail(15)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -192,6 +228,7 @@
             <img src="images/ACETABULAR CUP TAKIM.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Ацетабулярная чашка с винтовой фиксацией + комплект</h3>
+                <p class="text-white/70 text-sm mb-4">Полный комплект: чашка + вкладыш + головка.</p>
                 <button onclick="showProductDetail(16)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -201,6 +238,7 @@
             <img src="images/KÜRELER.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Металлические головки (Femoral Heads)</h3>
+                <p class="text-white/70 text-sm mb-4">Высокоточные металлические головки разных диаметров.</p>
                 <button onclick="showProductDetail(17)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -210,6 +248,7 @@
             <img src="images/ACETABULAR LINER1.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Полиэтиленовые вкладыши (Acetabular Liners)</h3>
+                <p class="text-white/70 text-sm mb-4">Высококачественные полиэтиленовые вкладыши.</p>
                 <button onclick="showProductDetail(18)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -219,6 +258,7 @@
             <img src="images/ACETABULAR CUP VİDA.jpg" class="w-full h-64 object-contain bg-[#0A0A0B] p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Винты для ацетабулярной чашки</h3>
+                <p class="text-white/70 text-sm mb-4">Специальные костные винты для дополнительной фиксации.</p>
                 <button onclick="showProductDetail(19)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -228,6 +268,7 @@
             <img src="images/ÇİMENTOSUZ KALKAR STEM.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Бесцементный стержень с поддержкой калькара</h3>
+                <p class="text-white/70 text-sm mb-4">С усиленной поддержкой проксимального отдела бедра.</p>
                 <button onclick="showProductDetail(20)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -237,6 +278,7 @@
             <img src="images/çimentolu KALKAR DESTEKLİ FEMORAL STEM.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Цементный стержень с поддержкой калькара</h3>
+                <p class="text-white/70 text-sm mb-4">Классический цементный стержень с Calcar поддержкой.</p>
                 <button onclick="showProductDetail(21)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -246,6 +288,7 @@
             <img src="images/MODULER CONE FEMORALSTEM.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Модульные конусы и проксимальные тела</h3>
+                <p class="text-white/70 text-sm mb-4">Отдельные модульные компоненты для индивидуальной сборки.</p>
                 <button onclick="showProductDetail(22)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -255,6 +298,7 @@
             <img src="images/Dual Mobility Cup Cemented.png" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Цементная ацетабулярная чашка Dual Mobility</h3>
+                <p class="text-white/70 text-sm mb-4">Цементная версия чашки с двойной подвижностью.</p>
                 <button onclick="showProductDetail(23)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -264,6 +308,7 @@
             <img src="images/BUTUN URUNLER.jpg" class="w-full h-64 object-contain bg-black p-4">
             <div class="p-6">
                 <h3 class="font-semibold text-xl mb-2">Полная линейка компонентов тазобедренного сустава</h3>
+                <p class="text-white/70 text-sm mb-4">Обзор всей линейки имплантатов: стержни, чашки, головки, вкладыши.</p>
                 <button onclick="showProductDetail(24)" class="w-full py-3 text-sm font-semibold border border-white/30 hover:bg-white hover:text-[#0A0A0B] rounded-2xl">Подробнее и запросить образцы</button>
             </div>
         </div>
@@ -271,69 +316,156 @@
     </div>
 </div>
 
-<!-- Модальное окно -->
+<!-- Final CTA -->
+<div class="max-w-7xl mx-auto px-6 py-16 text-center border-t border-white/10">
+    <h2 class="text-3xl font-semibold mb-4">Нужна помощь с подбором наборов?</h2>
+    <button onclick="showContactModal()" class="px-10 py-4 bg-[#C9A227] hover:bg-[#B8971F] text-[#0A0A0B] font-semibold rounded-2xl text-lg">Запросить консультацию</button>
+</div>
+
+<footer class="bg-black py-8 text-center text-sm text-white/50 border-t border-white/10">
+    © 2026 HIP KNEE MEDICAL QAZAQSTAN | Pro Implant
+</footer>
+
+<!-- Product Detail Modal -->
 <div id="product-detail-modal" onclick="if (event.target.id === 'product-detail-modal') hideProductDetailModal()" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4">
     <div onclick="event.stopImmediatePropagation()" class="max-w-4xl w-full bg-[#111114] rounded-3xl border border-white/20 overflow-hidden">
-        <div class="p-8">
-            <img id="detail-image" class="w-full rounded-2xl mb-6">
-            <h3 id="detail-title" class="text-3xl font-semibold mb-2"></h3>
-            <p id="detail-subtitle" class="text-white/70 mb-6"></p>
-            <ul id="detail-features" class="space-y-2 mb-8"></ul>
-            <button onclick="requestQuoteFromModal()" class="w-full py-4 bg-[#C9A227] text-[#0A0A0B] font-semibold rounded-2xl">Запросить коммерческое предложение</button>
+        <div class="flex justify-between items-center px-8 pt-8 pb-4 border-b border-white/10">
+            <div id="detail-badge" class="px-4 py-1 text-xs font-semibold tracking-wider rounded bg-[#C9A227]/10 text-[#C9A227]"></div>
+            <button onclick="hideProductDetailModal()" class="text-3xl text-white/40 hover:text-white">&times;</button>
+        </div>
+        <div class="p-8 grid md:grid-cols-2 gap-10">
+            <div>
+                <img id="detail-image" class="w-full rounded-2xl object-contain bg-[#0A0A0B] p-6 border border-white/10">
+            </div>
+            <div>
+                <h3 id="detail-title" class="text-3xl font-semibold tracking-tight mb-3"></h3>
+                <p id="detail-subtitle" class="text-white/70 text-lg mb-6"></p>
+                <div class="mb-8">
+                    <h5 class="font-semibold tracking-wider text-xs text-[#C9A227] mb-3">КЛЮЧЕВЫЕ ХАРАКТЕРИСТИКИ</h5>
+                    <ul id="detail-features" class="space-y-2 text-sm text-white/85"></ul>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <button onclick="requestQuoteFromModal()" class="w-full py-4 bg-[#C9A227] hover:bg-[#D4B03A] text-[#0A0A0B] font-semibold rounded-2xl">Запросить коммерческое предложение</button>
+                    <button onclick="hideProductDetailModal()" class="w-full py-4 border border-white/30 hover:bg-white/5 rounded-2xl">Закрыть</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Contact Modal -->
+<div id="contact-modal" onclick="if (event.target.id === 'contact-modal') hideContactModal()" class="hidden fixed inset-0 z-[110] bg-black/90 flex items-center justify-center p-4">
+    <div onclick="event.stopImmediatePropagation()" class="max-w-lg w-full bg-[#111114] rounded-3xl border border-white/20 p-9">
+        <h3 class="text-3xl font-semibold mb-6">Давайте начнём разговор</h3>
+        <form id="contact-form" onsubmit="submitContactForm(event)">
+            <div class="space-y-4">
+                <input type="text" id="form-name" placeholder="Имя и фамилия" required class="w-full bg-[#0A0A0B] border border-white/20 rounded-2xl px-5 py-3 text-sm">
+                <input type="email" id="form-email" placeholder="Email" required class="w-full bg-[#0A0A0B] border border-white/20 rounded-2xl px-5 py-3 text-sm">
+                <textarea id="form-message" rows="4" placeholder="Чем мы можем вам помочь?" class="w-full bg-[#0A0A0B] border border-white/20 rounded-3xl px-5 py-3 text-sm"></textarea>
+            </div>
+            <div class="mt-6 flex gap-4">
+                <button type="button" onclick="hideContactModal()" class="flex-1 py-4 rounded-2xl border border-white/30">Отмена</button>
+                <button type="submit" class="flex-1 py-4 rounded-2xl bg-[#C9A227] text-[#0A0A0B] font-semibold">Отправить запрос</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <script>
-const products = [
-    {id:0, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Набор ацетабулярных разверток", image:"images/Acetabular Cup Reamer Set.png", features:["Полный комплект разверток"]},
-    {id:1, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Хирургический набор Ace_4", image:"images/Ace_4-removebg-preview.png", features:["Синие рукоятки"]},
-    {id:2, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Набор ацетабулярных компонентов Ace_3", image:"images/Ace_3-removebg-preview.png", features:["Цветная кодировка"]},
-    {id:3, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Набор инструментов Ace_2", image:"images/Ace_2-removebg-preview.png", features:["Эргономичные синие рукоятки"]},
-    {id:4, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Набор инструментов для биполярной чашки", image:"images/Bipolar Cup Instrument Set.png", features:["Биполярная система"]},
-    {id:5, category:"instruments", badge:"ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title:"Набор долот и рашпилей Coril Design", image:"images/Coril Design Rasp Set.png", features:["Зеленые держатели"]},
-    {id:6, category:"instruments", badge:"ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title:"Набор долот CHISEL BOX зеленый", image:"images/инструменты.тазобедренные1.jpg", features:["CHISEL BOX организация"]},
-    {id:7, category:"instruments", badge:"ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title:"Хирургический набор T2", image:"images/T2.jpeg", features:["Цветовая кодировка"]},
-    {id:8, category:"instruments", badge:"ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title:"Набор T2 Set расширенный", image:"images/t2 set.jpeg", features:["Расширенный комплект"]},
-    {id:9, category:"instruments", badge:"ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title:"Набор инструментов тазобедренного сустава детальный", image:"images/инструменты.тазобедренные2.jpg", features:["PROXIMAL BODY REAMER"]},
-    {id:10, category:"instruments", badge:"ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title:"Набор долот зеленый детальный", image:"images/инструменты.тазобедренные3.jpg", features:["CHISEL BOX система"]},
-    {id:11, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Система Dual Mobility", image:"images/ACETABULAR CUP DUAL KAPLI.jpg", features:["Двойная подвижность"]},
-    {id:12, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Бесцементный стержень HA Coated (Corail)", image:"images/Cementless Femoral Stem HA COATED corail type.png", features:["HA-покрытие"]},
-    {id:13, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Цементный стержень", image:"images/Cemented Femoral Stem.png", features:["Полированная поверхность"]},
-    {id:14, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Модульная система стержней", image:"images/MODULER TİP FEMORAL STEM.jpg", features:["Полная модульность"]},
-    {id:15, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Биполярная чашка", image:"images/Bİ-POLAR CUP.jpg", features:["Биполярная конструкция"]},
-    {id:16, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Ацетабулярная чашка с винтовой фиксацией", image:"images/ACETABULAR CUP TAKIM.jpg", features:["Полный комплект"]},
-    {id:17, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Металлические головки", image:"images/KÜRELER.jpg", features:["Разные диаметры"]},
-    {id:18, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Полиэтиленовые вкладыши", image:"images/ACETABULAR LINER1.jpg", features:["Высокопрочный UHMWPE"]},
-    {id:19, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Винты для фиксации ацетабулярной чашки", image:"images/ACETABULAR CUP VİDA.jpg", features:["Самонарезающие"]},
-    {id:20, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Бесцементный стержень с поддержкой калькара", image:"images/ÇİMENTOSUZ KALKAR STEM.jpg", features:["Поддержка Calcar"]},
-    {id:21, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Цементный стержень с поддержкой калькара", image:"images/çimentolu KALKAR DESTEKLİ FEMORAL STEM.jpg", features:["Цементная фиксация"]},
-    {id:22, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Модульные конусы и проксимальные тела", image:"images/MODULER CONE FEMORALSTEM.jpg", features:["Модульная система"]},
-    {id:23, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Цементная чашка Dual Mobility", image:"images/Dual Mobility Cup Cemented.png", features:["Цементная версия"]},
-    {id:24, category:"hip", badge:"ТАЗОБЕДРЕННЫЙ СУСТАВ", title:"Полная линейка имплантатов", image:"images/BUTUN URUNLER.jpg", features:["Полный ассортимент"]}
-];
+    const products = [
+        { id: 0, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор ацетабулярных разверток (ACETABULAR CUP SET)", subtitle: "Полный набор ацетабулярных чашек, разверток и инструментов.", image: "images/Acetabular Cup Reamer Set.png", features: ["Развертки разных диаметров", "Синие рукоятки", "Полный комплект"] },
+        { id: 1, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Хирургический набор Ace_4", subtitle: "Профессиональный набор с синими рукоятками.", image: "images/Ace_4-removebg-preview.png", features: ["Синие эргономичные рукоятки", "Полный комплект"] },
+        { id: 2, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор ацетабулярных компонентов Ace_3", subtitle: "Набор с цветными пробными головками.", image: "images/Ace_3-removebg-preview.png", features: ["Цветная кодировка", "Пробные компоненты"] },
+        { id: 3, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор инструментов Ace_2", subtitle: "Компактный набор с синими рукоятками.", image: "images/Ace_2-removebg-preview.png", features: ["Эргономичные синие рукоятки"] },
+        { id: 4, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор инструментов для биполярной чашки", subtitle: "Специализированный набор с фиолетовыми рукоятками.", image: "images/Bipolar Cup Instrument Set.png", features: ["Биполярная система", "Фиолетовые рукоятки"] },
+        { id: 5, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор долот и рашпилей Coril Design (зеленый)", subtitle: "Профессиональный набор с зелеными держателями.", image: "images/Coril Design Rasp Set.png", features: ["Зеленые силиконовые держатели", "CHISEL BOX"] },
+        { id: 6, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор долот CHISEL BOX (зеленый)", subtitle: "Полный набор долот в зеленом исполнении.", image: "images/инструменты.тазобедренные1.jpg", features: ["CHISEL BOX организация", "Зеленые держатели"] },
+        { id: 7, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Хирургический набор T2 (синий/фиолетовый)", subtitle: "Большой профессиональный набор ремеров и разверток.", image: "images/T2.jpeg", features: ["Цветовая кодировка", "PROXIMAL BODY REAMER"] },
+        { id: 8, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор T2 Set (расширенный)", subtitle: "Расширенная версия набора T2.", image: "images/t2 set.jpeg", features: ["Расширенный комплект", "Разные диаметры"] },
+        { id: 9, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор инструментов для тазобедренного сустава (детальный)", subtitle: "Профессиональный набор с синими и фиолетовыми держателями.", image: "images/инструменты.тазобедренные2.jpg", features: ["PROXIMAL BODY REAMER", "Высокоточные инструменты"] },
+        { id: 10, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор долот и инструментов (зеленый, детальный)", subtitle: "Детальный вид полного CHISEL BOX комплекта.", image: "images/инструменты.тазобедренные3.jpg", features: ["CHISEL BOX система", "Зеленые держатели"] },
+        { id: 11, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Система ацетабулярной чашки Dual Mobility", subtitle: "Современная система с двойной подвижностью для снижения риска вывиха.", image: "images/ACETABULAR CUP DUAL KAPLI.jpg", features: ["Dual Mobility технология", "Сниженный риск вывиха"] },
+        { id: 12, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бесцементный стержень HA Coated (Corail type)", subtitle: "С гидроксиапатитовым покрытием для отличной остеоинтеграции.", image: "images/Cementless Femoral Stem HA COATED corail type.png", features: ["HA-покрытие", "Corail дизайн"] },
+        { id: 13, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементный бедренный стержень", subtitle: "Классический полированный цементный стержень.", image: "images/Cemented Femoral Stem.png", features: ["Полированная поверхность", "Цементная фиксация"] },
+        { id: 14, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная система бедренных компонентов", subtitle: "Полная модульная система: стержни, проксимальные тела, конусы.", image: "images/MODULER TİP FEMORAL STEM.jpg", features: ["Полная модульность", "Индивидуальная подгонка"] },
+        { id: 15, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Биполярная чашка (Bipolar Cup)", subtitle: "Биполярная система для гемиартропластики.", image: "images/Bİ-POLAR CUP.jpg", features: ["Биполярная конструкция"] },
+        { id: 16, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с винтовой фиксацией + комплект", subtitle: "Полный комплект: чашка + вкладыш + головка.", image: "images/ACETABULAR CUP TAKIM.jpg", features: ["Винтовая фиксация", "Полный комплект"] },
+        { id: 17, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Металлические головки (Femoral Heads)", subtitle: "Высокоточные металлические головки разных диаметров.", image: "images/KÜRELER.jpg", features: ["Разные диаметры", "Высокопрочный сплав"] },
+        { id: 18, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Полиэтиленовые вкладыши (Acetabular Liners)", subtitle: "Высококачественные полиэтиленовые вкладыши.", image: "images/ACETABULAR LINER1.jpg", features: ["Высокопрочный UHMWPE"] },
+        { id: 19, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Винты для ацетабулярной чашки", subtitle: "Специальные костные винты для дополнительной фиксации.", image: "images/ACETABULAR CUP VİDA.jpg", features: ["Самонарезающие", "Разные длины"] },
+        { id: 20, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бесцементный стержень с поддержкой калькара", subtitle: "С усиленной поддержкой проксимального отдела бедра.", image: "images/ÇİMENTOSUZ KALKAR STEM.jpg", features: ["Поддержка Calcar", "HA покрытие"] },
+        { id: 21, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементный стержень с поддержкой калькара", subtitle: "Классический цементный стержень с Calcar поддержкой.", image: "images/çimentolu KALKAR DESTEKLİ FEMORAL STEM.jpg", features: ["Цементная фиксация", "Calcar поддержка"] },
+        { id: 22, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульные конусы и проксимальные тела", subtitle: "Отдельные модульные компоненты для индивидуальной сборки.", image: "images/MODULER CONE FEMORALSTEM.jpg", features: ["Модульная система"] },
+        { id: 23, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементная ацетабулярная чашка Dual Mobility", subtitle: "Цементная версия чашки с двойной подвижностью.", image: "images/Dual Mobility Cup Cemented.png", features: ["Цементная фиксация", "Dual Mobility"] },
+        { id: 24, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Полная линейка компонентов тазобедренного сустава", subtitle: "Обзор всей линейки имплантатов.", image: "images/BUTUN URUNLER.jpg", features: ["Полный ассортимент"] }
+    ];
 
-function showProductDetail(id) {
-    const p = products.find(x => x.id === id);
-    if (!p) return alert("Продукт не найден");
-    alert("Открыта карточка: " + p.title);
-}
+    function filterProducts(category) {
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+            card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+        });
+    }
 
-function filterProducts(cat) {
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
+    function showProductDetail(id) {
+        const product = products.find(p => p.id === id);
+        if (!product) {
+            alert("Информация о продукте временно недоступна.");
+            return;
+        }
+        document.getElementById('detail-badge').innerHTML = product.badge;
+        document.getElementById('detail-title').innerHTML = product.title;
+        document.getElementById('detail-subtitle').innerHTML = product.subtitle;
+        document.getElementById('detail-image').src = product.image;
+        
+        const featuresList = document.getElementById('detail-features');
+        featuresList.innerHTML = product.features.map(f => 
+            `<li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A227] mt-1"></i> <span>${f}</span></li>`
+        ).join('');
+        
+        document.getElementById('product-detail-modal').classList.remove('hidden');
+        document.getElementById('product-detail-modal').classList.add('flex');
+    }
+
+    function hideProductDetailModal() {
+        const modal = document.getElementById('product-detail-modal');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }
+
+    function requestQuoteFromModal() {
+        hideProductDetailModal();
+        showContactModal();
+    }
+
+    function showContactModal() {
+        document.getElementById('contact-modal').classList.remove('hidden');
+        document.getElementById('contact-modal').classList.add('flex');
+    }
+
+    function hideContactModal() {
+        const modal = document.getElementById('contact-modal');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }
+
+    function submitContactForm(e) {
+        e.preventDefault();
+        alert("Спасибо! Ваш запрос отправлен. Мы свяжемся с вами в ближайшее время.");
+        hideContactModal();
+        e.target.reset();
+    }
+
+    // Поиск
+    document.getElementById('search-input').addEventListener('input', function() {
+        const term = this.value.toLowerCase();
+        document.querySelectorAll('.product-card').forEach(card => {
+            const name = (card.dataset.name || '').toLowerCase();
+            card.style.display = name.includes(term) ? '' : 'none';
+        });
     });
-}
 
-document.getElementById('search-input').addEventListener('input', function() {
-    const term = this.value.toLowerCase();
-    document.querySelectorAll('.product-card').forEach(card => {
-        const name = (card.dataset.name || '').toLowerCase();
-        card.style.display = name.includes(term) ? '' : 'none';
-    });
-});
-
-console.log('%c[HIP KNEE MEDICAL QAZAQSTAN] Все 25 карточек загружены.', 'color:#666');
+    console.log('%c[HIP KNEE MEDICAL QAZAQSTAN] Полный каталог загружен. Все фото учтены.', 'color:#666');
 </script>
 </body>
 </html>
