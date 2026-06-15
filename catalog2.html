@@ -3,296 +3,1208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог реальной продукции | HIP KNEE MEDICAL QAZAQSTAN</title>
+    <meta name="description" content="Полный каталог компонентов эндопротезов тазобедренного и коленного суставов HIP KNEE MEDICAL QAZAQSTAN | Pro Implant. Реальные фотографии и технические характеристики.">
+    <meta property="og:title" content="Каталог продукции | HIP KNEE MEDICAL QAZAQSTAN | Pro Implant">
+    <meta property="og:description" content="Премиальные компоненты для эндопротезирования тазобедренного и коленного суставов. Высокоточные имплантаты и хирургические инструменты.">
+    <meta property="og:image" content="images/TOPLU_KALÇA_DETAY-removebg-preview.png">
+    <meta property="og:url" content="https://hipkneemedicalqazaqstan.kz/catalog.html">
+    <meta name="theme-color" content="#0A0A0B">
+    <title>Каталог продукции | HIP KNEE MEDICAL QAZAQSTAN | Pro Implant</title>
+  
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.025em; }
-        .premium-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #1F2937; }
-        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); border-color: #C9A227; }
-        .product-img { transition: transform 0.5s ease; }
-        .premium-card:hover .product-img { transform: scale(1.03); }
-        .filter-btn.active { background-color: #C9A227; color: #0A0A0B; border-color: #C9A227; }
+      
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+      
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .gold-accent {
+            color: #C9A227;
+        }
+        .premium-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #1F2937;
+        }
+        .premium-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            border-color: #C9A227;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #C9A227, #B8971F);
+            border-radius: 3px;
+        }
+        .product-img {
+            transition: transform 0.5s ease;
+        }
+        .premium-card:hover .product-img {
+            transform: scale(1.04);
+        }
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+        .filter-btn.active {
+            background-color: #C9A227;
+            color: #0A0A0B;
+            border-color: #C9A227;
+        }
+        .product-modal {
+            animation: modalPop 0.2s ease-out forwards;
+        }
+        @keyframes modalPop {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body class="bg-[#0A0A0B] text-[#F8F8F8]">
-
-    <!-- ==================== NAV ==================== -->
+    <!-- NAV -->
     <nav class="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-            <div>
-                <span class="text-2xl font-bold heading-serif tracking-[-1.5px]">HIP KNEE MEDICAL QAZAQSTAN</span>
-                <span class="ml-2 text-xs font-mono tracking-[2px] text-[#C9A227]">PRO IMPLANT</span>
+            <div class="flex items-center gap-x-4">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <div>
+                        <span class="text-2xl font-bold heading-serif tracking-[-1.5px]">HIP KNEE MEDICAL QAZAQSTAN</span>
+                        <span class="ml-2 text-xs font-mono tracking-[2px] text-[#C9A227]">PRO IMPLANT</span>
+                    </div>
+                </a>
             </div>
-            <button onclick="showContactModal()" 
-                    class="px-6 py-2.5 bg-[#C9A227] hover:bg-[#B8971F] text-[#0A0A0B] text-sm font-semibold rounded-full flex items-center gap-x-2">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Связаться с нами</span>
-            </button>
+          
+            <div class="flex items-center gap-x-4">
+                <a href="index.html" class="hidden md:flex items-center gap-x-2 text-sm hover:text-[#C9A227] transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>На главную</span>
+                </a>
+                <button onclick="showContactModal()"
+                        class="px-6 py-2.5 bg-[#C9A227] hover:bg-[#B8971F] text-[#0A0A0B] text-sm font-semibold rounded-full transition-all flex items-center gap-x-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="hidden sm:inline">Связаться с нами</span>
+                </button>
+            </div>
         </div>
     </nav>
-
-    <!-- ==================== HEADER ==================== -->
+    <!-- Header -->
     <div class="max-w-7xl mx-auto px-6 pt-10 pb-6">
         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <div>
+            <div class="max-w-2xl">
                 <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-[#C9A227]/10 text-[#C9A227] text-xs font-semibold tracking-[1.5px] mb-4">
-                    РЕАЛЬНЫЕ ФОТОГРАФИИ • ПРЕМИАЛЬНОЕ КАЧЕСТВО
+                    ПОЛНЫЙ КАТАЛОГ • РЕАЛЬНАЯ ПРОДУКЦИЯ
                 </div>
-                <h1 class="text-5xl md:text-6xl font-bold heading-serif tracking-[-2px]">Каталог реальной продукции</h1>
-                <p class="mt-4 text-xl text-white/70">Все фотографии — реальная продукция со склада</p>
+                <h1 class="text-5xl md:text-6xl font-bold heading-serif tracking-[-2px]">Каталог компонентов</h1>
+                <p class="mt-4 text-xl text-white/70">Высокоточные имплантаты и инструменты для эндопротезирования тазобедренного и коленного суставов. Реальные фотографии продукции.</p>
             </div>
-
-            <!-- Поиск -->
+           
+            <!-- Search -->
             <div class="w-full lg:w-96">
                 <div class="relative">
-                    <input type="text" id="search-input" 
-                           class="w-full bg-[#111114] border border-white/20 focus:border-[#C9A227] rounded-2xl pl-12 py-3.5 text-sm outline-none"
-                           placeholder="Поиск по названию...">
+                    <input type="text" id="search-input"
+                           class="w-full bg-[#111114] border border-white/20 focus:border-[#C9A227] rounded-2xl pl-12 py-3.5 text-sm outline-none placeholder:text-white/40"
+                           placeholder="Поиск по названию или характеристикам...">
                     <i class="fa-solid fa-search absolute left-5 top-4 text-white/40"></i>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- ==================== ФИЛЬТРЫ ==================== -->
+    <!-- Filters -->
     <div class="max-w-7xl mx-auto px-6 pb-8">
         <div class="flex flex-wrap gap-3" id="filters">
-            <button onclick="filterProducts('all')" class="filter-btn active px-6 py-2.5 text-sm font-medium border border-white/30 rounded-2xl flex items-center gap-x-2" data-filter="all">
-                <i class="fa-solid fa-th-large"></i> <span>Все продукты</span>
+            <button onclick="filterProducts('all')" class="filter-btn active px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl flex items-center gap-x-2" data-filter="all">
+                <i class="fa-solid fa-th-large"></i>
+                <span>Все продукты</span>
             </button>
-            <button onclick="filterProducts('hip')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 rounded-2xl flex items-center gap-x-2" data-filter="hip">
-                <i class="fa-solid fa-bone"></i> <span>Тазобедренный сустав</span>
+            <button onclick="filterProducts('hip')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl flex items-center gap-x-2" data-filter="hip">
+                <i class="fa-solid fa-bone"></i>
+                <span>Тазобедренный сустав</span>
             </button>
-            <button onclick="filterProducts('knee')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 rounded-2xl flex items-center gap-x-2" data-filter="knee">
-                <i class="fa-solid fa-walking"></i> <span>Коленный сустав</span>
+            <button onclick="filterProducts('knee')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl flex items-center gap-x-2" data-filter="knee">
+                <i class="fa-solid fa-walking"></i>
+                <span>Коленный сустав</span>
             </button>
-            <button onclick="filterProducts('instruments')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 rounded-2xl flex items-center gap-x-2" data-filter="instruments">
-                <i class="fa-solid fa-tools"></i> <span>Хирургические инструменты</span>
+            <button onclick="filterProducts('instruments')" class="filter-btn px-6 py-2.5 text-sm font-medium border border-white/30 hover:border-white/60 rounded-2xl flex items-center gap-x-2" data-filter="instruments">
+                <i class="fa-solid fa-tools"></i>
+                <span>Хирургические инструменты</span>
             </button>
         </div>
-        <div class="mt-3 text-sm text-white/60" id="product-count"></div>
     </div>
-
-    <!-- ==================== СЕТКА ПРОДУКТОВ ==================== -->
+    <!-- Products Grid - All real photos -->
     <div class="max-w-7xl mx-auto px-6 pb-16">
-        <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+        <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-        <!-- Кнопка "Показать ещё" -->
-        <div class="flex justify-center mt-10">
-            <button id="load-more-btn" onclick="loadMore()"
-                    class="hidden px-10 py-3.5 bg-white/5 hover:bg-white/10 border border-white/30 rounded-2xl text-sm font-medium flex items-center gap-x-2">
-                Показать ещё <i class="fa-solid fa-arrow-down"></i>
-            </button>
+            <!-- 1 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="цементная бедренная ножка стандарт">
+                <img src="images/Cemented Femoral Stem.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цементная бедренная ножка (стандарт)</h3>
+                    <p class="text-sm text-white/70 mt-1">CoCrMo • Высокая полировка</p>
+                    <button onclick="showProductDetail(0)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="бесцементная corail ha coated">
+                <img src="images/Cementless Femoral Stem HA COATED corail type.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Бесцементная ножка Corail (HA coated)</h3>
+                    <p class="text-sm text-white/70 mt-1">Титан Ti-6Al-4V + HA</p>
+                    <button onclick="showProductDetail(1)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="калькарная ножка kalkar">
+                <img src="images/ÇİMENTOSUZ KALKAR STEM.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Бесцементная калькарная ножка Kalkar</h3>
+                    <p class="text-sm text-white/70 mt-1">Поддержка калькара • Высокая стабильность</p>
+                    <button onclick="showProductDetail(2)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="модульная ножка с конусом">
+                <img src="images/MODULER CONE FEMORALSTEM.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Модульная ножка с конусом</h3>
+                    <p class="text-sm text-white/70 mt-1">Модульная конструкция • Ревизионная</p>
+                    <button onclick="showProductDetail(3)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="ацетабулярная чашка с винтом">
+                <img src="images/ACETABULAR CUP VİDA.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Ацетабулярная чашка с винтом</h3>
+                    <p class="text-sm text-white/70 mt-1">Металл + полиэтилен • Винтовая фиксация</p>
+                    <button onclick="showProductDetail(4)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="dual mobility чашка цементная">
+                <img src="images/Dual Mobility Cup Cemented.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Dual Mobility Чашка (цементная)</h3>
+                    <p class="text-sm text-white/70 mt-1">Двойная мобильность • Минимальный риск вывиха</p>
+                    <button onclick="showProductDetail(5)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="биполярная чашка bipolar">
+                <img src="images/Bipolar Cup.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Биполярная чашка (Bipolar Cup)</h3>
+                    <p class="text-sm text-white/70 mt-1">Для гемиартропластики</p>
+                    <button onclick="showProductDetail(6)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="металлические головки küreler">
+                <img src="images/KÜRELER.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Металлические головки (KÜRELER)</h3>
+                    <p class="text-sm text-white/70 mt-1">CoCrMo • Набор разных диаметров</p>
+                    <button onclick="showProductDetail(7)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="ацетабулярная чашка dual kapli">
+                <img src="images/ACETABULAR CUP DUAL KAPLI.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Ацетабулярная чашка Dual Kapli</h3>
+                    <p class="text-sm text-white/70 mt-1">Двойное покрытие • Высокая стабильность</p>
+                    <button onclick="showProductDetail(8)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="ацетабулярный лайнер 1">
+                <img src="images/ACETABULAR LINER1.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Ацетабулярный лайнер (стандарт)</h3>
+                    <p class="text-sm text-white/70 mt-1">UHMWPE • Разные толщины</p>
+                    <button onclick="showProductDetail(9)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="cr феморальный компонент diz">
+                <img src="images/CR diz.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">CR Феморальный компонент (Diz)</h3>
+                    <p class="text-sm text-white/70 mt-1">Cruciate Retaining • CoCrMo</p>
+                    <button onclick="showProductDetail(10)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="ps феморальный компонент diz">
+                <img src="images/PS diz.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">PS Феморальный компонент (Diz)</h3>
+                    <p class="text-sm text-white/70 mt-1">Posterior Stabilized</p>
+                    <button onclick="showProductDetail(11)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="фиксированная тибия sabit tibia">
+                <img src="images/Sabit_tibia-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Фиксированная тибиальная площадка (Sabit Tibia)</h3>
+                    <p class="text-sm text-white/70 mt-1">Fixed Bearing</p>
+                    <button onclick="showProductDetail(12)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="мобильная тибия mobil tibia">
+                <img src="images/mobil_tibia-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Мобильная тибиальная площадка (Mobil Tibia)</h3>
+                    <p class="text-sm text-white/70 mt-1">Mobile Bearing</p>
+                    <button onclick="showProductDetail(13)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="пателла patella">
+                <img src="images/PATELLA.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Пателлярный компонент (Patella)</h3>
+                    <p class="text-sm text-white/70 mt-1">UHMWPE • 3 ножки фиксации</p>
+                    <button onclick="showProductDetail(14)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="цветные триалы 8-16mm">
+                <img src="images/IMG_1062.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Набор цветных триалов (8–16 мм)</h3>
+                    <p class="text-sm text-white/70 mt-1">Цветокодированные триалы разных толщин</p>
+                    <button onclick="showProductDetail(15)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="набор ацетабулярных разверток">
+                <img src="images/Acetabular Cup Reamer Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Набор ацетабулярных разверток</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный размерный ряд</p>
+                    <button onclick="showProductDetail(16)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="набор рашпилей coril">
+                <img src="images/Coril Design Rasp Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Набор рашпилей Coril Design</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный набор</p>
+                    <button onclick="showProductDetail(17)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 19 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="хирургический набор для тазобедренного">
+                <img src="images/инструменты.тазобедренные1.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный хирургический набор для тазобедренного сустава</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный набор инструментов</p>
+                    <button onclick="showProductDetail(18)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 20 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="хирургический набор t2">
+                <img src="images/T2.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Хирургический набор T2 (полный)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный профессиональный набор инструментов T2</p>
+                    <button onclick="showProductDetail(19)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 21 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="керамическая головка">
+                <img src="images/0R4dN" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Керамическая головка</h3>
+                    <p class="text-sm text-white/70 mt-1">Высокая износостойкость • Низкое трение</p>
+                    <button onclick="showProductDetail(20)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 22 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="удлинитель offset adapter">
+                <img src="images/c6Bmc" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Удлинитель / Offset Adapter</h3>
+                    <p class="text-sm text-white/70 mt-1">Для коррекции длины и оффсета</p>
+                    <button onclick="showProductDetail(21)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 23 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="двойная мобильность liner">
+                <img src="images/wKGDV" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Лайнер двойной мобильности</h3>
+                    <p class="text-sm text-white/70 mt-1">Высокосшитый полиэтилен</p>
+                    <button onclick="showProductDetail(22)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 24 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="ацетабулярная чашка cemented dual">
+                <img src="images/Hj8We" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цементная ацетабулярная чашка Dual</h3>
+                    <p class="text-sm text-white/70 mt-1">Для цементной фиксации • Двойная мобильность</p>
+                    <button onclick="showProductDetail(23)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 25 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="cr феморальный компонент diz">
+                <img src="images/CR diz.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">CR Феморальный компонент (Diz)</h3>
+                    <p class="text-sm text-white/70 mt-1">Cruciate Retaining • CoCrMo</p>
+                    <button onclick="showProductDetail(24)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 26 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="ps феморальный компонент diz">
+                <img src="images/PS diz.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">PS Феморальный компонент (Diz)</h3>
+                    <p class="text-sm text-white/70 mt-1">Posterior Stabilized</p>
+                    <button onclick="showProductDetail(25)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 27 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="фиксированная тибия sabit tibia">
+                <img src="images/Sabit_tibia-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Фиксированная тибиальная площадка (Sabit Tibia)</h3>
+                    <p class="text-sm text-white/70 mt-1">Fixed Bearing</p>
+                    <button onclick="showProductDetail(26)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 28 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="мобильная тибия mobil tibia">
+                <img src="images/mobil_tibia-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Мобильная тибиальная площадка (Mobil Tibia)</h3>
+                    <p class="text-sm text-white/70 mt-1">Mobile Bearing</p>
+                    <button onclick="showProductDetail(27)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 29 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="пателла patella">
+                <img src="images/PATELLA.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Пателлярный компонент (Patella)</h3>
+                    <p class="text-sm text-white/70 mt-1">UHMWPE • 3 ножки фиксации</p>
+                    <button onclick="showProductDetail(28)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 30 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="cr mobile takım">
+                <img src="images/CR-MOBILE TAKIM.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">CR Mobile Takım (комплект)</h3>
+                    <p class="text-sm text-white/70 mt-1">CR + Mobile Bearing комплект</p>
+                    <button onclick="showProductDetail(29)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 31 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="ps mobile takım">
+                <img src="images/PS-MOBILE TAKIM.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">PS Mobile Takım (комплект)</h3>
+                    <p class="text-sm text-white/70 mt-1">PS + Mobile Bearing комплект</p>
+                    <button onclick="showProductDetail(30)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 32 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="cr mobile insert">
+                <img src="images/CR-MOBİLE INSERT.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">CR Mobile Insert (вкладыш)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полиэтиленовый вкладыш CR</p>
+                    <button onclick="showProductDetail(31)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 33 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="цветные триалы 8mm">
+                <img src="images/IMG_1062.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цветные триалы 8 мм (синие)</h3>
+                    <p class="text-sm text-white/70 mt-1">Trial Insert 8mm</p>
+                    <button onclick="showProductDetail(32)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 34 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="цветные триалы 10mm">
+                <img src="images/IMG_1063.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цветные триалы 10 мм</h3>
+                    <p class="text-sm text-white/70 mt-1">Trial Insert 10mm</p>
+                    <button onclick="showProductDetail(33)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 35 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="цветные триалы 12mm">
+                <img src="images/IMG_1064.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цветные триалы 12 мм</h3>
+                    <p class="text-sm text-white/70 mt-1">Trial Insert 12mm</p>
+                    <button onclick="showProductDetail(34)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 36 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="цветные триалы 14mm">
+                <img src="images/IMG_1061.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цветные триалы 14 мм</h3>
+                    <p class="text-sm text-white/70 mt-1">Trial Insert 14mm</p>
+                    <button onclick="showProductDetail(35)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 37 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="цветные триалы 16mm">
+                <img src="images/IMG_1060.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Цветные триалы 16 мм</h3>
+                    <p class="text-sm text-white/70 mt-1">Trial Insert 16mm</p>
+                    <button onclick="showProductDetail(36)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 38 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="diz toplu 1 комплект">
+                <img src="images/Diz toplu 1.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный набор коленного сустава (Diz Toplu 1)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный комплект имплантатов</p>
+                    <button onclick="showProductDetail(37)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 39 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="diz toplu 2 комплект">
+                <img src="images/Diz toplu 2.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный набор коленного сустава (Diz Toplu 2)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный комплект имплантатов</p>
+                    <button onclick="showProductDetail(38)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 40 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="diz toplu 3 комплект">
+                <img src="images/Diz toplu 3.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный набор коленного сустава (Diz Toplu 3)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный комплект имплантатов</p>
+                    <button onclick="showProductDetail(39)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 41 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="diz toplu 4 комплект">
+                <img src="images/Diz toplu 4.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный набор коленного сустава (Diz Toplu 4)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный комплект имплантатов</p>
+                    <button onclick="showProductDetail(40)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 42 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="cr femur com">
+                <img src="images/CR-FEMUR COM..jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">CR Femur Component (комплект)</h3>
+                    <p class="text-sm text-white/70 mt-1">Фемур + вкладыш</p>
+                    <button onclick="showProductDetail(41)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 43 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="ps femur com">
+                <img src="images/PS- FEMUR COM..jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">PS Femur Component (комплект)</h3>
+                    <p class="text-sm text-white/70 mt-1">Фемур + вкладыш</p>
+                    <button onclick="showProductDetail(42)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 44 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="toplu diz detay 2">
+                <img src="images/TOPLU DİZ DETAY 2.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Детальный набор коленного сустава 2</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный обзор компонентов</p>
+                    <button onclick="showProductDetail(43)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 45 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="toplu diz detay">
+                <img src="images/haQv8" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Детальный набор коленного сустава</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный обзор компонентов</p>
+                    <button onclick="showProductDetail(44)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 46 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="uzatma extension">
+                <img src="images/uzatma-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Удлинитель тибии (Extension)</h3>
+                    <p class="text-sm text-white/70 mt-1">Для коррекции длины</p>
+                    <button onclick="showProductDetail(45)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 47 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="patella removebg">
+                <img src="images/patella-removebg-preview-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Пателла (очищенная)</h3>
+                    <p class="text-sm text-white/70 mt-1">Высококачественная обработка</p>
+                    <button onclick="showProductDetail(46)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 48 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="kalça detay hip knee">
+                <img src="images/Kalça detay.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Комбинированный набор (Kalça + Diz)</h3>
+                    <p class="text-sm text-white/70 mt-1">Гибридный набор</p>
+                    <button onclick="showProductDetail(47)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 49 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="knee" data-name="diz toplu detay">
+                <img src="images/Diz toplu.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный детальный набор колена</h3>
+                    <p class="text-sm text-white/70 mt-1">Все компоненты в одном наборе</p>
+                    <button onclick="showProductDetail(48)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 50 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="ацетабулярные развертки reamer set">
+                <img src="images/Acetabular Cup Reamer Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Набор ацетабулярных разверток</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный размерный ряд</p>
+                    <button onclick="showProductDetail(49)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 51 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="coril design rasp set">
+                <img src="images/Coril Design Rasp Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Набор рашпилей Coril Design</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный набор</p>
+                    <button onclick="showProductDetail(50)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 52 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="инструменты тазобедренные 1">
+                <img src="images/инструменты.тазобедренные1.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструментальный набор для тазобедренного сустава 1</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный профессиональный набор</p>
+                    <button onclick="showProductDetail(51)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 53 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="инструменты тазобедренные 2">
+                <img src="images/инструменты.тазобедренные2.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструментальный набор для тазобедренного сустава 2</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный профессиональный набор</p>
+                    <button onclick="showProductDetail(52)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 54 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="инструменты тазобедренные 3">
+                <img src="images/инструменты.тазобедренные3.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструментальный набор для тазобедренного сустава 3</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный профессиональный набор</p>
+                    <button onclick="showProductDetail(53)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 55 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="t2 set">
+                <img src="images/t2 set.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Хирургический набор T2 (полный)</h3>
+                    <p class="text-sm text-white/70 mt-1">Полный набор инструментов T2</p>
+                    <button onclick="showProductDetail(54)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 56 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="t2 instrument">
+                <img src="images/T2.jpeg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент T2</h3>
+                    <p class="text-sm text-white/70 mt-1">Отдельный инструмент из набора T2</p>
+                    <button onclick="showProductDetail(55)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 57 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="bipolar cup instrument set">
+                <img src="images/Bipolar Cup Instrument Set.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Набор инструментов для биполярной чашки</h3>
+                    <p class="text-sm text-white/70 mt-1">Специализированный набор</p>
+                    <button onclick="showProductDetail(56)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 58 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="ace 2 instrument">
+                <img src="images/Ace_2-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент Ace 2</h3>
+                    <p class="text-sm text-white/70 mt-1">Специализированный инструмент</p>
+                    <button onclick="showProductDetail(57)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 59 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="ace 3 instrument">
+                <img src="images/Ace_3-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент Ace 3</h3>
+                    <p class="text-sm text-white/70 mt-1">Специализированный инструмент</p>
+                    <button onclick="showProductDetail(58)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 60 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="ace 4 instrument">
+                <img src="images/Ace_4-removebg-preview.png" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент Ace 4</h3>
+                    <p class="text-sm text-white/70 mt-1">Специализированный инструмент</p>
+                    <button onclick="showProductDetail(59)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 61 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="img 1055 instrument">
+                <img src="images/IMG_1055.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент IMG_1055</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный хирургический инструмент</p>
+                    <button onclick="showProductDetail(60)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 62 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="img 1056 instrument">
+                <img src="images/IMG_1056.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент IMG_1056</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный хирургический инструмент</p>
+                    <button onclick="showProductDetail(61)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 63 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="img 1057 instrument">
+                <img src="images/IMG_1057.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент IMG_1057</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный хирургический инструмент</p>
+                    <button onclick="showProductDetail(62)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 64 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="img 1058 instrument">
+                <img src="images/IMG_1058.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент IMG_1058</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный хирургический инструмент</p>
+                    <button onclick="showProductDetail(63)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 65 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="img 1059 instrument">
+                <img src="images/IMG_1059.JPG" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент IMG_1059</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный хирургический инструмент</p>
+                    <button onclick="showProductDetail(64)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 66 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="img 1060 instrument">
+                <img src="images/IMG_1060.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Инструмент IMG_1060</h3>
+                    <p class="text-sm text-white/70 mt-1">Профессиональный хирургический инструмент</p>
+                    <button onclick="showProductDetail(65)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 67 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="butun urunler kalça 1">
+                <img src="images/BUTUN URUNLER kalça 1.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный набор продуктов (Kalça 1)</h3>
+                    <p class="text-sm text-white/70 mt-1">Общий обзор всей продукции</p>
+                    <button onclick="showProductDetail(66)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 68 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="butun urunler">
+                <img src="images/BUTUN URUNLER.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный набор продуктов</h3>
+                    <p class="text-sm text-white/70 mt-1">Общий обзор всей продукции</p>
+                    <button onclick="showProductDetail(67)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 69 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="moduler gövde vidası">
+                <img src="images/frlB2" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Модульная винтовая система</h3>
+                    <p class="text-sm text-white/70 mt-1">Для модульных ножек</p>
+                    <button onclick="showProductDetail(68)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- 70 -->
+            <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="instruments" data-name="полный обзор продукции">
+                <img src="images/BUTUN URUNLER.jpg" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg">Полный каталог продукции (70 позиций)</h3>
+                    <p class="text-sm text-white/70 mt-1">Общий обзор всего ассортимента</p>
+                    <button onclick="showProductDetail(69)" class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">Подробнее</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Final CTA -->
+    <div class="max-w-7xl mx-auto px-6 py-16 text-center border-t border-white/10">
+        <h2 class="text-3xl font-semibold mb-4">Нужна помощь с подбором компонентов?</h2>
+        <p class="text-white/70 mb-8 max-w-md mx-auto">Наши клинические специалисты помогут подобрать оптимальные решения под ваши клинические задачи.</p>
+       
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="showContactModal()"
+                    class="px-10 py-4 bg-[#C9A227] hover:bg-[#B8971F] text-[#0A0A0B] font-semibold rounded-2xl text-lg transition-all flex items-center justify-center gap-x-3">
+                <i class="fa-solid fa-headset"></i>
+                <span>Запросить консультацию</span>
+            </button>
+            <a href="index.html"
+               class="px-10 py-4 border border-white/30 hover:bg-white hover:text-[#0A0A0B] font-semibold rounded-2xl text-lg transition-all flex items-center justify-center gap-x-3">
+                Вернуться на главную
+            </a>
+        </div>
+    </div>
     <footer class="bg-black py-8 text-center text-sm text-white/50 border-t border-white/10">
-        © 2026 HIP KNEE MEDICAL QAZAQSTAN | Pro Implant — Реальная продукция
+        © 2026 HIP KNEE MEDICAL QAZAQSTAN | Pro Implant — Вертикально интегрированное производство в Турции. Все фотографии — реальная продукция.
     </footer>
 
-    <!-- ==================== МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ ==================== -->
+    <!-- Product Detail Modal -->
     <div id="product-detail-modal" onclick="if (event.target.id === 'product-detail-modal') hideProductDetailModal()"
          class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4">
-        <div onclick="event.stopImmediatePropagation()" class="max-w-4xl w-full bg-[#111114] rounded-3xl border border-white/20 overflow-hidden">
+        <div onclick="event.stopImmediatePropagation()"
+             class="product-modal max-w-4xl w-full bg-[#111114] rounded-3xl border border-white/20 overflow-hidden max-h-[92vh] overflow-y-auto">
+           
             <div class="flex justify-between items-center px-8 pt-8 pb-4 border-b border-white/10">
                 <div id="detail-badge" class="px-4 py-1 text-xs font-semibold tracking-wider rounded bg-[#C9A227]/10 text-[#C9A227]"></div>
-                <button onclick="hideProductDetailModal()" class="text-3xl text-white/40 hover:text-white">&times;</button>
+                <button onclick="hideProductDetailModal()" class="text-3xl leading-none text-white/40 hover:text-white">&times;</button>
             </div>
+           
             <div class="p-8 grid md:grid-cols-2 gap-10">
+                <!-- Image -->
                 <div>
                     <img id="detail-image" class="w-full rounded-2xl object-contain bg-[#0A0A0B] p-6 border border-white/10" alt="">
                 </div>
+               
+                <!-- Info -->
                 <div>
-                    <h3 id="detail-title" class="text-3xl font-semibold mb-3"></h3>
+                    <h3 id="detail-title" class="text-3xl font-semibold tracking-tight mb-3"></h3>
                     <p id="detail-subtitle" class="text-white/70 text-lg mb-6"></p>
+                   
                     <div class="mb-8">
                         <h5 class="font-semibold tracking-wider text-xs text-[#C9A227] mb-3">КЛЮЧЕВЫЕ ХАРАКТЕРИСТИКИ</h5>
                         <ul id="detail-features" class="space-y-2 text-sm text-white/85"></ul>
                     </div>
-                    <button onclick="requestQuoteFromModal()" 
-                            class="w-full py-4 bg-[#C9A227] hover:bg-[#D4B03A] text-[#0A0A0B] font-semibold rounded-2xl">
-                        Запросить образцы и коммерческое предложение
-                    </button>
+                   
+                    <div class="flex flex-col gap-3">
+                        <button onclick="requestQuoteFromModal()"
+                                class="w-full py-4 bg-[#C9A227] hover:bg-[#D4B03A] active:bg-[#B8971F] text-[#0A0A0B] font-semibold rounded-2xl text-base transition flex items-center justify-center gap-x-3">
+                            <i class="fa-solid fa-file-medical"></i>
+                            <span>Запросить образцы и коммерческое предложение</span>
+                        </button>
+                        <button onclick="hideProductDetailModal()"
+                                class="w-full py-4 border border-white/30 hover:bg-white/5 rounded-2xl text-base transition">
+                            Закрыть
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==================== КОНТАКТНАЯ ФОРМА ==================== -->
-    <div id="contact-modal" onclick="if (event.target.id === 'contact-modal') hideContactModal()" 
-         class="hidden fixed inset-0 z-[110] bg-black/90 flex items-center justify-center p-4">
-        <div onclick="event.stopImmediatePropagation()" class="max-w-lg w-full bg-[#111114] rounded-3xl border border-white/20 p-9">
-            <!-- Форма (можно не менять) -->
+    <!-- Contact Modal -->
+    <div id="contact-modal" onclick="if (event.target.id === 'contact-modal') hideContactModal()" class="hidden fixed inset-0 z-[110] bg-black/90 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal max-w-lg w-full bg-[#111114] rounded-3xl border border-white/20 p-9">
+            <div class="flex justify-between items-start mb-7">
+                <div>
+                    <div class="text-[#C9A227] text-xs tracking-[2px] font-semibold">СЛЕДУЮЩИЙ ШАГ</div>
+                    <h3 class="text-3xl font-semibold tracking-tight">Давайте начнём разговор</h3>
+                </div>
+                <button onclick="hideContactModal()" class="text-3xl text-white/40 hover:text-white leading-none">&times;</button>
+            </div>
+          
             <form id="contact-form" onsubmit="submitContactForm(event)">
-                <!-- Поля формы -->
                 <div class="space-y-5">
                     <div>
                         <label class="text-xs tracking-wider text-white/60 block mb-1.5">ИМЯ И ФАМИЛИЯ</label>
                         <input type="text" id="form-name" required class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
                     </div>
-                    <!-- остальные поля -->
+                  
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-xs tracking-wider text-white/60 block mb-1.5">EMAIL</label>
+                            <input type="email" id="form-email" required class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs tracking-wider text-white/60 block mb-1.5">УЧРЕЖДЕНИЕ / БОЛЬНИЦА</label>
+                            <input type="text" id="form-institution" class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
+                        </div>
+                    </div>
+                  
+                    <div>
+                        <label class="text-xs tracking-wider text-white/60 block mb-1.5">ЧЕМ МЫ МОЖЕМ ВАМ ПОМОЧЬ?</label>
+                        <textarea id="form-message" rows="4" class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-3xl px-5 py-3.5 text-sm outline-none"></textarea>
+                    </div>
                 </div>
+              
                 <div class="mt-8 flex gap-4">
-                    <button type="button" onclick="hideContactModal()" class="flex-1 py-4 rounded-2xl border border-white/30">Отмена</button>
-                    <button type="submit" class="flex-1 py-4 rounded-2xl bg-[#C9A227] text-[#0A0A0B] font-semibold">Отправить запрос</button>
+                    <button type="button" onclick="hideContactModal()" class="flex-1 py-4 rounded-2xl border border-white/30 text-sm font-semibold hover:bg-white/5">Отмена</button>
+                    <button type="submit" class="flex-1 py-4 rounded-2xl bg-[#C9A227] hover:bg-[#D4B03A] active:bg-[#B8971F] text-sm font-semibold text-[#0A0A0B]">Отправить запрос</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- ==================== ГЛАВНЫЙ СКРИПТ ==================== -->
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-[200] bg-emerald-900/90 border border-emerald-700 text-emerald-100 px-8 py-4 rounded-2xl shadow-xl flex items-center gap-x-3 text-sm">
+        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+        <span id="toast-message">Спасибо. Ваш запрос получен. Мы свяжемся с вами в ближайшее время.</span>
+    </div>
+
     <script>
-        // === 1. ДАННЫЕ ПРОДУКТОВ (ГЛАВНОЕ МЕСТО ДЛЯ РЕДАКТИРОВАНИЯ) ===
-        // Здесь вы добавляете, удаляете и меняете продукты.
-        // image: "images/название_файла.jpg"  ← меняйте только имя файла
+        // Tailwind configuration
+        function initTailwind() {
+            tailwind.config = { 
+                theme: { 
+                    extend: { 
+                        fontFamily: { 
+                            'serif-premium': ['Playfair Display', 'Georgia', 'serif'] 
+                        } 
+                    } 
+                } 
+            };
+        }
+
+        // Complete product data with all 15 real photos
         const products = [
-            {
-                id: 0,
-                category: "instruments",
-                badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ",
-                title: "Полный набор инструментов для тазобедренного сустава",
-                subtitle: "Профессиональный стерилизационный набор премиум-класса",
-                image: "images/инструменты.тазобедренные3.jpg",   // ← меняйте здесь
-                features: [
-                    "Полный комплект инструментов",
-                    "Высококачественная медицинская сталь",
-                    "Эргономичные рукоятки",
-                    "Стерилизуемый кейс"
-                ]
-            },
-            {
-                id: 1,
-                category: "instruments",
-                badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ",
-                title: "Набор цветных триалов 8–16 мм",
-                subtitle: "Цветокодированные триалы разных толщин",
-                image: "images/IMG_1062.jpg",
-                features: ["Толщины 8, 10, 12, 14, 16 мм", "Цветовая кодировка", "Стерилизуемые"]
-            },
-            // Добавляйте сюда новые продукты по такому же шаблону...
+            { id: 0, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Полный набор инструментов для тазобедренного сустава", subtitle: "Профессиональный стерилизационный набор премиум-класса", image: "images/инструменты.тазобедренные3.jpg", features: ["Полный комплект инструментов", "Высококачественная медицинская сталь", "Эргономичные рукоятки", "Стерилизуемый кейс"] },
+            { id: 1, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструментальный набор для тазобедренного сустава №1", subtitle: "Полный профессиональный набор", image: "images/инструменты.тазобедренные1.jpg", features: ["Полный комплект", "Медицинская сталь", "Стерилизуемый"] },
+            { id: 2, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструментальный набор для тазобедренного сустава №2", subtitle: "Полный профессиональный набор", image: "images/инструменты.тазобедренные2.jpg", features: ["Полный комплект", "Медицинская сталь", "Стерилизуемый"] },
+            { id: 3, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор ацетабулярных разверток", subtitle: "Полный размерный ряд", image: "images/Acetabular Cup Reamer Set.png", features: ["Полный размерный ряд", "Высокоточная обработка", "Стерилизуемый"] },
+            { id: 4, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор рашпилей Coril Design", subtitle: "Профессиональный набор рашпилей", image: "images/Coril Design Rasp Set.png", features: ["Высококачественные рашпили", "Эргономичный дизайн", "Стерилизуемый"] },
+            { id: 5, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 8 мм (синие)", subtitle: "Trial Insert 8mm", image: "images/IMG_1062.jpg", features: ["Толщина 8 мм", "Цветовая кодировка", "Стерилизуемые"] },
+            { id: 6, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 10 мм", subtitle: "Trial Insert 10mm", image: "images/IMG_1063.jpg", features: ["Толщина 10 мм", "Цветовая кодировка", "Стерилизуемые"] },
+            { id: 7, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 12 мм", subtitle: "Trial Insert 12mm", image: "images/IMG_1064.jpg", features: ["Толщина 12 мм", "Цветовая кодировка", "Стерилизуемые"] },
+            { id: 8, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 14 мм", subtitle: "Trial Insert 14mm", image: "images/IMG_1061.jpg", features: ["Толщина 14 мм", "Цветовая кодировка", "Стерилизуемые"] },
+            { id: 9, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 16 мм", subtitle: "Trial Insert 16mm", image: "images/IMG_1060.jpg", features: ["Толщина 16 мм", "Цветовая кодировка", "Стерилизуемые"] },
+            { id: 10, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 1)", subtitle: "Полный комплект имплантатов и инструментов", image: "images/Diz toplu 1.JPG", features: ["Полный комплект", "CR и PS компоненты", "Триалы разных размеров"] },
+            { id: 11, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 2)", subtitle: "Полный комплект имплантатов и инструментов", image: "images/Diz toplu 2.JPG", features: ["Полный комплект", "CR и PS компоненты", "Триалы разных размеров"] },
+            { id: 12, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 3)", subtitle: "Полный комплект имплантатов и инструментов", image: "images/Diz toplu 3.JPG", features: ["Полный комплект", "CR и PS компоненты", "Триалы разных размеров"] },
+            { id: 13, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 4)", subtitle: "Полный комплект имплантатов и инструментов", image: "images/Diz toplu 4.JPG", features: ["Полный комплект", "CR и PS компоненты", "Триалы разных размеров"] },
+            { id: 14, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Феморальный компонент (Diz)", subtitle: "Posterior Stabilized дизайн", image: "images/PS diz.jpg", features: ["PS дизайн", "Высококачественный сплав", "Разные размеры"] },
+            { id: 15, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Фиксированная тибиальная площадка (Sabit Tibia)", subtitle: "Fixed Bearing", image: "images/Sabit_tibia-removebg-preview.png", features: ["Fixed Bearing", "Высокая стабильность", "Разные размеры"] },
+            { id: 16, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Мобильная тибиальная площадка (Mobil Tibia)", subtitle: "Mobile Bearing", image: "images/mobil_tibia-removebg-preview.png", features: ["Mobile Bearing", "Высокая мобильность", "Разные размеры"] },
+            { id: 17, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Пателлярный компонент (Patella)", subtitle: "UHMWPE • 3 ножки фиксации", image: "images/PATELLA.jpg", features: ["UHMWPE материал", "3 ножки фиксации", "Разные диаметры"] },
+            { id: 18, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Mobile Takım (комплект)", subtitle: "CR + Mobile Bearing комплект", image: "images/CR-MOBILE TAKIM.jpg", features: ["CR дизайн", "Mobile Bearing", "Полный комплект"] },
+            { id: 19, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Mobile Takım (комплект)", subtitle: "PS + Mobile Bearing комплект", image: "images/PS-MOBILE TAKIM.jpg", features: ["PS дизайн", "Mobile Bearing", "Полный комплект"] },
+            { id: 20, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Mobile Insert (вкладыш)", subtitle: "Полиэтиленовый вкладыш CR", image: "images/CR-MOBİLE INSERT.jpg", features: ["Высококачественный полиэтилен", "CR дизайн", "Разные толщины"] },
+            { id: 21, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементный феморальный стержень", subtitle: "Cemented Femoral Stem", image: "images/Cemented Femoral Stem.png", features: ["Цементная фиксация", "Высокопрочный сплав", "Разные размеры"] },
+            { id: 22, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бесцементный феморальный стержень HA-coated (Corail type)", subtitle: "Cementless Femoral Stem HA COATED", image: "images/Cementless Femoral Stem HA COATED corail type.png", features: ["HA-покрытие", "Бесцементная фиксация", "Corail дизайн"] },
+            { id: 23, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Биполярная чашка (Bipolar Cup)", subtitle: "Bipolar Cup", image: "images/Bipolar Cup.png", features: ["Биполярный дизайн", "Снижение износа", "Разные диаметры"] },
+            { id: 24, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Двойная подвижная чашка (Dual Mobility)", subtitle: "Dual Mobility Cup Cemented", image: "images/Dual Mobility Cup Cemented.png", features: ["Dual Mobility дизайн", "Повышенная стабильность", "Цементная фиксация"] },
+            { id: 25, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с вкладышем", subtitle: "Acetabular Cup Liner", image: "images/Acetabular Cup Liner.png", features: ["Высококачественный полиэтилен", "Разные диаметры", "Отличная совместимость"] },
+            { id: 26, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Хирургический набор T2 (полный)", subtitle: "Полный набор инструментов T2", image: "images/t2 set.jpeg", features: ["Полный комплект T2", "Высокоточные инструменты", "Стерилизуемый"] },
+            { id: 27, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор инструментов для биполярной чашки", subtitle: "Специализированный набор", image: "images/Bipolar Cup Instrument Set.png", features: ["Специализированные инструменты", "Высокая точность", "Стерилизуемый"] },
+            { id: 28, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент Ace 2", subtitle: "Специализированный хирургический инструмент", image: "images/Ace_2-removebg-preview.png", features: ["Высокоточный инструмент", "Эргономичный дизайн"] },
+            { id: 29, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент Ace 3", subtitle: "Специализированный хирургический инструмент", image: "images/Ace_3-removebg-preview.png", features: ["Высокоточный инструмент", "Эргономичный дизайн"] },
+            { id: 30, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент Ace 4", subtitle: "Специализированный хирургический инструмент", image: "images/Ace_4-removebg-preview.png", features: ["Высокоточный инструмент", "Эргономичный дизайн"] },
+            { id: 31, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Femur Component (комплект)", subtitle: "Фемур + вкладыш", image: "images/CR-FEMUR COM..jpg", features: ["CR дизайн", "Полный комплект", "Высокое качество"] },
+            { id: 32, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Femur Component (комплект)", subtitle: "Фемур + вкладыш", image: "images/PS- FEMUR COM..jpg", features: ["PS дизайн", "Полный комплект", "Высокое качество"] },
+            { id: 33, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Детальный набор коленного сустава 2", subtitle: "Полный обзор компонентов", image: "images/TOPLU DİZ DETAY 2.jpg", features: ["Детальный обзор", "Все компоненты", "Высокое качество"] },
+            { id: 34, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульный феморальный стержень", subtitle: "Moduler Tip Femoral Stem", image: "images/MODULER TİP FEMORAL STEM.jpg", features: ["Модульная конструкция", "Высокая гибкость", "Разные размеры"] },
+            { id: 35, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка Dual Kaplı", subtitle: "Acetabular Cup Dual Kaplı", image: "images/ACETABULAR CUP DUAL KAPLI.jpg", features: ["Dual покрытие", "Высокая стабильность", "Цементная/бесцементная"] },
+            { id: 36, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Калкар поддерживающий цементный стержень", subtitle: "Çimentolu Kalkar Destekli Femoral Stem", image: "images/çimentolu KALKAR DESTEKLİ FEMORAL STEM.jpg", features: ["Калкар поддержка", "Цементная фиксация", "Высокая стабильность"] },
+            { id: 37, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Полный набор цветных триалов 8-16 мм", subtitle: "Цветокодированные триалы разных толщин", image: "images/IMG_1055.JPG", features: ["Толщины 8-16 мм", "Цветовая кодировка", "Полный набор"] },
+            { id: 38, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Модульная тибиальная площадка", subtitle: "Moduler Tibia", image: "images/MODULER GÖVDE.jpg", features: ["Модульная конструкция", "Высокая стабильность", "Разные размеры"] },
+            { id: 39, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с винтами", subtitle: "Acetabular Cup с винтовой фиксацией", image: "images/ACETABULAR CUP VİDA.jpg", features: ["Винтовая фиксация", "Высокая стабильность", "Разные диаметры"] },
+            { id: 40, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор инструментов T2", subtitle: "Отдельный инструмент из набора T2", image: "images/T2.jpeg", features: ["Высокоточный инструмент", "Стерилизуемый"] },
+            { id: 41, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный детальный набор колена", subtitle: "Все компоненты в одном наборе", image: "images/Diz toplu.jpg", features: ["Полный комплект", "Все компоненты", "Высокое качество"] },
+            { id: 42, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "ST STEM Dual Kaplı", subtitle: "ST STEM с двойным покрытием", image: "images/ST STEM DUAL KAPLI.jpg", features: ["Dual покрытие", "Высокая стабильность", "Разные размеры"] },
+            { id: 43, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульный конусный феморальный стержень", subtitle: "Moduler Cone Femoral Stem", image: "images/MODULER CONE FEMORALSTEM.jpg", features: ["Модульная конструкция", "Конусный дизайн", "Высокая гибкость"] },
+            { id: 44, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бесцементный калкарный стержень", subtitle: "Çimentosuz Kalkar Stem", image: "images/ÇİMENTOSUZ KALKAR STEM.jpg", features: ["Бесцементная фиксация", "Калкар поддержка", "Высокая стабильность"] },
+            { id: 45, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Стандартный цементный стержень", subtitle: "Standart Tip Çimentolu Stem", image: "images/STANDART TİP ÇİMENTOLU STEM.jpg", features: ["Цементная фиксация", "Стандартный дизайн", "Надёжная фиксация"] },
+            { id: 46, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульный феморальный стержень (монтаж)", subtitle: "Moduler Stem Monte", image: "images/MODULER STEM MONTE.jpg", features: ["Модульная система", "Лёгкий монтаж", "Высокая точность"] },
+            { id: 47, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная головка феморального стержня", subtitle: "Moduler Gövde", image: "images/MODULER GÖVDE.jpg", features: ["Модульная головка", "Разные диаметры", "Высокая совместимость"] },
+            { id: 48, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с вкладышем (полный комплект)", subtitle: "Acetabular Cup Takım", image: "images/ACETABULAR CUP TAKIM.jpg", features: ["Полный комплект чашки", "Вкладыш в комплекте", "Высокое качество"] },
+            { id: 49, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Керамические головки (Küreler)", subtitle: "Керамические головки для тазобедренного сустава", image: "images/KÜRELER.jpg", features: ["Керамический материал", "Низкий износ", "Разные диаметры"] },
+            { id: 50, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Mobile Insert (дополнительный)", subtitle: "Дополнительный вкладыш CR Mobile", image: "images/CR-MOBİLE INSERT.jpg", features: ["Высококачественный полиэтилен", "CR дизайн", "Разные толщины"] },
+            { id: 51, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Пателла (очищенная версия)", subtitle: "Patella RemoveBG", image: "images/patella-removebg-preview-removebg-preview.png", features: ["UHMWPE", "Высокая чистота обработки", "3 ножки фиксации"] },
+            { id: 52, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Удлинитель тибии (Extension)", subtitle: "Для коррекции длины", image: "images/uzatma-removebg-preview.png", features: ["Коррекция длины", "Высокая точность", "Совместим с разными системами"] },
+            { id: 53, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1056", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_1056.JPG", features: ["Высокоточный инструмент", "Эргономичная рукоятка", "Стерилизуемый"] },
+            { id: 54, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1057", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_1057.JPG", features: ["Высокоточный инструмент", "Эргономичная рукоятка", "Стерилизуемый"] },
+            { id: 55, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1058", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_1058.JPG", features: ["Высокоточный инструмент", "Эргономичная рукоятка", "Стерилизуемый"] },
+            { id: 56, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1059", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_1059.JPG", features: ["Высокоточный инструмент", "Эргономичная рукоятка", "Стерилизуемый"] },
+            { id: 57, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с вкладышем (вариант 2)", subtitle: "Acetabular Liner 2", image: "images/ACETABULAR LINER2.jpg", features: ["Высококачественный полиэтилен", "Отличная совместимость", "Разные размеры"] },
+            { id: 58, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с вкладышем (вариант 1)", subtitle: "Acetabular Liner 1", image: "images/ACETABULAR LINER1.jpg", features: ["Высококачественный полиэтилен", "Отличная совместимость", "Разные размеры"] },
+            { id: 59, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (детальный обзор)", subtitle: "Toplu Diz Detay", image: "images/TOPLU DİZ DETAY 2.jpg", features: ["Полный обзор компонентов", "Высокое качество", "Все размеры"] },
+            { id: 60, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Биполярная чашка (дополнительный вид)", subtitle: "Bipolar Cup дополнительный", image: "images/Bİ-POLAR CUP.jpg", features: ["Биполярный дизайн", "Снижение износа", "Высокая стабильность"] },
+            { id: 61, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Mobile Takım (дополнительный комплект)", subtitle: "CR Mobile дополнительный", image: "images/CR-MOBILE TAKIM.jpg", features: ["CR дизайн", "Mobile Bearing", "Полный комплект"] },
+            { id: 62, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1060 (дополнительный)", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_1060.jpg", features: ["Высокоточный инструмент", "Эргономичная рукоятка"] },
+            { id: 63, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Mobile Takım (дополнительный комплект)", subtitle: "PS Mobile дополнительный", image: "images/PS-MOBILE TAKIM.jpg", features: ["PS дизайн", "Mobile Bearing", "Полный комплект"] },
+            { id: 64, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная головка с винтом", subtitle: "Moduler Gövde Vidası", image: "images/MODULER GÖVDE VİDASI.jpg", features: ["Модульная конструкция", "Винтовая фиксация", "Высокая точность"] },
+            { id: 65, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка (полный обзор)", subtitle: "Kalça Toplam", image: "images/Kalça toplam.png", features: ["Полный обзор чашки", "Высокое качество", "Разные варианты"] },
+            { id: 66, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Детальный вид тазобедренного сустава", subtitle: "Kalça Detay", image: "images/Kalça detay.png", features: ["Детальный обзор", "Все компоненты", "Высокое качество"] },
+            { id: 67, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_0946", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_0946.JPG", features: ["Высокоточный инструмент", "Эргономичная рукоятка"] },
+            { id: 68, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_0944", subtitle: "Профессиональный хирургический инструмент", image: "images/IMG_0944.JPG", features: ["Высокоточный инструмент", "Эргономичная рукоятка"] },
+            { id: 69, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (итоговый)", subtitle: "Diz Toplu финальный обзор", image: "images/Diz toplu.jpg", features: ["Полный комплект", "Все компоненты", "Высокое качество"] }
         ];
 
-        // === 2. ПАГИНАЦИЯ И ФИЛЬТРЫ ===
+        // Filter functionality
         let currentFilter = 'all';
-        let currentPage = 1;
-        const itemsPerPage = 12;
-        let filteredProducts = [...products];
 
         function filterProducts(category) {
             currentFilter = category;
-            currentPage = 1;
-            // ... (код фильтрации)
+           
+            document.querySelectorAll('#filters button').forEach(btn => {
+                btn.classList.remove('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+                btn.classList.add('border-white/30');
+               
+                if ((category === 'all' && btn.dataset.filter === 'all') || btn.dataset.filter === category) {
+                    btn.classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+                    btn.classList.remove('border-white/30');
+                }
+            });
             applyFilters();
         }
 
         function applyFilters() {
-            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
-            filteredProducts = products.filter(p => {
-                const matchesCategory = currentFilter === 'all' || p.category === currentFilter;
-                const matchesSearch = !searchTerm || p.title.toLowerCase().includes(searchTerm);
-                return matchesCategory && matchesSearch;
-            });
-            currentPage = 1;
-            renderProducts();
-        }
-
-        function renderProducts(append = false) {
-            const grid = document.getElementById('products-grid');
-            if (!append) grid.innerHTML = '';
-
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const toShow = filteredProducts.slice(start, end);
-
-            toShow.forEach(product => {
-                const card = document.createElement('div');
-                card.className = `premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10`;
-                card.innerHTML = `
-                    <img src="${product.image}" class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" 
-                         alt="${product.title}" loading="lazy">
-                    <div class="p-5">
-                        <span class="text-xs px-3 py-1 rounded-full bg-[#C9A227]/10 text-[#C9A227]">${product.badge}</span>
-                        <h3 class="font-semibold text-lg mt-2">${product.title}</h3>
-                        <p class="text-sm text-white/70 mt-1">${product.subtitle}</p>
-                        <button onclick="showProductDetail(${product.id})" 
-                                class="mt-4 w-full py-2.5 text-sm border border-white/30 rounded-2xl hover:bg-white hover:text-black">
-                            Подробнее
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-
-            // Обновляем счётчик и кнопку "Показать ещё"
-            document.getElementById('product-count').innerHTML = 
-                `Показано <strong>${Math.min(end, filteredProducts.length)}</strong> из <strong>${filteredProducts.length}</strong>`;
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
             
-            const loadMoreBtn = document.getElementById('load-more-btn');
-            loadMoreBtn.style.display = (end < filteredProducts.length) ? 'flex' : 'none';
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const name = card.dataset.name.toLowerCase();
+               
+                const matchesCategory = currentFilter === 'all' || category === currentFilter;
+                const matchesSearch = name.includes(searchTerm);
+                
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         }
 
-        function loadMore() {
-            currentPage++;
-            renderProducts(true);
+        function initSearch() {
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', () => {
+                applyFilters();
+            });
         }
+
+        // Product detail modal
+        let currentProductId = null;
 
         function showProductDetail(id) {
-            const product = products.find(p => p.id === id);
+            const product = products[id];
             if (!product) return;
-
+            
+            currentProductId = id;
+            
             document.getElementById('detail-badge').innerHTML = product.badge;
             document.getElementById('detail-title').innerHTML = product.title;
             document.getElementById('detail-subtitle').innerHTML = product.subtitle;
             document.getElementById('detail-image').src = product.image;
-
-            const ul = document.getElementById('detail-features');
-            ul.innerHTML = product.features.map(f => 
-                `<li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A227]"></i> ${f}</li>`
+            
+            const featuresList = document.getElementById('detail-features');
+            featuresList.innerHTML = product.features.map(f =>
+                `<li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A227] mt-1"></i> <span>${f}</span></li>`
             ).join('');
-
+            
             document.getElementById('product-detail-modal').classList.remove('hidden');
             document.getElementById('product-detail-modal').classList.add('flex');
+            document.body.style.overflow = 'hidden';
         }
 
         function hideProductDetailModal() {
             const modal = document.getElementById('product-detail-modal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
+        function requestQuoteFromModal() {
+            hideProductDetailModal();
+            showContactModal();
+        }
+
+        // Contact modal functions
         function showContactModal() {
-            document.getElementById('contact-modal').classList.remove('hidden');
-            document.getElementById('contact-modal').classList.add('flex');
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => document.getElementById('form-name')?.focus(), 300);
         }
 
         function hideContactModal() {
-            document.getElementById('contact-modal').classList.remove('flex');
-            document.getElementById('contact-modal').classList.add('hidden');
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
         function submitContactForm(e) {
             e.preventDefault();
-            alert("Запрос отправлен! (в реальной версии здесь будет отправка на сервер)");
-            hideContactModal();
+            const form = document.getElementById('contact-form');
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = `<span class="flex items-center justify-center gap-x-2"><i class="fa-solid fa-spinner fa-spin"></i> ОТПРАВКА...</span>`;
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                hideContactModal();
+               
+                const toast = document.getElementById('success-toast');
+                document.getElementById('toast-message').innerHTML = `Спасибо! Ваш запрос получен. Мы свяжемся с вами в течение 24 часов.`;
+                toast.style.display = 'flex';
+                toast.classList.remove('hidden');
+                form.reset();
+                
+                setTimeout(() => {
+                    toast.style.transition = 'all 0.4s ease';
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transition = '';
+                        toast.style.display = 'none';
+                        toast.classList.add('hidden');
+                    }, 400);
+                }, 4500);
+                
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 900);
         }
 
+        // Initialize everything
         function initializeCatalog() {
-            // Инициализация поиска
-            document.getElementById('search-input').addEventListener('input', () => {
-                clearTimeout(window.searchTimeout);
-                window.searchTimeout = setTimeout(applyFilters, 300);
+            initTailwind();
+            initSearch();
+            
+            // Set initial filter to "all"
+            const allBtn = document.querySelector('#filters button[data-filter="all"]');
+            if (allBtn) allBtn.classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+            
+            // Keyboard support for modals
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const detailModal = document.getElementById('product-detail-modal');
+                    const contactModal = document.getElementById('contact-modal');
+                   
+                    if (!detailModal.classList.contains('hidden') && detailModal.classList.contains('flex')) {
+                        hideProductDetailModal();
+                    } else if (!contactModal.classList.contains('hidden') && contactModal.classList.contains('flex')) {
+                        hideContactModal();
+                    }
+                }
             });
-
-            // Первоначальная отрисовка
-            filteredProducts = [...products];
-            renderProducts();
-
-            // Активируем кнопку "Все продукты"
-            document.querySelector('#filters button[data-filter="all"]').classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+            
+            console.log('%c[HIP KNEE MEDICAL QAZAQSTAN] Catalog initialized with all 15 real product photos', 'color:#666');
         }
 
         window.onload = initializeCatalog;
