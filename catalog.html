@@ -1059,6 +1059,34 @@
         // Filter functionality
         let currentFilter = 'all';
 
+        function renderProducts(list) {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+        
+            list.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10';
+                
+                card.innerHTML = `
+                    <img src="${p.image}" 
+                         class="product-img w-full h-64 object-contain bg-[#0A0A0B] p-4" 
+                         alt="${p.title}"
+                         loading="lazy">
+        
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg">${p.title}</h3>
+                        <p class="text-sm text-white/70 mt-1">${p.subtitle}</p>
+                        
+                        <button onclick="showProductDetail(${p.id})" 
+                                class="mt-4 w-full py-2.5 text-sm border border-white/30 hover:bg-white hover:text-black rounded-2xl transition-all">
+                            Подробнее
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
         function filterProducts(category) {
             currentFilter = category;
            
