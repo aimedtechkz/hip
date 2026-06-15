@@ -135,7 +135,6 @@
     </div>
 
     <script>
-        // === ИСПРАВЛЕННЫЙ МАССИВ PRODUCTS ===
         const products = [ /
                 <!-- 1 -->
                 <div class="premium-card bg-[#111114] rounded-3xl overflow-hidden border border-white/10 product-card" data-category="hip" data-name="цементная бедренная ножка стандарт">
@@ -867,22 +866,367 @@
             });
         }
 
-        // Остальные функции (filterProducts, showProductDetail, hide..., search и т.д.) оставляем без изменений
-        // (они уже были в оригинальном файле)
+    <!-- Final CTA -->
+    <div class="max-w-7xl mx-auto px-6 py-16 text-center border-t border-white/10">
+        <h2 class="text-3xl font-semibold mb-4">Нужна помощь с подбором компонентов?</h2>
+        <p class="text-white/70 mb-8 max-w-md mx-auto">Наши клинические специалисты помогут подобрать оптимальные решения под ваши клинические задачи.</p>
+       
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="showContactModal()"
+                    class="px-10 py-4 bg-[#C9A227] hover:bg-[#B8971F] text-[#0A0A0B] font-semibold rounded-2xl text-lg transition-all flex items-center justify-center gap-x-3">
+                <i class="fa-solid fa-headset"></i>
+                <span>Запросить консультацию</span>
+            </button>
+            <a href="index.html"
+               class="px-10 py-4 border border-white/30 hover:bg-white hover:text-[#0A0A0B] font-semibold rounded-2xl text-lg transition-all flex items-center justify-center gap-x-3">
+                Вернуться на главную
+            </a>
+        </div>
+    </div>
+    <footer class="bg-black py-8 text-center text-sm text-white/50 border-t border-white/10">
+        © 2026 HIP KNEE MEDICAL QAZAQSTAN | Pro Implant — Вертикально интегрированное производство в Турции. Все фотографии — реальная продукция.
+    </footer>
 
-        function initializeCatalog() {
-            // Инициализация поиска и фильтров
-            const searchInput = document.getElementById('search-input');
-            searchInput.addEventListener('input', applyFilters);
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" onclick="if (event.target.id === 'product-detail-modal') hideProductDetailModal()"
+         class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()"
+             class="product-modal max-w-4xl w-full bg-[#111114] rounded-3xl border border-white/20 overflow-hidden max-h-[92vh] overflow-y-auto">
+           
+            <div class="flex justify-between items-center px-8 pt-8 pb-4 border-b border-white/10">
+                <div id="detail-badge" class="px-4 py-1 text-xs font-semibold tracking-wider rounded bg-[#C9A227]/10 text-[#C9A227]"></div>
+                <button onclick="hideProductDetailModal()" class="text-3xl leading-none text-white/40 hover:text-white">&times;</button>
+            </div>
+           
+            <div class="p-8 grid md:grid-cols-2 gap-10">
+                <!-- Image -->
+                <div>
+                    <img id="detail-image" class="w-full rounded-2xl object-contain bg-[#0A0A0B] p-6 border border-white/10" alt="">
+                </div>
+               
+                <!-- Info -->
+                <div>
+                    <h3 id="detail-title" class="text-3xl font-semibold tracking-tight mb-3"></h3>
+                    <p id="detail-subtitle" class="text-white/70 text-lg mb-6"></p>
+                   
+                    <div class="mb-8">
+                        <h5 class="font-semibold tracking-wider text-xs text-[#C9A227] mb-3">КЛЮЧЕВЫЕ ХАРАКТЕРИСТИКИ</h5>
+                        <ul id="detail-features" class="space-y-2 text-sm text-white/85"></ul>
+                    </div>
+                   
+                    <div class="flex flex-col gap-3">
+                        <button onclick="requestQuoteFromModal()"
+                                class="w-full py-4 bg-[#C9A227] hover:bg-[#D4B03A] active:bg-[#B8971F] text-[#0A0A0B] font-semibold rounded-2xl text-base transition flex items-center justify-center gap-x-3">
+                            <i class="fa-solid fa-file-medical"></i>
+                            <span>Запросить образцы и коммерческое предложение</span>
+                        </button>
+                        <button onclick="hideProductDetailModal()"
+                                class="w-full py-4 border border-white/30 hover:bg-white/5 rounded-2xl text-base transition">
+                            Закрыть
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            // Начальный рендер
-            renderProducts(products);
-            
-            // Активируем кнопку "Все продукты"
-            document.querySelector('#filters button[data-filter="all"]').classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+    <!-- Contact Modal -->
+    <div id="contact-modal" onclick="if (event.target.id === 'contact-modal') hideContactModal()" class="hidden fixed inset-0 z-[110] bg-black/90 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal max-w-lg w-full bg-[#111114] rounded-3xl border border-white/20 p-9">
+            <div class="flex justify-between items-start mb-7">
+                <div>
+                    <div class="text-[#C9A227] text-xs tracking-[2px] font-semibold">СЛЕДУЮЩИЙ ШАГ</div>
+                    <h3 class="text-3xl font-semibold tracking-tight">Давайте начнём разговор</h3>
+                </div>
+                <button onclick="hideContactModal()" class="text-3xl text-white/40 hover:text-white leading-none">&times;</button>
+            </div>
+          
+            <form id="contact-form" onsubmit="submitContactForm(event)">
+                <div class="space-y-5">
+                    <div>
+                        <label class="text-xs tracking-wider text-white/60 block mb-1.5">ИМЯ И ФАМИЛИЯ</label>
+                        <input type="text" id="form-name" required class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
+                    </div>
+                  
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-xs tracking-wider text-white/60 block mb-1.5">EMAIL</label>
+                            <input type="email" id="form-email" required class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs tracking-wider text-white/60 block mb-1.5">УЧРЕЖДЕНИЕ / БОЛЬНИЦА</label>
+                            <input type="text" id="form-institution" class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-2xl px-5 py-3.5 text-sm outline-none">
+                        </div>
+                    </div>
+                  
+                    <div>
+                        <label class="text-xs tracking-wider text-white/60 block mb-1.5">ЧЕМ МЫ МОЖЕМ ВАМ ПОМОЧЬ?</label>
+                        <textarea id="form-message" rows="4" class="w-full bg-[#0A0A0B] border border-white/20 focus:border-[#C9A227] rounded-3xl px-5 py-3.5 text-sm outline-none"></textarea>
+                    </div>
+                </div>
+              
+                <div class="mt-8 flex gap-4">
+                    <button type="button" onclick="hideContactModal()" class="flex-1 py-4 rounded-2xl border border-white/30 text-sm font-semibold hover:bg-white/5">Отмена</button>
+                    <button type="submit" class="flex-1 py-4 rounded-2xl bg-[#C9A227] hover:bg-[#D4B03A] active:bg-[#B8971F] text-sm font-semibold text-[#0A0A0B]">Отправить запрос</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-[200] bg-emerald-900/90 border border-emerald-700 text-emerald-100 px-8 py-4 rounded-2xl shadow-xl flex items-center gap-x-3 text-sm">
+        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+        <span id="toast-message">Спасибо. Ваш запрос получен. Мы свяжемся с вами в ближайшее время.</span>
+    </div>
+
+    <script>
+        // Tailwind configuration
+        function initTailwind() {
+            tailwind.config = { 
+                theme: { 
+                    extend: { 
+                        fontFamily: { 
+                            'serif-premium': ['Playfair Display', 'Georgia', 'serif'] 
+                        } 
+                    } 
+                } 
+            };
         }
 
-        // Функции filterProducts, applyFilters, showProductDetail и т.д. — оставьте как в оригинале
+        // Complete product data with all 15 real photos
+        const products = [
+            // === HIP (0–24) ===
+            { id: 0, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементная бедренная ножка (стандарт)", subtitle: "Высокополированная цементная ножка премиум-класса из CoCrMo.", image: "images/Cemented Femoral Stem.png", features: ["Материал: CoCrMo", "Высокая зеркальная полировка", "Для цементной фиксации", "Различные размеры", "Высокая биосовместимость"] },
+            { id: 1, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бесцементная ножка Corail (HA coated)", subtitle: "Титановая ножка с пористым покрытием и гидроксиапатитом для отличной остеоинтеграции.", image: "images/Cementless Femoral Stem HA COATED corail type.png", features: ["Материал: Титан Ti-6Al-4V", "Пористое плазменное покрытие + HA", "Для бесцементной фиксации", "Высокая первичная стабильность"] },
+            { id: 2, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Бесцементная калькарная ножка Kalkar", subtitle: "Ножка с поддержкой калькара и высокой первичной стабильностью.", image: "images/ÇİMENTOSUZ KALKAR STEM.jpg", features: ["Материал: Титановый сплав", "Поддержка калькара", "Пористое покрытие", "Отличная ротационная стабильность"] },
+            { id: 3, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная ножка с конусом", subtitle: "Модульная конструкция для первичного и ревизионного эндопротезирования.", image: "images/MODULER CONE FEMORALSTEM.jpg", features: ["Модульная конструкция", "Возможность ревизии", "Высокая первичная стабильность", "Различные углы и длины"] },
+            { id: 4, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка с винтом", subtitle: "Металлическая ацетабулярная чашка с полиэтиленовым вкладышем и фиксирующим винтом.", image: "images/ACETABULAR CUP VİDA.jpg", features: ["Материал: Титан / CoCrMo", "Пористое покрытие", "Винтовая фиксация", "Цементная и бесцементная версии"] },
+            { id: 5, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Dual Mobility Чашка (цементная)", subtitle: "Цементная чашка двойной мобильности с минимальным риском вывиха.", image: "images/Dual Mobility Cup Cemented.png", features: ["Двойная мобильность", "Высокосшитый полиэтилен", "Цементная фиксация", "Минимальный риск вывиха"] },
+            { id: 6, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Биполярная чашка (Bipolar Cup)", subtitle: "Биполярная система для гемиартропластики тазобедренного сустава.", image: "images/Bipolar Cup.png", features: ["Биполярная конструкция", "Снижает трение и износ", "Простота установки", "Для гемиартропластики"] },
+            { id: 7, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Металлические головки (KÜRELER)", subtitle: "Набор хромированных сферических головок CoCrMo разных диаметров.", image: "images/KÜRELER.jpg", features: ["Материал: CoCrMo", "Высокая полировка", "Диаметры: 22, 28, 32, 36 мм", "Совместимость с большинством систем"] },
+            { id: 8, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка Dual Kapli", subtitle: "Ацетабулярная чашка с двойным покрытием для высокой стабильности.", image: "images/ACETABULAR CUP DUAL KAPLI.jpg", features: ["Двойное покрытие", "Высокая стабильность", "Пористое покрытие", "Совместимость с разными лайнерами"] },
+            { id: 9, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярный лайнер (стандарт)", subtitle: "Стандартный полиэтиленовый лайнер UHMWPE разных толщин.", image: "images/ACETABULAR LINER1.jpg", features: ["Материал: UHMWPE", "Разные толщины", "Высокая износостойкость", "Совместимость с большинством чашек"] },
+            { id: 10, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка Takım (комплект)", subtitle: "Полный комплект ацетабулярной чашки с вкладышем.", image: "images/ACETABULAR CUP TAKIM.jpg", features: ["Полный комплект", "Чашка + вкладыш", "Высокое качество", "Разные размеры"] },
+            { id: 11, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярный лайнер (усиленный)", subtitle: "Высокосшитый полиэтиленовый лайнер повышенной износостойкости.", image: "images/ACETABULAR LINER2.jpg", features: ["Высокосшитый полиэтилен", "Повышенная износостойкость", "Разные толщины", "Для активных пациентов"] },
+            { id: 12, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементная ножка (стандартный тип)", subtitle: "Стандартная цементная ножка с высокой полировкой.", image: "images/STANDART TİP ÇİMENTOLU STEM.jpg", features: ["Цементная фиксация", "CoCrMo", "Высокая полировка", "Разные размеры"] },
+            { id: 13, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная ножка (собранная)", subtitle: "Готовая к установке модульная система.", image: "images/MODULER STEM MONTE.jpg", features: ["Модульная конструкция", "Готова к установке", "Высокая стабильность", "Ревизионная"] },
+            { id: 14, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная ножка (грудь)", subtitle: "Проксимальная часть модульной системы.", image: "images/MODULER GÖVDE.jpg", features: ["Проксимальная часть", "Модульная система", "Высокая стабильность", "Совместимость с разными шейками"] },
+            { id: 15, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементная ножка с поддержкой калькара", subtitle: "Цементная ножка с калькарной поддержкой.", image: "images/çimentolu KALKAR DESTEKLİ FEMORAL STEM.jpg", features: ["Цементная фиксация", "Калькарная поддержка", "Высокая стабильность", "CoCrMo"] },
+            { id: 16, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Стержень ST Dual Kapli", subtitle: "Стержень с двойным покрытием и высокой стабильностью.", image: "images/ST STEM DUAL KAPLI.jpg", features: ["Двойное покрытие", "Высокая стабильность", "Цементная / бесцементная", "Разные длины"] },
+            { id: 17, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Модульная ножка (модульный тип)", subtitle: "Полностью модульная система.", image: "images/MODULER TİP FEMORAL STEM.jpg", features: ["Полностью модульная", "Высокая гибкость", "Ревизионная", "Разные конфигурации"] },
+            { id: 18, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Набор реамеров для ацетабулярной чашки", subtitle: "Полный набор реамеров разных размеров.", image: "images/Acetabular Cup Reamer Set.png", features: ["Полный размерный ряд", "Высококачественная сталь", "Цветовая кодировка", "Стерилизуемый кейс"] },
+            { id: 19, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Инструментальный набор для биполярной чашки", subtitle: "Специализированный набор инструментов для установки биполярной чашки.", image: "images/Bipolar Cup Instrument Set.png", features: ["Специализированные инструменты", "Для биполярных систем", "Высокое качество", "Стерилизуемый кейс"] },
+            { id: 20, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Ацетабулярная чашка + лайнер + головка + винт", subtitle: "Полный комплект для тазобедренного сустава.", image: "images/Acetabular Cup liner head screw.png", features: ["Полный комплект", "Чашка + лайнер + головка + винт", "Готов к использованию", "Высокое качество"] },
+            { id: 21, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Керамическая головка", subtitle: "Керамическая головка высокой износостойкости.", image: "images/0R4dN", features: ["Материал: Керамика", "Высокая износостойкость", "Низкое трение", "Разные диаметры"] },
+            { id: 22, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Удлинитель / Offset Adapter", subtitle: "Для коррекции длины и оффсета.", image: "images/c6Bmc", features: ["Коррекция длины", "Оффсет адаптер", "Модульная система", "Разные размеры"] },
+            { id: 23, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Лайнер двойной мобильности", subtitle: "Высокосшитый полиэтиленовый лайнер для двойной мобильности.", image: "images/wKGDV", features: ["Двойная мобильность", "Высокосшитый полиэтилен", "Минимальный износ", "Разные толщины"] },
+            { id: 24, category: "hip", badge: "ТАЗОБЕДРЕННЫЙ СУСТАВ", title: "Цементная ацетабулярная чашка Dual", subtitle: "Цементная чашка двойной мобильности.", image: "images/Hj8We", features: ["Цементная фиксация", "Двойная мобильность", "Высокая стабильность", "Минимальный риск вывиха"] },
+        
+            // === KNEE (25–49) ===
+            { id: 25, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Феморальный компонент (Diz)", subtitle: "Cruciate Retaining фемур премиум-класса из CoCrMo.", image: "images/CR diz.jpg", features: ["Материал: CoCrMo", "Cruciate Retaining дизайн", "Анатомическая форма", "Высокая износостойкость"] },
+            { id: 26, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Феморальный компонент (Diz)", subtitle: "Posterior Stabilized фемур с стабилизирующим механизмом.", image: "images/PS diz.jpg", features: ["Материал: CoCrMo", "Posterior Stabilized дизайн", "Стабилизирующий механизм", "Для пациентов с недостаточностью ПКС"] },
+            { id: 27, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Фиксированная тибиальная площадка (Sabit Tibia)", subtitle: "Тибиальный компонент с фиксированной платформой.", image: "images/Sabit_tibia-removebg-preview.png", features: ["Материал: Титан / CoCrMo", "Фиксированная платформа", "Высокая стабильность", "Совместимость с CR и PS вкладышами"] },
+            { id: 28, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Мобильная тибиальная площадка (Mobil Tibia)", subtitle: "Тибиальный компонент с мобильной платформой.", image: "images/mobil_tibia-removebg-preview.png", features: ["Материал: Титан / CoCrMo", "Мобильная платформа", "Улучшенная кинематика", "Снижение износа полиэтилена"] },
+            { id: 29, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Пателлярный компонент (Patella)", subtitle: "Пателлярная кнопка из высококачественного UHMWPE с тремя ножками фиксации.", image: "images/PATELLA.jpg", features: ["Материал: UHMWPE", "Три ножки фиксации", "Анатомическая форма", "Высокая износостойкость"] },
+            { id: 30, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Mobile Takım (комплект)", subtitle: "Полный комплект CR + Mobile Bearing.", image: "images/CR-MOBILE TAKIM.jpg", features: ["CR дизайн", "Mobile Bearing", "Полный комплект", "Высокая стабильность"] },
+            { id: 31, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Mobile Takım (комплект)", subtitle: "Полный комплект PS + Mobile Bearing.", image: "images/PS-MOBILE TAKIM.jpg", features: ["PS дизайн", "Mobile Bearing", "Полный комплект", "Высокая стабильность"] },
+            { id: 32, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Mobile Insert (вкладыш)", subtitle: "Полиэтиленовый вкладыш для CR Mobile системы.", image: "images/CR-MOBİLE INSERT.jpg", features: ["CR дизайн", "Mobile Bearing", "UHMWPE", "Разные толщины"] },
+            { id: 33, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 8 мм (синие)", subtitle: "Trial Insert толщиной 8 мм.", image: "images/IMG_1062.jpg", features: ["Толщина 8 мм", "Цветовая кодировка", "Высококачественная сталь", "Стерилизуемые"] },
+            { id: 34, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 10 мм", subtitle: "Trial Insert толщиной 10 мм.", image: "images/IMG_1063.jpg", features: ["Толщина 10 мм", "Цветовая кодировка", "Высококачественная сталь"] },
+            { id: 35, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 12 мм", subtitle: "Trial Insert толщиной 12 мм.", image: "images/IMG_1064.jpg", features: ["Толщина 12 мм", "Цветовая кодировка"] },
+            { id: 36, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 14 мм", subtitle: "Trial Insert толщиной 14 мм.", image: "images/IMG_1061.jpg", features: ["Толщина 14 мм", "Цветовая кодировка"] },
+            { id: 37, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Цветные триалы 16 мм", subtitle: "Trial Insert толщиной 16 мм.", image: "images/IMG_1060.jpg", features: ["Толщина 16 мм", "Цветовая кодировка"] },
+            { id: 38, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 1)", subtitle: "Полный комплект имплантатов коленного сустава.", image: "images/Diz toplu 1.JPG", features: ["Полный комплект", "Фемур + Тибия + Вкладыш + Пателла", "Высокое качество"] },
+            { id: 39, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 2)", subtitle: "Полный комплект имплантатов коленного сустава.", image: "images/Diz toplu 2.JPG", features: ["Полный комплект", "Фемур + Тибия + Вкладыш + Пателла"] },
+            { id: 40, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 3)", subtitle: "Полный комплект имплантатов коленного сустава.", image: "images/Diz toplu 3.JPG", features: ["Полный комплект", "Фемур + Тибия + Вкладыш + Пателла"] },
+            { id: 41, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный набор коленного сустава (Diz Toplu 4)", subtitle: "Полный комплект имплантатов коленного сустава.", image: "images/Diz toplu 4.JPG", features: ["Полный комплект", "Фемур + Тибия + Вкладыш + Пателла"] },
+            { id: 42, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "CR Femur Component (комплект)", subtitle: "Фемур + вкладыш CR системы.", image: "images/CR-FEMUR COM..jpg", features: ["CR дизайн", "Полный комплект", "Высокое качество"] },
+            { id: 43, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "PS Femur Component (комплект)", subtitle: "Фемур + вкладыш PS системы.", image: "images/PS- FEMUR COM..jpg", features: ["PS дизайн", "Полный комплект", "Высокое качество"] },
+            { id: 44, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Детальный набор коленного сустава 2", subtitle: "Полный обзор компонентов коленного сустава.", image: "images/TOPLU DİZ DETAY 2.jpg", features: ["Детальный обзор", "Все компоненты", "Высокое качество"] },
+            { id: 45, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Детальный набор коленного сустава", subtitle: "Полный обзор компонентов коленного сустава.", image: "images/haQv8", features: ["Детальный обзор", "Все компоненты", "Высокое качество"] },
+            { id: 46, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Удлинитель тибии (Extension)", subtitle: "Для коррекции длины большеберцовой кости.", image: "images/uzatma-removebg-preview.png", features: ["Коррекция длины", "Высокая стабильность", "Модульная система"] },
+            { id: 47, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Пателла (очищенная)", subtitle: "Высококачественная обработка пателлярного компонента.", image: "images/patella-removebg-preview-removebg-preview.png", features: ["Высококачественная обработка", "UHMWPE", "Три ножки фиксации"] },
+            { id: 48, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Комбинированный набор (Kalça + Diz)", subtitle: "Гибридный набор для тазобедренного и коленного суставов.", image: "images/Kalça detay.png", features: ["Гибридный набор", "Kalça + Diz", "Высокое качество"] },
+            { id: 49, category: "knee", badge: "КОЛЕННЫЙ СУСТАВ", title: "Полный детальный набор колена", subtitle: "Все компоненты коленного сустава в одном наборе.", image: "images/Diz toplu.jpg", features: ["Полный детальный набор", "Все компоненты", "Высокое качество"] },
+        
+            // === INSTRUMENTS (50–69) ===
+            { id: 50, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор ацетабулярных разверток", subtitle: "Полный набор реамеров для подготовки вертлужной впадины.", image: "images/Acetabular Cup Reamer Set.png", features: ["Полный размерный ряд", "Высококачественная хирургическая сталь", "Цветовая кодировка", "Стерилизуемый кейс"] },
+            { id: 51, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор рашпилей Coril Design", subtitle: "Профессиональный набор рашпилей для подготовки бедренного канала.", image: "images/Coril Design Rasp Set.png", features: ["Различные размеры и формы", "Высококачественная сталь", "Оптимизированная геометрия", "Стерилизуемый кейс"] },
+            { id: 52, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструментальный набор для тазобедренного сустава 1", subtitle: "Полный профессиональный набор инструментов.", image: "images/инструменты.тазобедренные1.jpg", features: ["Полный комплект", "Премиальная сталь", "Цветовая кодировка", "Оптимизировано для миниинвазивных доступов"] },
+            { id: 53, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструментальный набор для тазобедренного сустава 2", subtitle: "Полный профессиональный набор инструментов.", image: "images/инструменты.тазобедренные2.jpg", features: ["Полный комплект", "Премиальная сталь", "Цветовая кодировка"] },
+            { id: 54, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструментальный набор для тазобедренного сустава 3", subtitle: "Полный профессиональный набор инструментов.", image: "images/инструменты.тазобедренные3.jpg", features: ["Полный комплект", "Премиальная сталь", "Цветовая кодировка"] },
+            { id: 55, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Хирургический набор T2 (полный)", subtitle: "Полный профессиональный набор инструментов T2.", image: "images/t2 set.jpeg", features: ["Полный комплект", "Высококачественная сталь", "Эргономичные рукоятки", "Стерилизуемый кейс"] },
+            { id: 56, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент T2", subtitle: "Отдельный инструмент из набора T2.", image: "images/T2.jpeg", features: ["Высококачественная сталь", "Эргономичная рукоятка", "Стерилизуемый"] },
+            { id: 57, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Набор инструментов для биполярной чашки", subtitle: "Специализированный набор для установки биполярной чашки.", image: "images/Bipolar Cup Instrument Set.png", features: ["Специализированные инструменты", "Для биполярных систем", "Высокое качество", "Стерилизуемый кейс"] },
+            { id: 58, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент Ace 2", subtitle: "Специализированный хирургический инструмент.", image: "images/Ace_2-removebg-preview.png", features: ["Специализированный", "Высокое качество", "Эргономичная рукоятка"] },
+            { id: 59, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент Ace 3", subtitle: "Специализированный хирургический инструмент.", image: "images/Ace_3-removebg-preview.png", features: ["Специализированный", "Высокое качество"] },
+            { id: 60, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент Ace 4", subtitle: "Специализированный хирургический инструмент.", image: "images/Ace_4-removebg-preview.png", features: ["Специализированный", "Высокое качество"] },
+            { id: 61, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1055", subtitle: "Профессиональный хирургический инструмент.", image: "images/IMG_1055.JPG", features: ["Профессиональный", "Высокое качество", "Эргономичная рукоятка"] },
+            { id: 62, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1056", subtitle: "Профессиональный хирургический инструмент.", image: "images/IMG_1056.JPG", features: ["Профессиональный", "Высокое качество"] },
+            { id: 63, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1057", subtitle: "Профессиональный хирургический инструмент.", image: "images/IMG_1057.JPG", features: ["Профессиональный", "Высокое качество"] },
+            { id: 64, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1058", subtitle: "Профессиональный хирургический инструмент.", image: "images/IMG_1058.JPG", features: ["Профессиональный", "Высокое качество"] },
+            { id: 65, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1059", subtitle: "Профессиональный хирургический инструмент.", image: "images/IMG_1059.JPG", features: ["Профессиональный", "Высокое качество"] },
+            { id: 66, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Инструмент IMG_1060", subtitle: "Профессиональный хирургический инструмент.", image: "images/IMG_1060.jpg", features: ["Профессиональный", "Высокое качество"] },
+            { id: 67, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Полный набор продуктов (Kalça 1)", subtitle: "Общий обзор всей продукции тазобедренного сустава.", image: "images/BUTUN URUNLER kalça 1.jpg", features: ["Полный обзор", "Все компоненты", "Высокое качество"] },
+            { id: 68, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Полный набор продуктов", subtitle: "Общий обзор всей продукции.", image: "images/BUTUN URUNLER.jpg", features: ["Полный обзор", "Все компоненты", "Высокое качество"] },
+            { id: 69, category: "instruments", badge: "ХИРУРГИЧЕСКИЕ ИНСТРУМЕНТЫ", title: "Модульная винтовая система", subtitle: "Для модульных ножек.", image: "images/frlB2", features: ["Модульная винтовая система", "Высокое качество", "Совместимость", "Ревизионная"] }
+        ];
+
+        // Filter functionality
+        let currentFilter = 'all';
+
+        function filterProducts(category) {
+            currentFilter = category;
+           
+            document.querySelectorAll('#filters button').forEach(btn => {
+                btn.classList.remove('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+                btn.classList.add('border-white/30');
+               
+                if ((category === 'all' && btn.dataset.filter === 'all') || btn.dataset.filter === category) {
+                    btn.classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+                    btn.classList.remove('border-white/30');
+                }
+            });
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+            
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const name = card.dataset.name.toLowerCase();
+               
+                const matchesCategory = currentFilter === 'all' || category === currentFilter;
+                const matchesSearch = name.includes(searchTerm);
+                
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function initSearch() {
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', () => {
+                applyFilters();
+            });
+        }
+
+        // Product detail modal
+        let currentProductId = null;
+
+        function showProductDetail(id) {
+            const product = products[id];
+            if (!product) return;
+            
+            currentProductId = id;
+            
+            document.getElementById('detail-badge').innerHTML = product.badge;
+            document.getElementById('detail-title').innerHTML = product.title;
+            document.getElementById('detail-subtitle').innerHTML = product.subtitle;
+            document.getElementById('detail-image').src = product.image;
+            
+            const featuresList = document.getElementById('detail-features');
+            featuresList.innerHTML = product.features.map(f =>
+                `<li class="flex gap-x-3"><i class="fa-solid fa-check text-[#C9A227] mt-1"></i> <span>${f}</span></li>`
+            ).join('');
+            
+            document.getElementById('product-detail-modal').classList.remove('hidden');
+            document.getElementById('product-detail-modal').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideProductDetailModal() {
+            const modal = document.getElementById('product-detail-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function requestQuoteFromModal() {
+            hideProductDetailModal();
+            showContactModal();
+        }
+
+        // Contact modal functions
+        function showContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => document.getElementById('form-name')?.focus(), 300);
+        }
+
+        function hideContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function submitContactForm(e) {
+            e.preventDefault();
+            const form = document.getElementById('contact-form');
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = `<span class="flex items-center justify-center gap-x-2"><i class="fa-solid fa-spinner fa-spin"></i> ОТПРАВКА...</span>`;
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                hideContactModal();
+               
+                const toast = document.getElementById('success-toast');
+                document.getElementById('toast-message').innerHTML = `Спасибо! Ваш запрос получен. Мы свяжемся с вами в течение 24 часов.`;
+                toast.style.display = 'flex';
+                toast.classList.remove('hidden');
+                form.reset();
+                
+                setTimeout(() => {
+                    toast.style.transition = 'all 0.4s ease';
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transition = '';
+                        toast.style.display = 'none';
+                        toast.classList.add('hidden');
+                    }, 400);
+                }, 4500);
+                
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 900);
+        }
+
+        // Initialize everything
+        function initializeCatalog() {
+            initTailwind();
+            initSearch();
+            
+            // Set initial filter to "all"
+            const allBtn = document.querySelector('#filters button[data-filter="all"]');
+            if (allBtn) allBtn.classList.add('active', 'bg-[#C9A227]', 'text-[#0A0A0B]');
+            
+            // Keyboard support for modals
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const detailModal = document.getElementById('product-detail-modal');
+                    const contactModal = document.getElementById('contact-modal');
+                   
+                    if (!detailModal.classList.contains('hidden') && detailModal.classList.contains('flex')) {
+                        hideProductDetailModal();
+                    } else if (!contactModal.classList.contains('hidden') && contactModal.classList.contains('flex')) {
+                        hideContactModal();
+                    }
+                }
+            });
+            
+            console.log('%c[HIP KNEE MEDICAL QAZAQSTAN] Catalog initialized with all 15 real product photos', 'color:#666');
+        }
 
         window.onload = initializeCatalog;
     </script>
